@@ -1,6 +1,6 @@
 [project]
 name = "codex_dlc_company"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = [
     {name = "CodexDLC",email = "primecodex@gmail.com"}
@@ -102,7 +102,7 @@ testpaths = ["src"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-pythonpath = [".", "src/backend_django"]
+pythonpath = [".", "src", "src/backend_django"]
 DJANGO_SETTINGS_MODULE = "core.settings.test"
 markers = [
     "unit: Unit tests",

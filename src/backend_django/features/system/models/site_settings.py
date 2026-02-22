@@ -102,12 +102,13 @@ class SiteSettings(models.Model):
 
         super().save(*args, **kwargs)
 
-        # Sync to Redis
+        # Sync to Redis (Safe for tests)
         try:
-            from features.system.redis_managers.site_settings_manager import SiteSettingsManager
+            from ..redis_managers.site_settings_manager import SiteSettingsManager
 
             SiteSettingsManager.save_to_redis(self)
-        except ImportError:
+        except (ImportError, NotImplementedError):
+            # NotImplementedError happens when using LocMemCache in tests
             pass
 
     @classmethod

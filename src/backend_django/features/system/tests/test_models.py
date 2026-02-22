@@ -1,12 +1,19 @@
+import pytest
 from django.test import TestCase
-from features.system.models.site_settings import SiteSettings
+from features.system.models import SiteSettings
 
 
+@pytest.mark.unit
 class SiteSettingsModelTest(TestCase):
     def test_site_settings_singleton(self):
         """Test that SiteSettings always uses pk=1 (Singleton)."""
-        SiteSettings.objects.create(company_name="First")
-        SiteSettings.objects.create(company_name="Second")
+        # First save
+        s1 = SiteSettings(company_name="First")
+        s1.save()
+
+        # Second save (should overwrite the first one because pk is forced to 1)
+        s2 = SiteSettings(company_name="Second")
+        s2.save()
 
         # There should be only one record in the database
         self.assertEqual(SiteSettings.objects.count(), 1)
