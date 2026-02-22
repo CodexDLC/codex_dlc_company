@@ -7,6 +7,7 @@ All pages are wrapped in i18n_patterns, so we generate one entry per (page, lang
 from django.conf import settings
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
+from django.utils.translation import override
 
 
 class StaticPageSitemap(Sitemap):
@@ -33,20 +34,15 @@ class StaticPageSitemap(Sitemap):
 
     def location(self, item):
         lang_code, url_name, _, _ = item
-        return f"/{lang_code}/{self._get_path(url_name)}"
+        # Use translation.override to correctly resolve localized URL
+        with override(lang_code):
+            return reverse(url_name)
 
     def priority(self, item):
         return item[2]
 
     def changefreq(self, item):
         return item[3]
-
-    def _get_path(self, url_name):
-        """Return the path segment after the language prefix."""
-        full = reverse(url_name)
-        # reverse() includes the lang prefix via i18n_patterns when activated;
-        # strip leading slash for clean concatenation
-        return full.lstrip("/")
 
 
 SITEMAPS = {

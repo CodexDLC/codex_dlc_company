@@ -76,14 +76,15 @@ data/uploads/
 # Docker & Deploy (local overrides)
 # ═══════════════════════════════════════════
 deploy/.env
-deploy/backend/
-deploy/bot/
-deploy/worker/
-deploy/nginx/
-# deploy/docker-compose.yml — разблокирован для чтения
+# Разблокируем папки с Docker-файлами для CI/CD
+!deploy/django/
+!deploy/bot/
+!deploy/worker/
+!deploy/nginx/
+
+# Разблокируем конфиги композа
 !deploy/docker-compose.yml
-deploy/docker-compose.prod.yml
-# deploy/docker-compose.test.yml — разблокирован для валидации
+!deploy/docker-compose.prod.yml
 !deploy/docker-compose.test.yml
 
 # ═══════════════════════════════════════════

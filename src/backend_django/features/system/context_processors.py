@@ -1,3 +1,6 @@
+from django.core.cache import cache
+from django.utils.translation import get_language
+
 from .models.site_settings import SiteSettings
 from .models.static_translation import StaticTranslation
 
@@ -10,14 +13,19 @@ def site_settings(request):
 def static_content(request):
     """
     Injects all StaticTranslation keys as a dict into every template context.
-    Access via {{ content.home_hero_title }} — returns the language-aware `text` field
-    resolved by modeltranslation (text_ru / text_en / text_de based on active language).
-    Falls back to empty string when key is missing.
+    Uses caching to minimize database load.
     """
-    try:
-        content = {obj.key: obj.text for obj in StaticTranslation.objects.all()}
-    except Exception:
-        # Graceful degradation during migrations or cold start
-        content = {}
+    lang = get_language()
+    cache_key = f"static_content_{lang}"
+    content = cache.get(cache_key)
+
+    if content is None:
+        try:
+            content = {obj.key: obj.text for obj in StaticTranslation.objects.all()}
+            # Cache for 1 hour (3600 seconds)
+            cache.set(cache_key, content, 3600)
+        except Exception:
+            # Graceful degradation during migrations or cold start
+            content = {}
 
     return {"content": content}
