@@ -5,7 +5,7 @@ All notable changes to the **CodexDLC** project will be documented in this file.
 ## [0.2.0] - 2026-02-22
 ### Design System & Frontend Implementation
 *   **Dual Mode UI:** Implemented "High-Tech Gadget" (Dark) and "Premium Studio" (Light) themes with a custom CSS compiler and no-flash theme switcher.
-*   **Interactive Effects:** 
+*   **Interactive Effects:**
     *   Added **Hero Torch** effect (mouse-following glow).
     *   Implemented **Z-Row Parallax** for service visual blocks.
     *   Created **Fluid Branding Animation** for the logo (cycling through DLC meanings).
