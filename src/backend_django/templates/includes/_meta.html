@@ -1,38 +1,38 @@
 {% load i18n static %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}{{ site_settings.meta_title|default:"CodexDLC — Ваш бизнес. Наш IT-движок." }}{% endblock %}</title>
-<meta name="description" content="{% block meta_description %}{{ site_settings.meta_description|default:"Разработка, хостинг и поддержка премиальных сайтов по подписке." }}{% endblock %}">
+<title>{% block title %} {{ site_settings.meta_title|default:'CodexDLC — Ваш бизнес. Наш IT-движок.' }} {% endblock %}</title>
+<meta name="description" content="{% block meta_description %} {{ site_settings.meta_description|default:'Разработка, хостинг и поддержка премиальных сайтов по подписке.' }} {% endblock %}">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
 {# Canonical — всегда на основной домен #}
-{% with canonical_base=site_settings.canonical_domain|default:"https://codexdlc.com" %}
+{% with canonical_base=site_settings.canonical_domain|default:'https://codexdlc.com' %}
 <link rel="canonical" href="{{ canonical_base }}{{ request.path }}">
 
-{# Hreflang — корректная генерация без дублирования lang_code в path #}
+{# Hreflang — корректная генерация #}
 {% get_current_language as CURRENT_LANG %}
 {% for lang_code, lang_name in LANGUAGES %}
-{% with path_without_lang=request.path|slice:"3:" %}
-<link rel="alternate" hreflang="{{ lang_code }}" href="{{ canonical_base }}/{{ lang_code }}/{{ path_without_lang }}">
-{% endwith %}
+    {% with path_suffix=request.path|slice:'3:' %}
+    <link rel="alternate" hreflang="{{ lang_code }}" href="{{ canonical_base }}/{{ lang_code }}{{ path_suffix }}">
+    {% endwith %}
 {% endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ canonical_base }}{{ request.path }}">
 
 {# Open Graph #}
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="{{ site_settings.company_name|default:"CodexDLC" }}">
-<meta property="og:title" content="{% block og_title %}{{ site_settings.meta_title|default:"CodexDLC — Ваш бизнес. Наш IT-движок." }}{% endblock %}">
-<meta property="og:description" content="{{ site_settings.meta_description|default:"Разработка, хостинг и поддержка премиальных сайтов по подписке." }}">
+<meta property="og:site_name" content="{{ site_settings.company_name|default:'CodexDLC' }}">
+<meta property="og:title" content="{% block og_title %} {{ site_settings.meta_title|default:'CodexDLC — Ваш бизнес. Наш IT-движок.' }} {% endblock %}">
+<meta property="og:description" content="{% block og_description %} {{ site_settings.meta_description|default:'Разработка, хостинг и поддержка премиальных сайтов по подписке.' }} {% endblock %}">
 <meta property="og:url" content="{{ canonical_base }}{{ request.path }}">
-<meta property="og:image" content="{{ site_settings.og_image_url|default:"" }}">
+<meta property="og:image" content="{{ site_settings.og_image_url|default:'' }}">
 <meta property="og:locale" content="{{ CURRENT_LANG }}">
 {% endwith %}
 
 {# Twitter Cards #}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% block twitter_title %}{{ site_settings.meta_title|default:"CodexDLC" }}{% endblock %}">
-<meta name="twitter:description" content="{{ site_settings.meta_description|default:"" }}">
-<meta name="twitter:image" content="{{ site_settings.og_image_url|default:"" }}">
+<meta name="twitter:title" content="{% block twitter_title %} {{ site_settings.meta_title|default:'CodexDLC' }} {% endblock %}">
+<meta name="twitter:description" content="{% block twitter_description %} {{ site_settings.meta_description|default:'' }} {% endblock %}">
+<meta name="twitter:image" content="{{ site_settings.og_image_url|default:'' }}">
 
 {# Favicon System #}
 <link rel="icon" type="image/webp" href="{% static 'img/favicon.webp' %}">
