@@ -94,6 +94,11 @@ src/backend_django/static/fonts/JetBrains_Mono/
 src/backend_django/static/fonts/Space_Grotesk/
 
 # ═══════════════════════════════════════════
+# Images (Keep only optimized files in root)
+# ═══════════════════════════════════════════
+src/backend_django/static/img/_source/
+
+# ═══════════════════════════════════════════
 # Template installer artifacts
 # ═══════════════════════════════════════════
 .template_install_hash

@@ -10,8 +10,6 @@
 <link rel="canonical" href="{{ canonical_base }}{{ request.path }}">
 
 {# Hreflang — корректная генерация без дублирования lang_code в path #}
-{# request.path уже содержит /{lang}/... благодаря i18n_patterns #}
-{# Вырезаем текущий языковой префикс и строим ссылки для всех языков #}
 {% get_current_language as CURRENT_LANG %}
 {% for lang_code, lang_name in LANGUAGES %}
 {% with path_without_lang=request.path|slice:"3:" %}
@@ -36,10 +34,11 @@
 <meta name="twitter:description" content="{{ site_settings.meta_description|default:"" }}">
 <meta name="twitter:image" content="{{ site_settings.og_image_url|default:"" }}">
 
-{# Favicon #}
-<link rel="icon" type="image/x-icon" href="{{ site_settings.favicon_url|default:"/static/img/favicon.ico" }}">
+{# Favicon System #}
+<link rel="icon" type="image/webp" href="{% static 'img/favicon.webp' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 
-{# GA4 + GTM (только если заданы) #}
+{# GA4 + GTM #}
 {% if site_settings.gtm_container_id %}
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site_settings.ga4_measurement_id }}');</script>
 {% endif %}
 
-{# Anti-flash: применяем тему ДО рендера страницы (inline, обязательно в <head>) #}
+{# Anti-flash theme script #}
 <script>
     (function () {
         var saved = localStorage.getItem('codex-theme');

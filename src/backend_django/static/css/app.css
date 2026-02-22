@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('../../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    src: url('/static/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('../../fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype-variations');
+    src: url('/static/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype-variations');
     font-weight: 300 700;
     font-display: swap;
     font-style: normal;
@@ -31,7 +31,7 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../../fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype-variations');
+    src: url('/static/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype-variations');
     font-weight: 100 800;
     font-display: swap;
     font-style: normal;
@@ -39,47 +39,47 @@
 
 
 :root {
-
+    
     --deep-space: #050505;
     --cyber-blue: #00F0FF;
     --cyber-blue-hover: #00C4D1;
     --electric-purple: #8A2BE2;
     --status-green: #00FF66;
 
-
+    
     --gray-100: #FFFFFF;
     --gray-400: #A1A1AA;
     --gray-600: #4B5563;
 
-
+    
     --glass-bg: rgba(255, 255, 255, 0.07);
     --glass-bg-elevated: rgba(255, 255, 255, 0.10);
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-border-hover: rgba(0, 240, 255, 0.25);
     --glass-blur: blur(16px);
 
-
+    
     --glass-glow-blue: rgba(0, 240, 255, 0.08);
     --glass-glow-purple: rgba(138, 43, 226, 0.07);
     --glow-btn: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 48px rgba(0, 240, 255, 0.12);
 
-
+    
     --dock-bg: rgba(15, 15, 15, 0.88);
 
-
+    
     --color-bg: var(--deep-space);
     --color-primary: var(--cyber-blue);
     --color-secondary: var(--electric-purple);
     --color-text-main: var(--gray-100);
     --color-text-muted: var(--gray-400);
 
-
+    
     --container-max-width: 1440px;
     --grid-columns: 12;
     --gutter: 24px;
     --margin: 32px;
 
-
+    
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 24px;
@@ -88,12 +88,12 @@
     --space-2xl: 64px;
     --space-3xl: 96px;
 
-
+    
     --radius-bento: 24px;
     --radius-btn: 0px;
     --radius-dock: 100px;
 
-
+    
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
     --font-headings: 'Space Grotesk', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -784,3 +784,4 @@ a {
         font-size: 28px;
     }
 }
+
