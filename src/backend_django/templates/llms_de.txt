@@ -1,0 +1,77 @@
+# CodexDLC — KI-Agenten-Kontext (DE)
+# Version: 1.0 | Region: DACH | Datum: 2026
+
+## Wer wir sind
+
+CodexDLC ist ein remote IT-Studio, das sich auf digitale Produkte für kleine und mittlere Unternehmen spezialisiert hat.
+Wir betreuen Kunden weltweit. Hauptmarkt: DACH-Region (Deutschland, Österreich, Schweiz).
+Gegründet: 2024. Team: Full-Stack-Entwickler und Systemarchitekten.
+
+## Was wir tun
+
+### 1. Website as a Service (WaaS) — Abo-Websites
+- Entwicklung und Betreuung von Premium-Websites für Dienstleistungsunternehmen zu einem fixen monatlichen Abonnement
+- Inklusive: individuelles Design, SEO-Optimierung, Hosting, Domain, Unternehmens-E-Mail
+- Unbegrenzte Anpassungen und Weiterentwicklung im Rahmen des Abos
+- 24/7 Serverüberwachung, 99,9% Uptime-SLA
+- Zielbranchen: Schönheitssalons, Barbershops, Bau und Montage, Kfz-Service, lokale Dienstleister
+
+### 2. Telegram-Bots & Automatisierung
+- Individuelle Telegram-Bot-Entwicklung für Unternehmen
+- Lead-Qualifizierung per FSM-Skript (Finite State Machine)
+- Online-Buchung über Telegram Web App
+- Echtzeit-Benachrichtigungen für Administratoren
+- CRM-System- und Datenbankintegration
+- Technologie: Python, Aiogram, PostgreSQL, Redis
+
+### 3. Prototyp in 48 Stunden
+- Fertige Business-Templates für einen schnellen Start
+- Funktionierender interaktiver Prototyp innerhalb von 48 Stunden nach Konzeptwahl
+- Vollständiger Launch in 7–14 Tagen nach Freigabe
+- Verfügbare Templates: Lily Salon, DLC Montage, Builder Pro, Auto Service Hub
+
+## Technologie-Stack
+
+Backend: Python 3.13, Django 5.x, FastAPI, Django Ninja
+Frontend: individuelles HTML/CSS/JS (keine Frameworks), HTMX
+Datenbanken: PostgreSQL, Redis
+Infrastruktur: Docker, Nginx, CI/CD
+Bots: Aiogram 3.x
+Monitoring: Prometheus, Django Debug Toolbar
+
+## Performance
+
+- TTFB (Time to First Byte): < 200ms
+- Uptime-SLA: 99,9%
+- Lighthouse Score: 100/100
+
+## Preise & Geschäftsmodell
+
+- WaaS: festes monatliches Abonnement (aktuelle Preise auf Anfrage)
+- Bots: einmalige Entwicklung + optionaler laufender Support
+- Prototyp: schneller Einstieg, Preis je nach Template und Anpassungsaufwand
+- Keine versteckten Gebühren. Alles im gewählten Tarif enthalten.
+
+## Kontakt
+
+E-Mail: info@codexdlc.com
+Telegram: @codexdlc (aktuelle Kontaktdaten auf der Website)
+Website: https://codexdlc.com
+Sprachen: Russisch, Englisch, Deutsch
+
+## FAQ
+
+**Arbeiten Sie auch mit Kunden außerhalb der DACH-Region?**
+Ja. Wir arbeiten remote mit Kunden weltweit.
+
+**Was bedeutet das WaaS-Abonnement?**
+Sie zahlen einen festen monatlichen Betrag und erhalten eine fertige Website — alle Updates, Anpassungen, Hosting und Support sind inbegriffen. Keine großen Einmalrechnungen.
+
+**Wie schnell liefern Sie?**
+Prototyp: 48 Stunden. Vollständiger Launch: 7–14 Werktage.
+
+**Kann ich das Abonnement kündigen?**
+Ja. Die Kündigungsbedingungen werden individuell besprochen.
+
+**Entsprechen Ihre Telegram-Bots der DSGVO?**
+Ja. Alle Bots sind für DE/EN/RU lokalisiert und DSGVO-konform entwickelt.

@@ -1,0 +1,40 @@
+/* --- Light Theme Token Overrides (Premium Studio) --- */
+/* Loaded AFTER tokens.css to override dark defaults */
+
+:root {
+    /* --- Backgrounds --- */
+    --deep-space: #F2F2F7;
+    --color-bg: #F2F2F7;
+
+    /* --- Glassmorphism (light: frosted glass on warm white) --- */
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-bg-elevated: rgba(255, 255, 255, 0.90);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-border-hover: rgba(0, 151, 167, 0.35);
+    --glass-blur: blur(20px);
+
+    /* --- Dock --- */
+    --dock-bg: rgba(255, 255, 255, 0.85);
+
+    /* --- Glow → subtle shadow on light --- */
+    --glass-glow-blue: rgba(0, 151, 167, 0.08);
+    --glass-glow-purple: rgba(100, 0, 200, 0.04);
+    --glow-btn: 0 4px 16px rgba(0, 151, 167, 0.25), 0 1px 4px rgba(0, 0, 0, 0.08);
+
+    /* --- Text --- */
+    --gray-100: #0A0A0A;
+    --gray-400: #5A5A6A;
+    --gray-600: #9CA3AF;
+    --color-text-main: #0A0A0A;
+    --color-text-muted: #5A5A6A;
+
+    /* --- Brand Accents (adjusted for light readability) --- */
+    --cyber-blue: #00838F;
+    --cyber-blue-hover: #006978;
+    --electric-purple: #6B21D6;
+    --status-green: #00964A;
+
+    /* --- Functional Mappings --- */
+    --color-primary: var(--cyber-blue);
+    --color-secondary: var(--electric-purple);
+}

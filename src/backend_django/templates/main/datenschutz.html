@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}Datenschutz — CodexDLC{% endblock %}
+{% block og_title %}Datenschutz — CodexDLC{% endblock %}
+{% block meta_description %}Datenschutzerklärung für CodexDLC gemäß DSGVO.{% endblock %}
+
+{% block content %}
+<section style="padding: 160px 0 120px;">
+    <div class="container" style="max-width: 720px;">
+        <span class="tech-label">LEGAL // DSGVO</span>
+        <h1 style="font-size: clamp(36px, 5vw, 56px); margin-bottom: 48px;">Datenschutzerklärung</h1>
+
+        <div style="display: flex; flex-direction: column; gap: 40px; color: var(--gray-400); font-size: 15px; line-height: 1.8;">
+
+            <div>
+                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">1. Datenschutz auf einen Blick</h2>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+            </div>
+
+            <div>
+                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">2. Datenerfassung auf dieser Website</h2>
+                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem <a href="{% url 'main:impressum' %}" style="color: var(--cyber-blue);">Impressum</a> dieser Website entnehmen.</p>
+            </div>
+
+            <div>
+                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">3. Ihre Rechte</h2>
+                <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+            </div>
+
+            <div>
+                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">4. Kontakt</h2>
+                <p>Bei Fragen zum Datenschutz: <a href="mailto:hello@codexdlc.com" style="color: var(--cyber-blue);">hello@codexdlc.com</a></p>
+            </div>
+
+            <div style="padding: 20px 24px; background: var(--glass-bg); border-radius: 12px; border: 1px solid var(--glass-border);">
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 8px;">// COMPLIANCE_STATUS</div>
+                <div style="font-size: 13px; color: var(--gray-400);">Diese Website entspricht den Anforderungen der DSGVO (EU) 2016/679.</div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--glass-border);">
+            <a href="{% url 'main:index' %}" style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600);">← ZURÜCK ZUR STARTSEITE</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    var DARK_CSS  = "{% static 'css/app.css' %}";
+    var LIGHT_CSS = "{% static 'css/app-light.css' %}";
+    var themeLink = document.getElementById('theme-css');
+    var themeBtn  = document.getElementById('theme-btn');
+    function getTheme() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+    function applyTheme(t) { if (t === 'light') { document.documentElement.setAttribute('data-theme','light'); themeLink.href=LIGHT_CSS; themeBtn.textContent='[ D ]'; } else { document.documentElement.removeAttribute('data-theme'); themeLink.href=DARK_CSS; themeBtn.textContent='[ L ]'; } localStorage.setItem('codex-theme',t); }
+    function toggleTheme() { applyTheme(getTheme()==='dark'?'light':'dark'); }
+    (function(){ var c=getTheme(); themeBtn.textContent=c==='light'?'[ D ]':'[ L ]'; if(c==='light') themeLink.href=LIGHT_CSS; })();
+</script>
+{% endblock %}

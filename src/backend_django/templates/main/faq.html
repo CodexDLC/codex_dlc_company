@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}FAQ — Часто задаваемые вопросы — CodexDLC{% endblock %}
+{% block og_title %}FAQ — CodexDLC{% endblock %}
+
+{% block content %}
+<section style="padding: 160px 0 120px;">
+    <div class="container" style="max-width: 860px;">
+        <span class="tech-label">KNOWLEDGE_BASE</span>
+        <h1 style="font-size: clamp(40px, 6vw, 64px); margin-bottom: 24px;">Часто задаваемые вопросы</h1>
+        <p style="font-size: 18px; color: var(--gray-400); margin-bottom: 64px; line-height: 1.65;">
+            Ответы на самые популярные вопросы о наших услугах и условиях работы.
+        </p>
+
+        {# FAQ Items — CSS-only аккордеон #}
+        <div style="display: flex; flex-direction: column; gap: 2px;">
+
+            <details style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 24px 28px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    Что такое WaaS (Website as a Service)?
+                    <span style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); line-height: 1;">+</span>
+                </summary>
+                <div style="padding: 0 28px 24px; color: var(--gray-400); line-height: 1.7;">
+                    WaaS — это модель, при которой вы получаете профессиональный сайт за фиксированную ежемесячную подписку. В стоимость входят разработка, хостинг, домен, корпоративная почта, техподдержка и неограниченные правки.
+                </div>
+            </details>
+
+            <details style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 24px 28px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    Сколько стоит подписка?
+                    <span style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); line-height: 1;">+</span>
+                </summary>
+                <div style="padding: 0 28px 24px; color: var(--gray-400); line-height: 1.7;">
+                    Стоимость зависит от объёма и сложности проекта. Свяжитесь с нами — мы подготовим индивидуальное предложение в течение 24 часов.
+                </div>
+            </details>
+
+            <details style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 24px 28px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    Сколько времени занимает запуск сайта?
+                    <span style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); line-height: 1;">+</span>
+                </summary>
+                <div style="padding: 0 28px 24px; color: var(--gray-400); line-height: 1.7;">
+                    Прототип готов за 48 часов. Полноценный запуск — от 7 до 14 рабочих дней в зависимости от объёма контента и правок.
+                </div>
+            </details>
+
+            <details style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 24px 28px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    Могу ли я отменить подписку в любое время?
+                    <span style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); line-height: 1;">+</span>
+                </summary>
+                <div style="padding: 0 28px 24px; color: var(--gray-400); line-height: 1.7;">
+                    Да. Минимальный период — 3 месяца, после чего вы можете отменить с уведомлением за 30 дней.
+                </div>
+            </details>
+
+            <details style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 24px 28px; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    Вы работаете с клиентами из Германии, Австрии и Швейцарии?
+                    <span style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); line-height: 1;">+</span>
+                </summary>
+                <div style="padding: 0 28px 24px; color: var(--gray-400); line-height: 1.7;">
+                    Да, DACH-регион — наш основной рынок. Мы знаем местные требования к Impressum и Datenschutz и включаем их в стандартный пакет.
+                </div>
+            </details>
+
+        </div>
+
+        <div style="margin-top: 64px; text-align: center;">
+            <p style="color: var(--gray-400); margin-bottom: 24px;">Не нашли ответ на свой вопрос?</p>
+            <a href="{% url 'main:contacts' %}" class="btn btn-primary" style="padding: 18px 40px; font-size: 16px;">НАПИСАТЬ НАМ</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    var DARK_CSS  = "{% static 'css/app.css' %}";
+    var LIGHT_CSS = "{% static 'css/app-light.css' %}";
+    var themeLink = document.getElementById('theme-css');
+    var themeBtn  = document.getElementById('theme-btn');
+    function getTheme() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+    function applyTheme(t) { if (t === 'light') { document.documentElement.setAttribute('data-theme','light'); themeLink.href=LIGHT_CSS; themeBtn.textContent='[ D ]'; } else { document.documentElement.removeAttribute('data-theme'); themeLink.href=DARK_CSS; themeBtn.textContent='[ L ]'; } localStorage.setItem('codex-theme',t); }
+    function toggleTheme() { applyTheme(getTheme()==='dark'?'light':'dark'); }
+    (function(){ var c=getTheme(); themeBtn.textContent=c==='light'?'[ D ]':'[ L ]'; if(c==='light') themeLink.href=LIGHT_CSS; })();
+</script>
+{% endblock %}

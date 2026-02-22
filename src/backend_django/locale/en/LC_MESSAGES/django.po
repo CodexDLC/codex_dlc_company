@@ -1,0 +1,152 @@
+# English translations — CodexDLC
+# DACH region | RU/EN/DE
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ─── Navigation ───────────────────────────────────────────────
+msgid "nav_main_home"
+msgstr "Home"
+
+msgid "nav_main_services"
+msgstr "Services"
+
+msgid "nav_main_prototypes"
+msgstr "Prototypes"
+
+msgid "nav_main_contacts"
+msgstr "Contacts"
+
+msgid "nav_main_team"
+msgstr "Team"
+
+msgid "nav_footer_all_contacts"
+msgstr "All Contacts"
+
+msgid "nav_legal_impressum"
+msgstr "Imprint"
+
+msgid "nav_legal_privacy"
+msgstr "Privacy Policy"
+
+# ─── Buttons & Actions ────────────────────────────────────────
+msgid "btn_cta_booking"
+msgstr "Get in Touch"
+
+msgid "btn_action_more"
+msgstr "Learn More"
+
+msgid "btn_form_submit"
+msgstr "Submit"
+
+msgid "btn_form_cancel"
+msgstr "Cancel"
+
+msgid "btn_ui_toggle_footer"
+msgstr "Show"
+
+# ─── Hero ─────────────────────────────────────────────────────
+msgid "home_hero_label"
+msgstr "SYSTEM_ONLINE // V.1.0"
+
+msgid "home_hero_btn_services"
+msgstr "View Services"
+
+# ─── Compare block ────────────────────────────────────────────
+msgid "home_compare_label"
+msgstr "MARKET_ANALYSIS"
+
+msgid "home_compare_title"
+msgstr "Problem vs Solution"
+
+# ─── Services ─────────────────────────────────────────────────
+msgid "home_services_label"
+msgstr "CORE_OFFERINGS"
+
+msgid "home_services_title"
+msgstr "What We Do"
+
+msgid "home_service_waas_title"
+msgstr "Website as a Service"
+
+msgid "home_service_bot_title"
+msgstr "Telegram Bots & Automation"
+
+msgid "home_service_proto_title"
+msgstr "Prototype in 48 Hours"
+
+# ─── Subscription bento ───────────────────────────────────────
+msgid "home_sub_label"
+msgstr "SUBSCRIPTION_VALUE"
+
+msgid "home_sub_title"
+msgstr "What's Included"
+
+msgid "home_sub_dev_title"
+msgstr "Custom Development"
+
+msgid "home_sub_seo_title"
+msgstr "SEO & Analytics"
+
+msgid "home_sub_infra_title"
+msgstr "Domain & Email"
+
+msgid "home_sub_support_title"
+msgstr "24/7 Technical Support"
+
+# ─── Tech Corner ──────────────────────────────────────────────
+msgid "home_tech_label"
+msgstr "UNDER_THE_HOOD"
+
+msgid "home_tech_title"
+msgstr "Reliable Architecture"
+
+msgid "home_tech_arch_title"
+msgstr "Full-Stack & System Design"
+
+# ─── CTA ──────────────────────────────────────────────────────
+msgid "home_cta_label"
+msgstr "EXECUTE_DEPLOYMENT"
+
+msgid "home_cta_title"
+msgstr "Ready to Automate Your Leads?"
+
+msgid "home_cta_btn"
+msgstr "Start a Project"
+
+msgid "home_cta_input_placeholder"
+msgstr "Email or Phone..."
+
+# ─── Contacts page ────────────────────────────────────────────
+msgid "contacts_page_title"
+msgstr "Contacts"
+
+msgid "contacts_label"
+msgstr "GET_IN_TOUCH"
+
+msgid "contacts_subtitle"
+msgstr "Write to us — we respond within 24 hours."
+
+# ─── FAQ page ─────────────────────────────────────────────────
+msgid "faq_page_title"
+msgstr "FAQ"
+
+msgid "faq_label"
+msgstr "FAQ // SYSTEM_DOCS"
+
+# ─── Legal ────────────────────────────────────────────────────
+msgid "impressum_page_title"
+msgstr "Imprint"
+
+msgid "privacy_page_title"
+msgstr "Privacy Policy"
+
+# ─── Footer ───────────────────────────────────────────────────
+msgid "footer_rights"
+msgstr "All rights reserved"
+
+msgid "footer_tagline"
+msgstr "Your Business. Our IT Engine."

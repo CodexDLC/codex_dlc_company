@@ -1,0 +1,60 @@
+:root {
+    /* --- Brand Colors (High-Tech Gadget) --- */
+    --deep-space: #050505;
+    --cyber-blue: #00F0FF;
+    --cyber-blue-hover: #00C4D1;
+    --electric-purple: #8A2BE2;
+    --status-green: #00FF66;
+
+    /* --- Neutrals --- */
+    --gray-100: #FFFFFF;
+    --gray-400: #A1A1AA;
+    --gray-600: #4B5563;
+
+    /* --- Glassmorphism (усиленный для видимости на #050505) --- */
+    --glass-bg: rgba(255, 255, 255, 0.07);
+    --glass-bg-elevated: rgba(255, 255, 255, 0.10);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border-hover: rgba(0, 240, 255, 0.25);
+    --glass-blur: blur(16px);
+
+    /* --- Glow Effects --- */
+    --glass-glow-blue: rgba(0, 240, 255, 0.08);
+    --glass-glow-purple: rgba(138, 43, 226, 0.07);
+    --glow-btn: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 48px rgba(0, 240, 255, 0.12);
+
+    /* --- Dock Background --- */
+    --dock-bg: rgba(15, 15, 15, 0.88);
+
+    /* --- Functional Mappings --- */
+    --color-bg: var(--deep-space);
+    --color-primary: var(--cyber-blue);
+    --color-secondary: var(--electric-purple);
+    --color-text-main: var(--gray-100);
+    --color-text-muted: var(--gray-400);
+
+    /* --- Grid & Layout --- */
+    --container-max-width: 1440px;
+    --grid-columns: 12;
+    --gutter: 24px;
+    --margin: 32px;
+
+    /* --- Spacing (8px Baseline) --- */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    --space-3xl: 96px;
+
+    /* --- Geometry --- */
+    --radius-bento: 24px;
+    --radius-btn: 0px;
+    --radius-dock: 100px;
+
+    /* --- Typography --- */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-headings: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}

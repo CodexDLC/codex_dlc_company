@@ -1,0 +1,6 @@
+{% load static %}
+{# Preload Local Variable Fonts for Performance #}
+{# Paths must match exactly with fonts.css to avoid double loading #}
+<link rel="preload" href="{% static 'fonts/Inter-VariableFont_opsz,wght.ttf' %}" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{% static 'fonts/SpaceGrotesk-VariableFont_wght.ttf' %}" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{% static 'fonts/JetBrainsMono-VariableFont_wght.ttf' %}" as="font" type="font/ttf" crossorigin>

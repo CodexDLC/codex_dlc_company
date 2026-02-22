@@ -169,39 +169,44 @@ def run_docker_validation():
         if not docker_compose("up -d")[0]:
             return False
 
-        print_step("Waiting for services to be ready (15s)")
-        time.sleep(15)
+        print_step("Waiting for backend to complete tests (max 60s)")
+        for _ in range(60):
+            time.sleep(1)
+            env = {"CONTAINER_PREFIX": TEST_PROJECT_NAME}
+            _, output = run_command(
+                f"docker-compose -p {TEST_PROJECT_NAME} -f {COMPOSE_FILE} ps -a --format json backend",
+                capture_output=True,
+                env=env,
+            )
+            if not output.strip():
+                continue
 
-        env = {"CONTAINER_PREFIX": TEST_PROJECT_NAME}
-        _, output = run_command(
-            f"docker-compose -p {TEST_PROJECT_NAME} -f {COMPOSE_FILE} ps -q backend", capture_output=True, env=env
-        )
-        container_id = output.strip()
-        if not container_id:
-            print_error("Backend container not found")
-            return False
+            import json
 
-        print_step("Checking backend process")
-        success, ps_out = run_command(f"docker exec {container_id} ps aux", capture_output=True)
-        if not any(x in ps_out for x in ["manage.py", "gunicorn"]):
-            print_error("Backend process not found")
-            return False
+            try:
+                # Handle both single object and list of objects (depends on docker-compose version)
+                data = json.loads(output)
+                if isinstance(data, list):
+                    data = data[0]
 
-        commands = [
-            ("Updating content", "python manage.py update_all_content"),
-            ("Django system check", "python manage.py check"),
-            ("Checking migrations", "python manage.py showmigrations --plan"),
-        ]
+                state = data.get("State", "").lower()
+                exit_code = data.get("ExitCode", -1)
 
-        for desc, cmd in commands:
-            print_step(f"Docker | {desc}")
-            success, out = run_command(f"docker exec {container_id} {cmd}", capture_output=True)
-            if not success:
-                print_error(f"Command failed: {cmd}\n{out}")
-                return False
-            print_success(f"{desc} passed")
+                if state == "exited":
+                    if exit_code == 0:
+                        print_success("Backend tests passed in Docker")
+                        return True
+                    else:
+                        print_error(f"Backend tests failed in Docker (Exit Code: {exit_code})")
+                        # Get logs for debugging
+                        _, logs = docker_compose("logs backend")
+                        print(f"\n{Colors.RED}--- Backend Logs ---{Colors.ENDC}\n{logs}")
+                        return False
+            except (json.JSONDecodeError, IndexError):
+                continue
 
-        return True
+        print_error("Timeout waiting for backend tests to complete")
+        return False
 
     finally:
         cleanup_docker()

@@ -1,0 +1,145 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-db
+    env_file: ../.env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $$POSTGRES_DB -U $$POSTGRES_USER" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - codex_dlc_company-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-redis
+    env_file: ../.env
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    expose:
+      - "6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - codex_dlc_company-network
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-mailpit
+    ports:
+      - "8025:8025"
+    expose:
+      - "1025"
+    restart: unless-stopped
+    networks:
+      - codex_dlc_company-network
+
+  backend:
+    build:
+      context: ..
+      dockerfile: deploy/django/Dockerfile
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-backend
+    env_file: ../.env
+    volumes:
+      - ../src/backend_django:/app
+      - ../src/shared:/app/src/shared:ro
+      - staticfiles:/app/staticfiles
+      - logs:/app/data/logs
+    expose:
+      - "8000"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/api/v1/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    networks:
+      - codex_dlc_company-network
+
+  bot:
+    build:
+      context: ..
+      dockerfile: deploy/bot/Dockerfile
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-bot
+    env_file: ../.env
+    volumes:
+      - ../src/telegram_bot:/app/src/telegram_bot:ro
+      - ../src/shared:/app/src/shared:ro
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - codex_dlc_company-network
+
+  worker:
+    build:
+      context: ..
+      dockerfile: deploy/worker/Dockerfile
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-worker
+    command: arq src.workers.notification_worker.worker.WorkerSettings
+    env_file: ../.env
+    volumes:
+      - ../src/workers:/app/src/workers:ro
+      - ../src/shared:/app/src/shared:ro
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - codex_dlc_company-network
+
+  nginx:
+    build:
+      context: ..
+      dockerfile: deploy/nginx/Dockerfile.local
+    container_name: ${CONTAINER_PREFIX:-codex_dlc_company}-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ../src/backend_django/media:/app/media:ro
+      - staticfiles:/app/staticfiles:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - codex_dlc_company-network
+
+volumes:
+  staticfiles:
+    driver: local
+  logs:
+    driver: local
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+
+networks:
+  codex_dlc_company-network:
+    name: ${CONTAINER_PREFIX:-codex_dlc_company}-network
+    driver: bridge

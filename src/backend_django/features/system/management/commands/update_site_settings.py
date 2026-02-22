@@ -1,7 +1,9 @@
 import json
+
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from features.system.models import SiteSettings
+
 
 class Command(BaseCommand):
     help = "Update Site Settings from JSON fixture (features/system/fixtures/site_settings.json)"
@@ -21,10 +23,7 @@ class Command(BaseCommand):
             return
 
         # Simple fixture format check (Django list of objects)
-        if isinstance(data, list) and len(data) > 0:
-            fields = data[0].get("fields", {})
-        else:
-            fields = data # assume dict
+        fields = data[0].get("fields", {}) if isinstance(data, list) and len(data) > 0 else data
 
         site_settings = SiteSettings.load()
         updated_fields = 0

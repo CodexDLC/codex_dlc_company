@@ -41,6 +41,26 @@ class SiteSettings(models.Model):
     meta_title = models.CharField(_("Default Meta Title"), max_length=255, default="codex_dlc_company")
     meta_description = models.TextField(_("Default Meta Description"), blank=True)
     favicon_url = models.CharField(_("Favicon URL"), max_length=500, default="/static/img/favicon.ico")
+    og_image_url = models.URLField(
+        _("OG Image URL"), blank=True, help_text=_("Open Graph share image (1200x630px recommended)")
+    )
+    canonical_domain = models.URLField(
+        _("Canonical Domain"),
+        blank=True,
+        help_text=_(
+            "Primary domain for canonical/hreflang tags (e.g. https://codexdlc.com). Falls back to CANONICAL_DOMAIN from .env"
+        ),
+    )
+    # --- Analytics ---
+    ga4_measurement_id = models.CharField(
+        _("GA4 Measurement ID"), max_length=50, blank=True, help_text=_("e.g. G-XXXXXXXXXX")
+    )
+    gtm_container_id = models.CharField(
+        _("GTM Container ID"), max_length=50, blank=True, help_text=_("e.g. GTM-XXXXXXX")
+    )
+    # --- Geo ---
+    geo_lat = models.DecimalField(_("Latitude"), max_digits=10, decimal_places=7, null=True, blank=True)
+    geo_lng = models.DecimalField(_("Longitude"), max_digits=10, decimal_places=7, null=True, blank=True)
 
     # --- Technical & Admin Metadata ---
     # These are used for internal logic (notifications, worker routing)
@@ -48,25 +68,22 @@ class SiteSettings(models.Model):
         _("Admin Channel ID (Internal)"),
         max_length=100,
         blank=True,
-        help_text=_("Telegram ID for internal notifications (e.g. -100...)")
+        help_text=_("Telegram ID for internal notifications (e.g. -100...)"),
     )
     telegram_technical_bot_username = models.CharField(
-        _("Technical Bot Username"),
-        max_length=100,
-        blank=True,
-        help_text=_("The bot that sends admin alerts")
+        _("Technical Bot Username"), max_length=100, blank=True, help_text=_("The bot that sends admin alerts")
     )
     telegram_notification_topic_id = models.IntegerField(
         _("Notification Topic ID"),
         null=True,
         blank=True,
-        help_text=_("The topic ID in the admin channel for general notifications")
+        help_text=_("The topic ID in the admin channel for general notifications"),
     )
     telegram_topics = models.JSONField(
         _("Telegram Topics Map"),
         default=dict,
         blank=True,
-        help_text=_("Mapping of services to Telegram Topic IDs (e.g. {'hair': 2, 'nails': 4})")
+        help_text=_("Mapping of services to Telegram Topic IDs (e.g. {'hair': 2, 'nails': 4})"),
     )
 
     class Meta:
@@ -80,14 +97,18 @@ class SiteSettings(models.Model):
         self.pk = 1  # Singleton
         if not self.site_base_url:
             self.site_base_url = settings.SITE_BASE_URL
+        if not self.canonical_domain:
+            self.canonical_domain = settings.CANONICAL_DOMAIN
 
         super().save(*args, **kwargs)
 
-        # Sync to Redis
+        # Sync to Redis (Safe for tests and connection issues)
         try:
-            from features.system.redis_managers.site_settings_manager import SiteSettingsManager
+            from ..redis_managers.site_settings_manager import SiteSettingsManager
+
             SiteSettingsManager.save_to_redis(self)
-        except ImportError:
+        except (ImportError, Exception):
+            # Catch all exceptions to prevent Redis issues from breaking DB saves
             pass
 
     @classmethod

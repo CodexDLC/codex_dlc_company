@@ -1,0 +1,88 @@
+/* --- Light Theme Component Overrides --- */
+
+/* Buttons: solid fill on light (glow → shadow) */
+.btn-primary {
+    border-color: var(--cyber-blue);
+    color: var(--cyber-blue);
+    background: transparent;
+}
+
+.btn-primary:hover {
+    background: var(--cyber-blue);
+    color: #FFFFFF;
+    box-shadow: var(--glow-btn);
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--gray-100);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary:hover {
+    background: var(--glass-bg-elevated);
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Bento Cards: frosted glass with soft shadows */
+.bento-card {
+    background: var(--glass-bg);
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.bento-card:hover {
+    border-color: var(--glass-border-hover);
+    box-shadow:
+        0 4px 24px rgba(0, 151, 167, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Floating Dock: solid frosted white */
+.floating-dock {
+    background: var(--dock-bg);
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.10),
+        0 1px 4px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Status Dot: green stays green, pulse subtler */
+@keyframes status-pulse-light {
+    0%, 100% { box-shadow: 0 0 4px var(--status-green); }
+    50% { box-shadow: 0 0 10px var(--status-green), 0 0 18px rgba(0, 150, 74, 0.25); }
+}
+
+.status-dot {
+    animation: status-pulse-light 2s ease-in-out infinite;
+}
+
+/* Terminal Input: light border on white bg */
+.terminal-input {
+    color: var(--gray-100);
+    border-bottom-color: var(--glass-border);
+}
+
+.terminal-input::placeholder {
+    color: var(--gray-600);
+}
+
+.terminal-input:focus {
+    border-bottom-color: var(--cyber-blue);
+}
+
+/* Island Footer: light glass */
+.island-footer {
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Tech label: darker teal for light */
+.tech-label {
+    color: var(--cyber-blue);
+}

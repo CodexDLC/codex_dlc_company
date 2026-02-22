@@ -1,0 +1,77 @@
+# CodexDLC — AI Agent Context (EN)
+# Version: 1.0 | Region: DACH | Date: 2026
+
+## Who We Are
+
+CodexDLC is a remote IT studio specializing in digital products for small and medium-sized businesses.
+We serve clients worldwide. Primary market: DACH region (Germany, Austria, Switzerland).
+Founded: 2024. Team: full-stack developers and system architects.
+
+## What We Do
+
+### 1. Website as a Service (WaaS) — Subscription Websites
+- Development and support of premium websites for service businesses on a fixed monthly subscription
+- Includes: custom design, SEO optimization, hosting, domain, corporate email
+- Unlimited revisions and feature development within the subscription
+- 24/7 server monitoring, 99.9% Uptime SLA
+- Target niches: beauty salons, barbershops, construction, auto services, local businesses
+
+### 2. Telegram Bots & Automation
+- Custom Telegram bot development for businesses
+- Lead qualification via scripted FSM (Finite State Machine)
+- Online client booking via Telegram Web App
+- Real-time admin notifications
+- CRM system and database integration
+- Tech stack: Python, Aiogram, PostgreSQL, Redis
+
+### 3. Prototype in 48 Hours
+- Ready-made business templates for rapid start
+- Working interactive prototype within 48 hours of choosing a concept
+- Full launch in 7–14 days after approval
+- Available templates: Lily Salon, DLC Montage, Builder Pro, Auto Service Hub
+
+## Technology Stack
+
+Backend: Python 3.13, Django 5.x, FastAPI, Django Ninja
+Frontend: custom HTML/CSS/JS (no frameworks), HTMX
+Databases: PostgreSQL, Redis
+Infrastructure: Docker, Nginx, CI/CD
+Bots: Aiogram 3.x
+Monitoring: Prometheus, Django Debug Toolbar
+
+## Performance
+
+- TTFB (Time to First Byte): < 200ms
+- Uptime SLA: 99.9%
+- Lighthouse Score: 100/100
+
+## Pricing & Business Model
+
+- WaaS: fixed monthly subscription (contact us for current pricing)
+- Bots: one-time development + optional ongoing support
+- Prototype: quick start, price depends on template and customization
+- No hidden fees. Everything is included in the chosen plan.
+
+## Contact
+
+Email: info@codexdlc.com
+Telegram: @codexdlc (check current contacts on the website)
+Website: https://codexdlc.com
+Languages: Russian, English, German
+
+## FAQ
+
+**Do you work with clients outside DACH?**
+Yes. We work remotely with clients worldwide.
+
+**What does the WaaS subscription mean?**
+You pay a fixed monthly fee and receive a complete website — all updates, revisions, hosting and support are included. No large one-time invoices.
+
+**How fast do you deliver?**
+Prototype: 48 hours. Full launch: 7–14 business days.
+
+**Can I cancel the subscription?**
+Yes. Cancellation terms are discussed individually.
+
+**Do your Telegram bots comply with GDPR/DSGVO?**
+Yes. All bots are localized for DE/EN/RU and built in compliance with DSGVO requirements.

@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ site_settings.meta_title|default:"CodexDLC — Ваш бизнес. Наш IT-движок." }}{% endblock %}
+{% block og_title %}{{ site_settings.meta_title|default:"CodexDLC — Ваш бизнес. Наш IT-движок." }}{% endblock %}
+{% block twitter_title %}{{ site_settings.meta_title|default:"CodexDLC" }}{% endblock %}
+
+{% block meta_extra %}{% include "includes/_schema_local_business.html" %}{% endblock %}
+
+{% block content %}
+
+    {# ======================== BLOCK 1: HERO ======================== #}
+    <section class="hero" id="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-torch" id="hero-torch"></div>
+        <div class="container hero-content">
+            <span class="tech-label">{% trans "home_hero_label" %}</span>
+            <h1 class="hero-title" style="font-size: clamp(48px, 10vw, 84px); line-height: 1.05; margin-bottom: 32px;">
+                {{ content.home_hero_title|default:_("home_hero_title")|linebreaksbr }}
+            </h1>
+            <p style="font-size: 20px; color: var(--gray-400); margin-bottom: 48px; max-width: 620px; line-height: 1.65;">
+                {{ content.home_hero_subtitle|default:_("home_hero_subtitle") }}
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="{% url 'main:contacts' %}" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">{% trans "btn_cta_booking" %}</a>
+                <a href="#services" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">{% trans "home_hero_btn_services" %}</a>
+            </div>
+        </div>
+    </section>
+
+    {# ======================== BLOCK 2: PROBLEM vs SOLUTION ======================== #}
+    <section style="padding: 120px 0;">
+        <div class="container">
+            <span class="tech-label">{% trans "home_compare_label" %}</span>
+            <h2 style="font-size: 40px; margin-bottom: 16px;">{% trans "home_compare_title" %}</h2>
+            <div class="contrast-grid">
+                <div class="contrast-card">
+                    <h4 style="color: var(--gray-600);">CLASSIC_AGENCIES</h4>
+                    <ul class="contrast-list">
+                        <li>{{ content.home_compare_classic_1 }}</li>
+                        <li>{{ content.home_compare_classic_2 }}</li>
+                        <li>{{ content.home_compare_classic_3 }}</li>
+                        <li>{{ content.home_compare_classic_4 }}</li>
+                    </ul>
+                </div>
+                <div class="contrast-card active">
+                    <h4 style="color: var(--cyber-blue);">CODEXDLC_SUBSCRIPTION</h4>
+                    <ul class="contrast-list">
+                        <li>{{ content.home_compare_codex_1 }}</li>
+                        <li>{{ content.home_compare_codex_2 }}</li>
+                        <li>{{ content.home_compare_codex_3 }}</li>
+                        <li>{{ content.home_compare_codex_4 }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    {# ======================== BLOCK 3: Z-PATTERN SERVICES ======================== #}
+    <section id="services" class="z-section">
+        <div class="container">
+            <span class="tech-label">{% trans "home_services_label" %}</span>
+            <h2 style="font-size: 40px; margin-bottom: 80px;">{% trans "home_services_title" %}</h2>
+
+            {# 3.1 WaaS #}
+            <div class="z-row" style="margin-bottom: 96px;">
+                <div class="z-text-block">
+                    <div>
+                        <span class="tech-label" style="margin-bottom: 12px;">01 // WEBSITE AS A SERVICE</span>
+                        <h2>{% trans "home_service_waas_title" %}</h2>
+                    </div>
+                    <p>{{ content.home_service_waas_desc }}</p>
+                    <ul class="contrast-list" style="margin-top: 8px;">
+                        <li>{{ content.home_service_waas_feat_1 }}</li>
+                        <li>{{ content.home_service_waas_feat_2 }}</li>
+                        <li>{{ content.home_service_waas_feat_3 }}</li>
+                        <li>{{ content.home_service_waas_feat_4 }}</li>
+                    </ul>
+                    <a href="#" class="z-link">{% trans "btn_action_more" %} &nbsp;→</a>
+                </div>
+                <div class="z-visual">
+                    <div class="z-visual-accent"></div>
+                    <div style="text-align: center; z-index: 1;">
+                        <div style="font-size: 10px; margin-bottom: 16px; color: var(--gray-600);">[ LILY_SALON_PREVIEW ]</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 24px;">
+                            <div style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
+                            <div style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
+                            <div style="height: 80px; grid-column: span 2; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
+                            <div style="height: 40px; grid-column: span 2; background: var(--cyber-blue); opacity: 0.15; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# 3.2 Telegram Bots #}
+            <div class="z-row reverse" style="margin-bottom: 96px;">
+                <div class="z-text-block">
+                    <div>
+                        <span class="tech-label" style="margin-bottom: 12px;">02 // AUTOMATION</span>
+                        <h2>{% trans "home_service_bot_title" %}</h2>
+                    </div>
+                    <p>{{ content.home_service_bot_desc }}</p>
+                    <ul class="contrast-list" style="margin-top: 8px;">
+                        <li>{{ content.home_service_bot_feat_1 }}</li>
+                        <li>{{ content.home_service_bot_feat_2 }}</li>
+                        <li>{{ content.home_service_bot_feat_3 }}</li>
+                        <li>{{ content.home_service_bot_feat_4 }}</li>
+                    </ul>
+                    <a href="#" class="z-link">{% trans "btn_action_more" %} &nbsp;→</a>
+                </div>
+                <div class="z-visual blue-accent">
+                    <div class="z-visual-accent"></div>
+                    <div style="z-index: 1; padding: 24px; width: 100%;">
+                        <div style="background: var(--glass-bg-elevated); border-radius: 12px; padding: 16px; border: 1px solid var(--glass-border);">
+                            <div style="font-size: 10px; color: var(--gray-600); margin-bottom: 12px;">TELEGRAM_BOT // ACTIVE</div>
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <div style="background: var(--glass-bg); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--gray-400); border: 1px solid var(--glass-border);">{{ content.home_service_bot_demo_user }}</div>
+                                <div style="background: rgba(0, 240, 255, 0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--cyber-blue); border: 1px solid rgba(0,240,255,0.15); align-self: flex-end;">{{ content.home_service_bot_demo_bot }}</div>
+                                <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                                    <span class="status-dot" style="margin-right: 0;"></span>
+                                    <span style="font-family: var(--font-mono); font-size: 10px; color: var(--status-green);">NEW_LEAD // ADMIN_NOTIFIED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# 3.3 Prototypes #}
+            <div class="z-row">
+                <div class="z-text-block">
+                    <div>
+                        <span class="tech-label" style="margin-bottom: 12px;">03 // PLUG & PLAY</span>
+                        <h2>{% trans "home_service_proto_title" %}</h2>
+                    </div>
+                    <p>{{ content.home_service_proto_desc }}</p>
+                    <ul class="contrast-list" style="margin-top: 8px;">
+                        <li>{{ content.home_service_proto_feat_1 }}</li>
+                        <li>{{ content.home_service_proto_feat_2 }}</li>
+                        <li>{{ content.home_service_proto_feat_3 }}</li>
+                        <li>{{ content.home_service_proto_feat_4 }}</li>
+                    </ul>
+                    <a href="#" class="z-link">{% trans "nav_main_prototypes" %} &nbsp;→</a>
+                </div>
+                <div class="z-visual">
+                    <div class="z-visual-accent"></div>
+                    <div style="z-index: 1; padding: 24px; width: 100%;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                            <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">LILY<br>SALON</div>
+                            <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">DLC<br>MONTAGE</div>
+                            <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid rgba(0,240,255,0.25); font-family: var(--font-mono); font-size: 9px; color: var(--cyber-blue); text-align: center;">AUTO<br>HUB</div>
+                            <div style="grid-column: span 3; background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">BUILDER PRO // CONSTRUCTION</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    {# ======================== BLOCK 4: BENTO GRID (Subscription Value) ======================== #}
+    <section style="padding: 120px 0;">
+        <div class="container">
+            <span class="tech-label">{% trans "home_sub_label" %}</span>
+            <h2 style="font-size: 40px; margin-bottom: 48px;">{% trans "home_sub_title" %}</h2>
+            <div class="bento-grid">
+                <div class="bento-card" style="grid-column: span 8; grid-row: span 2; min-height: 400px;">
+                    <div>
+                        <h3>{% trans "home_sub_dev_title" %}</h3>
+                        <p style="color: var(--gray-400);">{{ content.home_sub_dev_desc }}</p>
+                    </div>
+                    <div style="height: 180px; background: var(--glass-glow-blue); border: 1px dashed var(--glass-border); border-radius: 16px; margin-top: 32px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); color: var(--gray-600); font-size: 12px;">[ LILY_SALON_PREVIEW ]</div>
+                </div>
+                <div class="bento-card" style="grid-column: span 4;">
+                    <h3>{% trans "home_sub_seo_title" %}</h3>
+                    <p style="color: var(--gray-400);">{{ content.home_sub_seo_desc }}</p>
+                </div>
+                <div class="bento-card" style="grid-column: span 4;">
+                    <h3>{% trans "home_sub_infra_title" %}</h3>
+                    <p style="color: var(--gray-400);">{{ content.home_sub_infra_desc }}</p>
+                </div>
+                <div class="bento-card" style="grid-column: span 12; flex-direction: row; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span class="status-dot"></span>
+                        <span style="font-family: var(--font-mono); font-size: 14px; color: var(--status-green);">UPTIME 99.9%</span>
+                    </div>
+                    <h3 style="margin: 0;">{% trans "home_sub_support_title" %}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    {# ======================== BLOCK 5: TECH CORNER ======================== #}
+    <section style="padding: 120px 0;">
+        <div class="container">
+            <span class="tech-label">{% trans "home_tech_label" %}</span>
+            <h2 style="font-size: 40px; margin-bottom: 16px;">{% trans "home_tech_title" %}</h2>
+            <p style="font-size: 17px; color: var(--gray-400); max-width: 600px; margin-bottom: 0;">{{ content.home_tech_subtitle }}</p>
+            <div class="tech-bento">
+                <div class="bento-card" style="grid-column: span 5;">
+                    <span class="tech-label" style="margin-bottom: 16px;">SYSTEM_ARCHITECT</span>
+                    <h3 style="margin-bottom: 12px;">{% trans "home_tech_arch_title" %}</h3>
+                    <p style="color: var(--gray-400); font-size: 15px; line-height: 1.6;">{{ content.home_tech_arch_desc }}</p>
+                    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 10px; color: var(--gray-600);">DACH_REGION // EST. 2024</div>
+                </div>
+                <div class="bento-card" style="grid-column: span 7;">
+                    <span class="tech-label" style="margin-bottom: 16px;">TECH_STACK</span>
+                    <div class="tech-stack">
+                        <span class="tech-badge active">Python</span>
+                        <span class="tech-badge active">Django</span>
+                        <span class="tech-badge active">FastAPI</span>
+                        <span class="tech-badge active">HTMX</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Redis</span>
+                        <span class="tech-badge">Aiogram</span>
+                        <span class="tech-badge">Nginx</span>
+                        <span class="tech-badge">CI/CD</span>
+                    </div>
+                    <div style="margin-top: 24px; padding: 16px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
+                        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 8px;">// performance benchmark</div>
+                        <div style="display: flex; gap: 32px;">
+                            <div>
+                                <div style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); font-weight: 600;">&lt;200ms</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Time to First Byte</div>
+                            </div>
+                            <div>
+                                <div style="font-family: var(--font-mono); font-size: 20px; color: var(--status-green); font-weight: 600;">99.9%</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Uptime SLA</div>
+                            </div>
+                            <div>
+                                <div style="font-family: var(--font-mono); font-size: 20px; color: var(--electric-purple); font-weight: 600;">100</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Lighthouse Score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    {# ======================== BLOCK 6: PORTFOLIO MARQUEE ======================== #}
+    <section style="padding: 80px 0;">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span class="marquee-item">LILY SALON</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">DLC MONTAGE</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">BUILDER PRO</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">AUTO SERVICE HUB</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">LILY SALON</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">DLC MONTAGE</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">BUILDER PRO</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+                <span class="marquee-item">AUTO SERVICE HUB</span>
+                <span class="marquee-item" style="color: var(--gray-600);">//</span>
+            </div>
+        </div>
+    </section>
+
+    {# ======================== BLOCK 7: FINAL FUNNEL (CTA) ======================== #}
+    <section style="padding: 140px 0;">
+        <div class="container" style="max-width: 650px; text-align: center;">
+            <span class="tech-label">{% trans "home_cta_label" %}</span>
+            <h2 style="font-size: 48px; margin-bottom: 24px;">{% trans "home_cta_title" %}</h2>
+            <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">{{ content.home_cta_subtitle }}</p>
+            <div style="text-align: left; background: var(--glass-bg); padding: 40px; border-radius: var(--radius-bento); border: 1px solid var(--glass-border);">
+                <input type="text" class="terminal-input" placeholder="{% trans "home_cta_input_placeholder" %}" style="font-size: 20px; margin-bottom: 32px;">
+                <button class="btn btn-primary" style="width: 100%; padding: 24px; font-size: 18px;">{% trans "home_cta_btn" %}</button>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    {# Logo DLC Animation #}
+    (function () {
+        var dlcEl     = document.getElementById('brand-dlc');
+        var taglineEl = document.getElementById('brand-tagline');
+
+        var taglines = [
+            'Digital Lead Conversion',
+            'Digital Local Clients',
+            "Developer's Life Cycle",
+            'Digital Life Creation'
+        ];
+        var current = 0;
+
+        var T_HOLD    = 1800;
+        var T_FADE    = 400;
+        var T_PAUSE   = 200;
+        var T_TAGLINE = 320;
+        var T_READ    = 3200;
+        var T_OUT     = 340;
+        var T_RESTORE = 300;
+
+        function runCycle() {
+            var tag = taglines[current];
+            current = (current + 1) % taglines.length;
+
+            setTimeout(function () {
+                dlcEl.classList.add('dlc-out');
+            }, T_HOLD);
+
+            setTimeout(function () {
+                taglineEl.textContent = tag;
+                taglineEl.classList.add('tagline-in');
+            }, T_HOLD + T_FADE + T_PAUSE);
+
+            setTimeout(function () {
+                taglineEl.classList.remove('tagline-in');
+                taglineEl.classList.add('tagline-out');
+            }, T_HOLD + T_FADE + T_PAUSE + T_TAGLINE + T_READ);
+
+            setTimeout(function () {
+                dlcEl.classList.remove('dlc-out');
+                dlcEl.classList.add('dlc-in');
+            }, T_HOLD + T_FADE + T_PAUSE + T_TAGLINE + T_READ + T_OUT * 0.5);
+
+            var total = T_HOLD + T_FADE + T_PAUSE + T_TAGLINE + T_READ + T_OUT + T_RESTORE;
+            setTimeout(function () {
+                taglineEl.classList.remove('tagline-out');
+                dlcEl.classList.remove('dlc-in');
+                runCycle();
+            }, total);
+        }
+
+        setTimeout(runCycle, 1200);
+    })();
+</script>
+
+<script>
+    {# Hero Torch + Z-row Parallax #}
+    (function () {
+        var hero  = document.getElementById('hero-section');
+        var torch = document.getElementById('hero-torch');
+        var raf   = null;
+        var tx = 0, ty = 0;
+        var cx = 0, cy = 0;
+
+        hero.addEventListener('mousemove', function (e) {
+            var r = hero.getBoundingClientRect();
+            tx = e.clientX - r.left;
+            ty = e.clientY - r.top;
+            if (!raf) raf = requestAnimationFrame(animTorch);
+        });
+
+        hero.addEventListener('mouseleave', function () {
+            torch.style.opacity = '0';
+            if (raf) { cancelAnimationFrame(raf); raf = null; }
+        });
+
+        hero.addEventListener('mouseenter', function () {
+            torch.style.opacity = '1';
+        });
+
+        function animTorch() {
+            cx += (tx - cx) * 0.10;
+            cy += (ty - cy) * 0.10;
+            torch.style.left = cx + 'px';
+            torch.style.top  = cy + 'px';
+            raf = requestAnimationFrame(animTorch);
+        }
+
+        var zRows = document.querySelectorAll('.z-row');
+        zRows.forEach(function (row) {
+            var visual = row.querySelector('.z-visual');
+            if (!visual) return;
+
+            row.addEventListener('mousemove', function (e) {
+                var r = row.getBoundingClientRect();
+                var nx = (e.clientX - r.left) / r.width  - 0.5;
+                var ny = (e.clientY - r.top)  / r.height - 0.5;
+                visual.style.transform = 'translate(' + (nx * 12) + 'px, ' + (ny * 8) + 'px)';
+            });
+
+            row.addEventListener('mouseleave', function () {
+                visual.style.transform = 'translate(0, 0)';
+            });
+        });
+    })();
+</script>
+{% endblock %}

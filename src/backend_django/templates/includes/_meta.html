@@ -1,0 +1,63 @@
+{% load i18n static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %} {{ site_settings.meta_title|default:'CodexDLC — Ваш бизнес. Наш IT-движок.' }} {% endblock %}</title>
+<meta name="description" content="{% block meta_description %} {{ site_settings.meta_description|default:'Разработка, хостинг и поддержка премиальных сайтов по подписке.' }} {% endblock %}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+{# Canonical — всегда на основной домен #}
+{% with canonical_base=site_settings.canonical_domain|default:'https://codexdlc.com' %}
+<link rel="canonical" href="{{ canonical_base }}{{ request.path }}">
+
+{# Hreflang — корректная генерация #}
+{% get_current_language as CURRENT_LANG %}
+{% for lang_code, lang_name in LANGUAGES %}
+    {% with path_suffix=request.path|slice:'3:' %}
+    <link rel="alternate" hreflang="{{ lang_code }}" href="{{ canonical_base }}/{{ lang_code }}{{ path_suffix }}">
+    {% endwith %}
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ canonical_base }}{{ request.path }}">
+
+{# Open Graph #}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site_settings.company_name|default:'CodexDLC' }}">
+<meta property="og:title" content="{% block og_title %} {{ site_settings.meta_title|default:'CodexDLC — Ваш бизнес. Наш IT-движок.' }} {% endblock %}">
+<meta property="og:description" content="{% block og_description %} {{ site_settings.meta_description|default:'Разработка, хостинг и поддержка премиальных сайтов по подписке.' }} {% endblock %}">
+<meta property="og:url" content="{{ canonical_base }}{{ request.path }}">
+<meta property="og:image" content="{{ site_settings.og_image_url|default:'' }}">
+<meta property="og:locale" content="{{ CURRENT_LANG }}">
+{% endwith %}
+
+{# Twitter Cards #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% block twitter_title %} {{ site_settings.meta_title|default:'CodexDLC' }} {% endblock %}">
+<meta name="twitter:description" content="{% block twitter_description %} {{ site_settings.meta_description|default:'' }} {% endblock %}">
+<meta name="twitter:image" content="{{ site_settings.og_image_url|default:'' }}">
+
+{# Favicon System #}
+<link rel="icon" type="image/webp" href="{% static 'img/favicon.webp' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+
+{# GA4 + GTM #}
+{% if site_settings.gtm_container_id %}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site_settings.gtm_container_id }}');</script>
+{% elif site_settings.ga4_measurement_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site_settings.ga4_measurement_id }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site_settings.ga4_measurement_id }}');</script>
+{% endif %}
+
+{# Anti-flash theme script #}
+<script>
+    (function () {
+        var saved = localStorage.getItem('codex-theme');
+        var prefer = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        var theme = saved || prefer;
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+</script>

@@ -1,0 +1,254 @@
+/* --- UI Components (High-Tech Gadget) --- */
+
+/* Buttons (Tactile Terminal Style) */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-btn);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-primary {
+    border-color: var(--cyber-blue);
+    color: var(--cyber-blue);
+    background: transparent;
+}
+
+.btn-primary:hover {
+    background: var(--cyber-blue);
+    color: var(--deep-space);
+    box-shadow: var(--glow-btn);
+}
+
+.btn-primary:active {
+    background: var(--cyber-blue-hover);
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    color: var(--gray-100);
+}
+
+.btn-secondary:hover {
+    background: var(--glass-bg-elevated);
+    border-color: var(--glass-border-hover);
+}
+
+/* Bento Cards */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gutter);
+}
+
+.bento-card {
+    background: linear-gradient(135deg, var(--glass-bg-elevated), var(--glass-bg));
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-bento);
+    padding: var(--space-lg);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.bento-card:hover {
+    border-color: var(--glass-border-hover);
+    box-shadow:
+        0 0 24px var(--glass-glow-blue),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+/* Floating Dock (Pill-shape) */
+.floating-dock {
+    position: fixed;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dock-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-dock);
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    z-index: 1000;
+}
+
+.dock-link {
+    color: var(--gray-400);
+    font-family: var(--font-headings);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.dock-link:hover {
+    color: var(--gray-100);
+}
+
+.dock-link.active {
+    color: var(--cyber-blue);
+}
+
+/* Status Indicators */
+@keyframes status-pulse {
+    0%, 100% { box-shadow: 0 0 6px var(--status-green); }
+    50% { box-shadow: 0 0 14px var(--status-green), 0 0 24px rgba(0, 255, 102, 0.3); }
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--status-green);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: status-pulse 2s ease-in-out infinite;
+}
+
+/* Forms (Command Line Style) */
+.terminal-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--gray-100);
+    font-family: var(--font-mono);
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.terminal-input::placeholder {
+    color: var(--gray-600);
+}
+
+.terminal-input:focus {
+    border-bottom: 1px solid var(--cyber-blue);
+}
+
+/* Footer (Terminal Style) */
+.footer {
+    background-color: var(--deep-space);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gutter);
+}
+
+.footer h4 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: var(--space-md);
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: var(--space-xs);
+    font-size: 14px;
+    color: var(--gray-400);
+}
+
+.footer ul li a:hover {
+    color: var(--cyber-blue);
+}
+
+/* Brand Logo with DLC Animation */
+.brand-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    font-family: var(--font-headings);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+}
+
+.brand-codex {
+    color: var(--gray-100);
+}
+
+.brand-dlc {
+    color: var(--cyber-blue);
+    display: inline-block;
+    transform-origin: center bottom;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.brand-dlc.dlc-out {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.brand-dlc.dlc-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.brand-tagline {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--cyber-blue);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.32s ease, transform 0.32s ease;
+    pointer-events: none;
+}
+
+.brand-tagline.tagline-in {
+    opacity: 0.75;
+    transform: translateY(0);
+}
+
+.brand-tagline.tagline-out {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray-400);
+    padding: 0;
+    transition: color 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.theme-toggle:hover {
+    color: var(--cyber-blue);
+}

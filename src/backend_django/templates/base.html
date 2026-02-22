@@ -1,22 +1,32 @@
-{% load i18n %}
-<!DOCTYPE html>
+{% load i18n static %}<!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ site_settings.meta_title }}{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}{{ site_settings.meta_description }}{% endblock %}">
-    <link rel="icon" type="image/x-icon" href="{{ site_settings.favicon_url }}">
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    {% block extra_css %}{% endblock %}
+    {% include "includes/_meta.html" %}
+    {% include "includes/_critical_css.html" %}
+    {% include "includes/_preloads.html" %}
+    {% block meta_extra %}{% endblock %}
 </head>
 <body>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
 
+    {% include "includes/_header.html" %}
+    {% include "includes/_floating_dock.html" %}
+
+    <div class="site-wrapper">
+        <main class="main-container">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    {% include "includes/_footer.html" %}
+
+    {# Async CSS — грузим после рендера, не блокируем #}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" id="theme-css"
+          data-dark="{% static 'css/app.css' %}" data-light="{% static 'css/app-light.css' %}"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{% static 'css/app.css' %}"></noscript>
+
+    <script src="{% static 'js/theme.js' %}" defer></script>
     {% block extra_js %}{% endblock %}
+
 </body>
 </html>

@@ -76,13 +76,28 @@ data/uploads/
 # Docker & Deploy (local overrides)
 # ═══════════════════════════════════════════
 deploy/.env
-deploy/backend/
-deploy/bot/
-deploy/worker/
-deploy/nginx/
-deploy/docker-compose.yml
-deploy/docker-compose.prod.yml
-deploy/docker-compose.test.yml
+# Разблокируем папки с Docker-файлами для CI/CD
+!deploy/django/
+!deploy/bot/
+!deploy/worker/
+!deploy/nginx/
+
+# Разблокируем конфиги композа
+!deploy/docker-compose.yml
+!deploy/docker-compose.prod.yml
+!deploy/docker-compose.test.yml
+
+# ═══════════════════════════════════════════
+# Fonts (Keep only variable files in root)
+# ═══════════════════════════════════════════
+src/backend_django/static/fonts/Inter/
+src/backend_django/static/fonts/JetBrains_Mono/
+src/backend_django/static/fonts/Space_Grotesk/
+
+# ═══════════════════════════════════════════
+# Images (Keep only optimized files in root)
+# ═══════════════════════════════════════════
+src/backend_django/static/img/_source/
 
 # ═══════════════════════════════════════════
 # Template installer artifacts

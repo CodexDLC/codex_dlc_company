@@ -1,0 +1,47 @@
+/* --- Light Theme Home Page Overrides --- */
+
+/* Hero background: stronger glow on light bg */
+.hero-bg {
+    background:
+        radial-gradient(ellipse 70% 60% at 50% 70%, rgba(107, 33, 214, 0.18), transparent),
+        radial-gradient(ellipse 45% 35% at 85% 15%, rgba(0, 131, 143, 0.14), transparent),
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+}
+
+/* Hero: dark text on light background */
+.hero-title {
+    background: linear-gradient(180deg, #0A0A0A 0%, #4B5563 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Contrast Cards: light variant */
+.contrast-card {
+    background: var(--glass-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contrast-card:not(.active):hover {
+    border-color: rgba(107, 33, 214, 0.25);
+    box-shadow: 0 4px 16px rgba(107, 33, 214, 0.06);
+}
+
+.contrast-card.active {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.80));
+    border-color: var(--cyber-blue);
+    box-shadow: 0 4px 24px rgba(0, 131, 143, 0.10);
+}
+
+/* Marquee: subtle on light */
+.marquee {
+    background: rgba(0, 0, 0, 0.02);
+    border-top-color: var(--glass-border);
+    border-bottom-color: var(--glass-border);
+}
+
+.marquee-item {
+    color: var(--gray-600);
+}

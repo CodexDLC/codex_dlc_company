@@ -1,0 +1,78 @@
+{% load i18n %}{% get_current_language as CURRENT_LANG %}{# JSON-LD — Organization + ITService. Include via {% block meta_extra %} on pages that need it. #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}/#org",
+      "name": "{{ site_settings.company_name|default:"CodexDLC" }}",
+      "url": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}{{ site_settings.logo_url|default:"/static/img/logo.webp" }}"
+      },
+      "image": "{{ site_settings.og_image_url|default:"" }}",
+      "description": "{{ site_settings.meta_description|default:"" }}",
+      "email": "{{ site_settings.email|default:"" }}",
+      "telephone": "{{ site_settings.phone|default:"" }}",
+      "foundingDate": "2024",
+      "areaServed": ["DE", "AT", "CH", "RU", "Worldwide"],
+      "availableLanguage": [
+        {"@type": "Language", "name": "Russian"},
+        {"@type": "Language", "name": "English"},
+        {"@type": "Language", "name": "German"}
+      ],
+      "sameAs": [{% spaceless %}
+        {% if site_settings.instagram_url %}"{{ site_settings.instagram_url }}"{% if site_settings.facebook_url or site_settings.telegram_channel_url %},{% endif %}{% endif %}
+        {% if site_settings.facebook_url %}"{{ site_settings.facebook_url }}"{% if site_settings.telegram_channel_url %},{% endif %}{% endif %}
+        {% if site_settings.telegram_channel_url %}"{{ site_settings.telegram_channel_url }}"{% endif %}
+      {% endspaceless %}]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}/#website",
+      "url": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}/{{ CURRENT_LANG }}/",
+      "name": "{{ site_settings.company_name|default:"CodexDLC" }}",
+      "publisher": {"@id": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}/#org"},
+      "inLanguage": ["ru", "en", "de"]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "IT Services",
+      "provider": {"@id": "{{ site_settings.canonical_domain|default:"https://codexdlc.com" }}/#org"},
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website as a Service (WaaS)",
+              "description": "Premium subscription websites for service businesses. Custom design, SEO, hosting, domain, email — all inclusive."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Telegram Bot Development",
+              "description": "Custom Telegram bots with FSM lead qualification, online booking via Telegram Web App and CRM integration."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rapid Prototyping",
+              "description": "Interactive business website prototype delivered in 48 hours. Launch-ready in 7–14 days after approval."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
