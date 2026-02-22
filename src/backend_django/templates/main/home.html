@@ -288,41 +288,6 @@
 
 {% block extra_js %}
 <script>
-    {# Theme Toggle #}
-    var DARK_CSS  = "{% static 'css/app.css' %}";
-    var LIGHT_CSS = "{% static 'css/app-light.css' %}";
-    var themeLink = document.getElementById('theme-css');
-    var themeBtn  = document.getElementById('theme-btn');
-
-    function getTheme() {
-        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-    }
-
-    function applyTheme(theme) {
-        if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeLink.href = LIGHT_CSS;
-            themeBtn.textContent = '[ D ]';
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-            themeLink.href = DARK_CSS;
-            themeBtn.textContent = '[ L ]';
-        }
-        localStorage.setItem('codex-theme', theme);
-    }
-
-    function toggleTheme() {
-        applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
-    }
-
-    (function () {
-        var current = getTheme();
-        themeBtn.textContent = current === 'light' ? '[ D ]' : '[ L ]';
-        if (current === 'light') { themeLink.href = LIGHT_CSS; }
-    })();
-</script>
-
-<script>
     {# Logo DLC Animation #}
     (function () {
         var dlcEl     = document.getElementById('brand-dlc');

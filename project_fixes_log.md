@@ -17,7 +17,7 @@
 *   **Entrypoint Script:** Файл `deploy/django/entrypoint.sh` отсутствовал в шаблоне, хотя вызывался в `Dockerfile`. Создан скрипт с поддержкой `collectstatic`, `migrate` и выполнения кастомных команд.
 *   **Docker Paths:** Исправлено несовпадение путей между `Dockerfile` (копирование в `/app`) и `docker-compose` (попытка запуска из `/app/src/backend_django`).
 *   **Missing Services:** В `docker-compose.yml` и `docker-compose.test.yml` добавлен сервис **Mailpit** для локального тестирования почты.
-*   **Test Environment:** 
+*   **Test Environment:**
     *   Создан отсутствующий файл `src/backend_django/core/settings/test.py`.
     *   Создан `deploy/docker-compose.test.yml` для изолированной проверки проекта.
 *   **Gitignore:** Разблокированы критические для CI/CD файлы `docker-compose.yml` и `docker-compose.test.yml`.

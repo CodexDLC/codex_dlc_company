@@ -1,5 +1,6 @@
 /* Main CSS Entry Point for Compiler */
 
+@import url('base/fonts.css');
 @import url('base/tokens.css');
 @import url('base/main.css');
 @import url('base/components.css');

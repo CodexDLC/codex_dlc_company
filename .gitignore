@@ -87,6 +87,13 @@ deploy/docker-compose.prod.yml
 !deploy/docker-compose.test.yml
 
 # ═══════════════════════════════════════════
+# Fonts (Keep only variable files in root)
+# ═══════════════════════════════════════════
+src/backend_django/static/fonts/Inter/
+src/backend_django/static/fonts/JetBrains_Mono/
+src/backend_django/static/fonts/Space_Grotesk/
+
+# ═══════════════════════════════════════════
 # Template installer artifacts
 # ═══════════════════════════════════════════
 .template_install_hash

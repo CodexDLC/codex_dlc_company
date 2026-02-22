@@ -3,25 +3,21 @@
 All notable changes to the **CodexDLC** project will be documented in this file.
 
 ## [0.2.0] - 2026-02-22
-### Core Architecture & Dual Mode UI
-*   **Architecture:** Streamlined project by removing FastAPI-related documentation and focusing on a robust Django-centric stack.
-*   **Dual Mode UI:** Implemented a comprehensive theme system with two modes:
-    *   **Dark (High-Tech Gadget):** Neon accents, Glassmorphism, Deep Space aesthetics.
-    *   **Light (Premium Studio):** Clean, Mac-style surfaces with adapted color tokens.
-*   **CSS Pipeline:** Integrated a custom CSS compiler with support for `compiler_config.json` and recursive `@import` resolution.
-*   **Template System:** Reorganized templates into a modular structure:
-    *   Added `includes/` for reusable components (Floating Dock, Header, Footer, Meta).
-    *   Implemented `Critical CSS` inlining for performance optimization.
-    *   Created dedicated views and templates for static pages (Contacts, FAQ, Legal).
-*   **Localization (i18n):** 
-    *   Configured Gettext for UI strings with full support for DE, EN, and RU.
-    *   Integrated `django-modeltranslation` for database-driven content.
-    *   Added initial fixtures for static translations.
-*   **SEO & AI Optimization:** 
-    *   Implemented JSON-LD `LocalBusiness` schema.
-    *   Added automated `hreflang` and `canonical` tag generation.
-    *   Optimized meta-structure for both human search engines and AI agents.
-*   **UX & Reliability:** Created custom error pages (400, 403, 404, 500) and implemented a "no-flash" theme switcher.
+### Design System & Frontend Implementation
+*   **Dual Mode UI:** Implemented "High-Tech Gadget" (Dark) and "Premium Studio" (Light) themes with a custom CSS compiler.
+*   **Typography:** Switched to local variable fonts (Inter, Space Grotesk, JetBrains Mono) for better performance and privacy.
+*   **Layout:** Implemented Z-Pattern for service sections and Bento Grid for technical specifications.
+*   **Components:** Created reusable components: Floating Dock (pill-shape), Glassmorphism cards, and tactile terminal-style buttons.
+*   **SEO & AI:** Added JSON-LD structured data, automated hreflang tags, and `llms_*.txt` context files for AI agents.
+*   **Performance:** Implemented Critical CSS inlining and font preloading.
+
+## [0.1.5] - 2026-02-22
+### Infrastructure & Template Hardening
+*   **Docker:** Created `docker-compose.test.yml` and integrated **Mailpit** for local email testing.
+*   **Hardening:** Fixed critical bugs in the base template (missing imports, incorrect Docker paths, entrypoint script).
+*   **Testing:** Established a dedicated test environment with SQLite in-memory and optimized settings.
+*   **QA Tools:** Overhauled `tools/dev/check.py` with dynamic container monitoring and automated linting (Ruff/Mypy).
+*   **Migrations:** Initial system migrations for SEO, analytics, and geo-location fields.
 
 ## [0.1.0] - 2026-02-22
 ### Foundation

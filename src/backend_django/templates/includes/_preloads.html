@@ -1,12 +1,5 @@
 {% load static %}
-{# Preconnect к внешним ресурсам #}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-{# DNS prefetch #}
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-{# Google Fonts — Inter, JetBrains Mono, Space Grotesk #}
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+{# Preload Local Variable Fonts for Performance #}
+<link rel="preload" href="{% static 'fonts/Inter-VariableFont_opsz,wght.ttf' %}" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{% static 'fonts/SpaceGrotesk-VariableFont_wght.ttf' %}" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{% static 'fonts/JetBrainsMono-VariableFont_wght.ttf' %}" as="font" type="font/ttf" crossorigin>

@@ -12,16 +12,15 @@ from django.urls import reverse
 class StaticPageSitemap(Sitemap):
     """Sitemap for static pages (home, contacts, faq, impressum, datenschutz)."""
 
-    changefreq = "weekly"
     protocol = "https"
 
     # (url_name, priority, changefreq)
     _pages = [
-        ("main:index",       1.0,  "weekly"),
-        ("main:contacts",    0.8,  "monthly"),
-        ("main:faq",         0.7,  "monthly"),
-        ("main:impressum",   0.3,  "yearly"),
-        ("main:datenschutz", 0.3,  "yearly"),
+        ("main:index", 1.0, "weekly"),
+        ("main:contacts", 0.8, "monthly"),
+        ("main:faq", 0.7, "monthly"),
+        ("main:impressum", 0.3, "yearly"),
+        ("main:datenschutz", 0.3, "yearly"),
     ]
 
     def items(self):

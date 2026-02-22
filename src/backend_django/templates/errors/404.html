@@ -19,13 +19,3 @@
     </div>
 </section>
 {% endblock %}
-
-{% block extra_js %}
-<script>
-    var DARK_CSS="{% static 'css/app.css' %}",LIGHT_CSS="{% static 'css/app-light.css' %}",themeLink=document.getElementById('theme-css'),themeBtn=document.getElementById('theme-btn');
-    function getTheme(){return document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';}
-    function applyTheme(t){if(t==='light'){document.documentElement.setAttribute('data-theme','light');themeLink.href=LIGHT_CSS;themeBtn.textContent='[ D ]';}else{document.documentElement.removeAttribute('data-theme');themeLink.href=DARK_CSS;themeBtn.textContent='[ L ]';}localStorage.setItem('codex-theme',t);}
-    function toggleTheme(){applyTheme(getTheme()==='dark'?'light':'dark');}
-    (function(){var c=getTheme();themeBtn.textContent=c==='light'?'[ D ]':'[ L ]';if(c==='light')themeLink.href=LIGHT_CSS;})();
-</script>
-{% endblock %}

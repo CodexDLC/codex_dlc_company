@@ -20,9 +20,12 @@
     {% include "includes/_footer.html" %}
 
     {# Async CSS — грузим после рендера, не блокируем #}
-    <link rel="stylesheet" href="{% static 'css/app.css' %}" id="theme-css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" id="theme-css"
+          data-dark="{% static 'css/app.css' %}" data-light="{% static 'css/app-light.css' %}"
+          media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="{% static 'css/app.css' %}"></noscript>
 
+    <script src="{% static 'js/theme.js' %}" defer></script>
     {% block extra_js %}{% endblock %}
 
 </body>
