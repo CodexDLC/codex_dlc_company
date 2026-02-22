@@ -1,3 +1,5 @@
+import re
+
 from django.core.cache import cache
 from django.utils.translation import get_language
 
@@ -8,6 +10,14 @@ from .models.static_translation import StaticTranslation
 def site_settings(request):
     """Makes site settings globally available in templates."""
     return {"site_settings": SiteSettings.load()}
+
+
+def path_without_lang(request):
+    """Provides current path stripped of language prefix for the language switcher."""
+    path = request.path
+    # Strip leading language prefix like /de/, /en/, /ru/
+    stripped = re.sub(r"^/[a-z]{2}/", "/", path)
+    return {"path_without_lang": stripped}
 
 
 def static_content(request):

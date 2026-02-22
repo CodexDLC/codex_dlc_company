@@ -58,7 +58,6 @@ services:
       - logs:/app/data/logs
     expose:
       - "8000"
-    # command removed to allow entrypoint.sh to handle startup (migrations, static, etc.)
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8000/api/v1/health" ]
       interval: 30s

@@ -25,7 +25,7 @@
                         <form action="{% url 'set_language' %}" method="post" style="display:inline;">
                             {% csrf_token %}
                             <input type="hidden" name="language" value="{{ lang_code }}">
-                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <input type="hidden" name="next" value="{{ path_without_lang }}">
                             <button type="submit" style="background:none;border:none;padding:0;cursor:pointer;color:var(--gray-400);font-family:var(--font-mono);font-size:12px;">{{ lang_code|upper }}</button>
                         </form>
                     {% endif %}

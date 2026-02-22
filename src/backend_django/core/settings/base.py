@@ -94,6 +94,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "features.system.context_processors.site_settings",
                 "features.system.context_processors.static_content",
+                "features.system.context_processors.path_without_lang",
             ],
         },
     },
@@ -195,7 +196,7 @@ LOCALE_PATHS = [BASE_DIR / "locale"]
 SITE_BASE_URL = os.environ.get("SITE_BASE_URL", "https://codexdlc.com")
 CANONICAL_DOMAIN = os.environ.get("CANONICAL_DOMAIN", SITE_BASE_URL)
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
