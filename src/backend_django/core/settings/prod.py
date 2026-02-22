@@ -70,7 +70,7 @@ DATABASES = {
 # Static files — collected by collectstatic
 # ═══════════════════════════════════════════
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles"  # noqa: F405
 
 # ═══════════════════════════════════════════
 # Logging

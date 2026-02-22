@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}404 — Страница не найдена — CodexDLC{% endblock %}
+
+{% block content %}
+<section style="min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 0;">
+    <div class="container" style="max-width: 560px;">
+        <span class="tech-label">ERROR // 404</span>
+        <h1 style="font-size: clamp(80px, 15vw, 140px); line-height: 1; margin-bottom: 8px; font-family: var(--font-mono); color: var(--glass-bg-elevated); -webkit-text-stroke: 1px var(--glass-border);">404</h1>
+        <h2 style="font-size: 28px; margin-bottom: 16px;">Страница не найдена</h2>
+        <p style="color: var(--gray-400); font-size: 16px; margin-bottom: 48px; line-height: 1.65;">
+            Запрошенный ресурс не существует или был перемещён. Проверьте адрес или вернитесь на главную.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="{% url 'main:index' %}" class="btn btn-primary" style="padding: 18px 36px; font-size: 15px;">НА ГЛАВНУЮ</a>
+            <a href="{% url 'main:contacts' %}" class="btn btn-secondary" style="padding: 18px 36px; font-size: 15px;">СВЯЗАТЬСЯ</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    var DARK_CSS="{% static 'css/app.css' %}",LIGHT_CSS="{% static 'css/app-light.css' %}",themeLink=document.getElementById('theme-css'),themeBtn=document.getElementById('theme-btn');
+    function getTheme(){return document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';}
+    function applyTheme(t){if(t==='light'){document.documentElement.setAttribute('data-theme','light');themeLink.href=LIGHT_CSS;themeBtn.textContent='[ D ]';}else{document.documentElement.removeAttribute('data-theme');themeLink.href=DARK_CSS;themeBtn.textContent='[ L ]';}localStorage.setItem('codex-theme',t);}
+    function toggleTheme(){applyTheme(getTheme()==='dark'?'light':'dark');}
+    (function(){var c=getTheme();themeBtn.textContent=c==='light'?'[ D ]':'[ L ]';if(c==='light')themeLink.href=LIGHT_CSS;})();
+</script>
+{% endblock %}

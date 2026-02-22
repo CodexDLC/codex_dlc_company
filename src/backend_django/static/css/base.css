@@ -1,18 +1,7 @@
-/* Main CSS Entry Point */
+/* Main CSS Entry Point for Compiler */
 
-@import url('tokens.css');
-@import url('layout.css');
-@import url('components.css');
-
-/* Global Reset & Base Styles */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-main, system-ui, sans-serif);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.5;
-}
+@import url('base/tokens.css');
+@import url('base/main.css');
+@import url('base/components.css');
+@import url('adaptive/layout.css');
+@import url('pages/home.css');

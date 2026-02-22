@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}Контакты — CodexDLC{% endblock %}
+{% block og_title %}Контакты — CodexDLC{% endblock %}
+
+{% block content %}
+<section style="padding: 160px 0 120px;">
+    <div class="container" style="max-width: 860px;">
+        <span class="tech-label">INITIATE_CONTACT</span>
+        <h1 style="font-size: clamp(40px, 6vw, 64px); margin-bottom: 24px;">Связаться с нами</h1>
+        <p style="font-size: 18px; color: var(--gray-400); margin-bottom: 64px; max-width: 560px; line-height: 1.65;">
+            Расскажите о вашем проекте — мы разберём задачи и предложим решение в течение 24 часов.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+
+            {# Форма #}
+            <div style="background: var(--glass-bg); padding: 40px; border-radius: var(--radius-bento); border: 1px solid var(--glass-border);">
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 24px;">// NEW_PROJECT_REQUEST</div>
+                <input type="text" class="terminal-input" placeholder="Имя..." style="margin-bottom: 16px;">
+                <input type="text" class="terminal-input" placeholder="Email или Telegram..." style="margin-bottom: 16px;">
+                <textarea class="terminal-input" placeholder="Опишите задачу..." style="height: 120px; resize: vertical; margin-bottom: 32px;"></textarea>
+                <button class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 16px;">ОТПРАВИТЬ ЗАПРОС</button>
+            </div>
+
+            {# Контактная информация #}
+            <div style="display: flex; flex-direction: column; gap: 32px; padding-top: 8px;">
+                <div>
+                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">EMAIL</div>
+                    <a href="mailto:hello@codexdlc.com" style="font-size: 18px; color: var(--cyber-blue);">hello@codexdlc.com</a>
+                </div>
+                <div>
+                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">TELEGRAM</div>
+                    <a href="https://t.me/codexdlc" target="_blank" rel="noopener" style="font-size: 18px; color: var(--cyber-blue);">@codexdlc</a>
+                </div>
+                <div>
+                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">REGION</div>
+                    <div style="font-size: 16px; color: var(--gray-400);">DACH — Deutschland, Austria, Switzerland</div>
+                </div>
+                <div style="padding: 20px; background: var(--glass-bg); border-radius: 12px; border: 1px solid var(--glass-border);">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <span class="status-dot"></span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--status-green);">ONLINE // RESPONSE &lt;24H</span>
+                    </div>
+                    <div style="font-size: 13px; color: var(--gray-400);">Мы отвечаем в рабочие дни с 9:00 до 19:00 (CET)</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    {# Theme Toggle (reused on all pages) #}
+    var DARK_CSS  = "{% static 'css/app.css' %}";
+    var LIGHT_CSS = "{% static 'css/app-light.css' %}";
+    var themeLink = document.getElementById('theme-css');
+    var themeBtn  = document.getElementById('theme-btn');
+
+    function getTheme() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+    function applyTheme(theme) {
+        if (theme === 'light') { document.documentElement.setAttribute('data-theme', 'light'); themeLink.href = LIGHT_CSS; themeBtn.textContent = '[ D ]'; }
+        else { document.documentElement.removeAttribute('data-theme'); themeLink.href = DARK_CSS; themeBtn.textContent = '[ L ]'; }
+        localStorage.setItem('codex-theme', theme);
+    }
+    function toggleTheme() { applyTheme(getTheme() === 'dark' ? 'light' : 'dark'); }
+    (function () { var c = getTheme(); themeBtn.textContent = c === 'light' ? '[ D ]' : '[ L ]'; if (c === 'light') themeLink.href = LIGHT_CSS; })();
+</script>
+{% endblock %}

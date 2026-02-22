@@ -1,0 +1,46 @@
+/* Responsive 12-Column Grid System & Utilities */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--gutter);
+}
+
+/* Base sections */
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-title {
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+/* Grid Spans */
+.col-span-4 {
+    grid-column: span 4;
+}
+
+.col-span-6 {
+    grid-column: span 6;
+}
+
+.col-span-12 {
+    grid-column: span 12;
+}
+
+@media (max-width: 1024px) {
+    .col-tablet-span-4 {
+        grid-column: span 4;
+    }
+
+    .col-tablet-span-8 {
+        grid-column: span 8;
+    }
+}
+
+@media (max-width: 640px) {
+    .col-mobile-span-4 {
+        grid-column: span 4;
+    }
+}

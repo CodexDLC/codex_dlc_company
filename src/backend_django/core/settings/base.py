@@ -46,13 +46,10 @@ INSTALLED_APPS = [
     "unfold.contrib.forms",
     "unfold.contrib.inlines",
     "unfold.contrib.import_export",
-
     # ── Monitoring ──
     "django_prometheus",
-
     # ── Translation ──
     "modeltranslation",
-
     # ── Django Core ──
     "django.contrib.admin",
     "django.contrib.auth",
@@ -60,12 +57,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    "django.contrib.sitemaps",
     # ── Shared Features ──
     "core",
     "features.main",
     "features.system",
-
     # ── Third Party ──
     "ninja",
 ]
@@ -96,6 +92,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "features.system.context_processors.site_settings",
+                "features.system.context_processors.static_content",
             ],
         },
     },
@@ -128,6 +126,7 @@ REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD", None)
 REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/0"
 if REDIS_PASSWORD:
     from urllib.parse import quote_plus
+
     encoded_pass = quote_plus(REDIS_PASSWORD.strip("'\""))
     REDIS_URL = f"redis://:{encoded_pass}@{REDIS_HOST}:{REDIS_PORT}/0"
 
@@ -176,13 +175,25 @@ TIME_ZONE = os.environ.get("TIME_ZONE", "UTC")
 USE_I18N = True
 USE_TZ = True
 
+# Ограничиваем языки проекта (DACH-регион: RU / EN / DE)
+LANGUAGES = [
+    ("ru", "Русский"),
+    ("en", "English"),
+    ("de", "Deutsch"),
+]
+
 # Model Translation (django-modeltranslation)
 MODELTRANSLATION_DEFAULT_LANGUAGE = LANGUAGE_CODE.split("-")[0]
-MODELTRANSLATION_LANGUAGES = ("en", "de", "ru", "uk")
+MODELTRANSLATION_LANGUAGES = ("en", "de", "ru")
 
 # ═══════════════════════════════════════════
 # Static files
 # ═══════════════════════════════════════════
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
+
+SITE_BASE_URL = os.environ.get("SITE_BASE_URL", "https://codexdlc.com")
+CANONICAL_DOMAIN = os.environ.get("CANONICAL_DOMAIN", SITE_BASE_URL)
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]

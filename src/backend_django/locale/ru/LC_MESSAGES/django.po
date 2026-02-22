@@ -1,0 +1,152 @@
+# Russian translations — CodexDLC
+# DACH region | RU/EN/DE
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# ─── Navigation ───────────────────────────────────────────────
+msgid "nav_main_home"
+msgstr "Главная"
+
+msgid "nav_main_services"
+msgstr "Услуги"
+
+msgid "nav_main_prototypes"
+msgstr "Прототипы"
+
+msgid "nav_main_contacts"
+msgstr "Контакты"
+
+msgid "nav_main_team"
+msgstr "Команда"
+
+msgid "nav_footer_all_contacts"
+msgstr "Все контакты"
+
+msgid "nav_legal_impressum"
+msgstr "Импрессум"
+
+msgid "nav_legal_privacy"
+msgstr "Datenschutz"
+
+# ─── Buttons & Actions ────────────────────────────────────────
+msgid "btn_cta_booking"
+msgstr "Связаться"
+
+msgid "btn_action_more"
+msgstr "Подробнее"
+
+msgid "btn_form_submit"
+msgstr "Отправить"
+
+msgid "btn_form_cancel"
+msgstr "Отмена"
+
+msgid "btn_ui_toggle_footer"
+msgstr "Показать"
+
+# ─── Hero ─────────────────────────────────────────────────────
+msgid "home_hero_label"
+msgstr "SYSTEM_ONLINE // V.1.0"
+
+msgid "home_hero_btn_services"
+msgstr "Смотреть услуги"
+
+# ─── Compare block ────────────────────────────────────────────
+msgid "home_compare_label"
+msgstr "MARKET_ANALYSIS"
+
+msgid "home_compare_title"
+msgstr "Проблема vs Решение"
+
+# ─── Services ─────────────────────────────────────────────────
+msgid "home_services_label"
+msgstr "CORE_OFFERINGS"
+
+msgid "home_services_title"
+msgstr "Что мы делаем"
+
+msgid "home_service_waas_title"
+msgstr "Сайты по подписке"
+
+msgid "home_service_bot_title"
+msgstr "Telegram-боты и автоматизация"
+
+msgid "home_service_proto_title"
+msgstr "Прототип за 48 часов"
+
+# ─── Subscription bento ───────────────────────────────────────
+msgid "home_sub_label"
+msgstr "SUBSCRIPTION_VALUE"
+
+msgid "home_sub_title"
+msgstr "Что входит в подписку"
+
+msgid "home_sub_dev_title"
+msgstr "Кастомная разработка"
+
+msgid "home_sub_seo_title"
+msgstr "SEO & Аналитика"
+
+msgid "home_sub_infra_title"
+msgstr "Домен & Почта"
+
+msgid "home_sub_support_title"
+msgstr "Техническая поддержка 24/7"
+
+# ─── Tech Corner ──────────────────────────────────────────────
+msgid "home_tech_label"
+msgstr "UNDER_THE_HOOD"
+
+msgid "home_tech_title"
+msgstr "Надёжная архитектура"
+
+msgid "home_tech_arch_title"
+msgstr "Full-Stack & System Design"
+
+# ─── CTA ──────────────────────────────────────────────────────
+msgid "home_cta_label"
+msgstr "EXECUTE_DEPLOYMENT"
+
+msgid "home_cta_title"
+msgstr "Готовы автоматизировать заявки?"
+
+msgid "home_cta_btn"
+msgstr "Инициировать проект"
+
+msgid "home_cta_input_placeholder"
+msgstr "Email или Телефон..."
+
+# ─── Contacts page ────────────────────────────────────────────
+msgid "contacts_page_title"
+msgstr "Контакты"
+
+msgid "contacts_label"
+msgstr "GET_IN_TOUCH"
+
+msgid "contacts_subtitle"
+msgstr "Напишите нам — ответим в течение 24 часов."
+
+# ─── FAQ page ─────────────────────────────────────────────────
+msgid "faq_page_title"
+msgstr "Вопросы и ответы"
+
+msgid "faq_label"
+msgstr "FAQ // SYSTEM_DOCS"
+
+# ─── Legal ────────────────────────────────────────────────────
+msgid "impressum_page_title"
+msgstr "Импрессум"
+
+msgid "privacy_page_title"
+msgstr "Политика конфиденциальности"
+
+# ─── Footer ───────────────────────────────────────────────────
+msgid "footer_rights"
+msgstr "Все права защищены"
+
+msgid "footer_tagline"
+msgstr "Ваш бизнес. Наш IT-движок."

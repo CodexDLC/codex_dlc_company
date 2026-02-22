@@ -15,9 +15,7 @@ class StaticTranslation(models.Model):
         help_text=_("Unique identifier used in templates (e.g., 'home_hero_title')"),
     )
     text = models.TextField(_("Text Content"))
-    description = models.CharField(
-        _("Description"), max_length=255, blank=True
-    )
+    description = models.CharField(_("Description"), max_length=255, blank=True)
 
     class Meta:
         verbose_name = _("Static Translation")

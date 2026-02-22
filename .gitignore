@@ -80,9 +80,11 @@ deploy/backend/
 deploy/bot/
 deploy/worker/
 deploy/nginx/
-deploy/docker-compose.yml
+# deploy/docker-compose.yml — разблокирован для чтения
+!deploy/docker-compose.yml
 deploy/docker-compose.prod.yml
-deploy/docker-compose.test.yml
+# deploy/docker-compose.test.yml — разблокирован для валидации
+!deploy/docker-compose.test.yml
 
 # ═══════════════════════════════════════════
 # Template installer artifacts

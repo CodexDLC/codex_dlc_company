@@ -1,8 +1,10 @@
 import json
 from typing import Any
+
 from django_redis import get_redis_connection
 
 REDIS_SITE_SETTINGS_KEY = "site_settings_hash"
+
 
 class SiteSettingsManager:
     """Manager for handling SiteSettings in Redis."""
@@ -38,6 +40,7 @@ class SiteSettingsManager:
             return {k.decode(): v.decode() for k, v in cached_data.items()}
 
         from features.system.models.site_settings import SiteSettings
+
         instance = SiteSettings.load()
         cls.save_to_redis(instance)
         return instance.to_dict()

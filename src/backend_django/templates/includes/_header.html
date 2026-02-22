@@ -1,0 +1,38 @@
+{% load i18n %}
+<header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+
+        {# Brand Logo #}
+        <a href="{% url 'main:index' %}" class="brand-logo" id="brand-logo" style="text-decoration: none;">
+            <span class="brand-codex">Codex</span><span class="brand-dlc" id="brand-dlc">DLC</span>
+            <span class="brand-tagline" id="brand-tagline"></span>
+        </a>
+
+        {# Controls: theme toggle + lang switcher #}
+        <div style="display: flex; align-items: center; gap: 24px; font-family: var(--font-mono); font-size: 12px; color: var(--gray-400);">
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="theme-btn">[ * ]</button>
+
+            {# Language Switcher — uses Django's set_language redirect view #}
+            {% get_current_language as CURRENT_LANG %}
+            {% get_available_languages as AVAILABLE_LANGUAGES %}
+            <div class="lang-switcher">
+                [
+                {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+                    {% if not forloop.first %}/{% endif %}
+                    {% if CURRENT_LANG == lang_code %}
+                        <span style="color: var(--cyber-blue);">{{ lang_code|upper }}</span>
+                    {% else %}
+                        <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="language" value="{{ lang_code }}">
+                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <button type="submit" style="background:none;border:none;padding:0;cursor:pointer;color:var(--gray-400);font-family:var(--font-mono);font-size:12px;">{{ lang_code|upper }}</button>
+                        </form>
+                    {% endif %}
+                {% endfor %}
+                ]
+            </div>
+        </div>
+
+    </div>
+</header>
