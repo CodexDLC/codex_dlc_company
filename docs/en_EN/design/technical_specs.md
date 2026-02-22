@@ -6,7 +6,7 @@ We use a hybrid system: interface strings in `.po` files and marketing content i
 
 ### 1.1. Key System (UI)
 
-Accessed via `{% trans "key" %}`. Never insert raw text directly into the `trans` tag.
+Accessed via `{% raw %}{% trans "key" %}{% endraw %}`. Never insert raw text directly into the `trans` tag.
 
 #### Group: Navigation (`nav_`)
 
@@ -43,7 +43,7 @@ Accessed via `{% trans "key" %}`. Never insert raw text directly into the `trans
 
 For frequently changing texts (Hero sections, service descriptions), the `StaticTranslation` model is used.
 
-*   **Template Access:** `{{ content.home_hero_title }}`.
+*   **Template Access:** `{% raw %}{{ content.home_hero_title }}{% endraw %}`.
 *   **Language Support:** Fields `text_de`, `text_en`, `text_ru`, `text_uk` (via `modeltranslation`).
 
 ---
