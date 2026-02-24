@@ -50,7 +50,7 @@ msgstr "Показать"
 
 # ─── Hero ─────────────────────────────────────────────────────
 msgid "home_hero_label"
-msgstr "SYSTEM_ONLINE // V.1.0"
+msgstr "ЦИФРОВЫЕ РЕШЕНИЯ ДЛЯ МАЛОГО БИЗНЕСА"
 
 msgid "home_hero_btn_services"
 msgstr "Смотреть услуги"
@@ -60,7 +60,7 @@ msgid "home_compare_label"
 msgstr "MARKET_ANALYSIS"
 
 msgid "home_compare_title"
-msgstr "Проблема vs Решение"
+msgstr "Почему подписка работает лучше разового заказа"
 
 # ─── Services ─────────────────────────────────────────────────
 msgid "home_services_label"
@@ -70,13 +70,13 @@ msgid "home_services_title"
 msgstr "Что мы делаем"
 
 msgid "home_service_waas_title"
-msgstr "Сайты по подписке"
+msgstr "Ваш цифровой филиал. Всё включено."
 
 msgid "home_service_bot_title"
-msgstr "Telegram-боты и автоматизация"
+msgstr "Запись клиентов без вашего участия"
 
 msgid "home_service_proto_title"
-msgstr "Прототип за 48 часов"
+msgstr "Прототип за 48 часов. Запуск за 7–14 дней."
 
 # ─── Subscription bento ───────────────────────────────────────
 msgid "home_sub_label"
@@ -150,3 +150,139 @@ msgstr "Все права защищены"
 
 msgid "footer_tagline"
 msgstr "Ваш бизнес. Наш IT-движок."
+
+# ─── Dual-mode Hero CTA ───────────────────────────────────
+msgid "home_hero_cta_primary_research"
+msgstr "Хочу такой сервис"
+
+msgid "home_hero_cta_secondary_research"
+msgstr "Пройти опрос"
+
+msgid "home_hero_cta_primary_sales"
+msgstr "Смотреть тарифы"
+
+msgid "home_hero_cta_secondary_sales"
+msgstr "Получить бесплатную консультацию"
+
+# ─── Trust / Architecture block ───────────────────────────
+msgid "home_trust_kicker"
+msgstr "НАДЁЖНАЯ АРХИТЕКТУРА"
+
+msgid "home_trust_title"
+msgstr "Безопасность и скорость, которые вы почувствуете"
+
+msgid "home_trust_metric_1_label"
+msgstr "Никаких страхов перед Abmahnung"
+
+msgid "home_trust_metric_2_label"
+msgstr "Сайт не падает в разгар сезона"
+
+msgid "home_trust_metric_3_label"
+msgstr "Google любит быстрые сайты"
+
+msgid "home_trust_metric_4_label"
+msgstr "Высший стандарт защиты данных"
+
+# ─── Dual-mode Final CTA (Block 5) ────────────────────────
+msgid "home_cta_kicker"
+msgstr "ГОТОВЫ ИЗБАВИТЬСЯ ОТ IT-РУТИНЫ?"
+
+msgid "home_cta_sales_btn_primary"
+msgstr "Смотреть тарифы"
+
+msgid "home_cta_sales_btn_secondary"
+msgstr "Запросить консультацию"
+
+msgid "home_cta_research_btn_primary"
+msgstr "Пройти опрос (2 минуты)"
+
+msgid "home_cta_research_btn_secondary"
+msgstr "Хочу узнать первым о запуске"
+
+# ─── WaaS service page ────────────────────────────────────
+msgid "waas_page_title"
+msgstr "Сайт по подписке — CodexDLC"
+
+msgid "waas_pricing_label"
+msgstr "ТАРИФЫ"
+
+msgid "waas_projects_label"
+msgstr "НАШИ_ПРОЕКТЫ"
+
+msgid "waas_cta_sales_btn_primary"
+msgstr "Выбрать тариф"
+
+msgid "waas_cta_sales_btn_secondary"
+msgstr "Получить консультацию"
+
+msgid "waas_cta_research_btn_primary"
+msgstr "Пройти опрос"
+
+msgid "waas_cta_research_btn_secondary"
+msgstr "Хочу узнать первым"
+
+# ─── Automation service page ──────────────────────────────
+msgid "automation_page_title"
+msgstr "Автоматизация — CodexDLC"
+
+msgid "automation_pricing_label"
+msgstr "ТАРИФЫ"
+
+msgid "automation_cta_sales_btn_primary"
+msgstr "Выбрать тариф"
+
+msgid "automation_cta_sales_btn_secondary"
+msgstr "Запросить демо"
+
+msgid "automation_cta_research_btn_primary"
+msgstr "Пройти опрос"
+
+msgid "automation_cta_research_btn_secondary"
+msgstr "Хочу узнать первым"
+
+# ─── Solutions / Prototype page ───────────────────────────
+msgid "solutions_page_title"
+msgstr "Готовые решения — CodexDLC"
+
+msgid "solutions_badge_live"
+msgstr "LIVE"
+
+msgid "solutions_badge_taken"
+msgstr "ЗАНЯТО"
+
+msgid "solutions_badge_free"
+msgstr "СВОБОДНО"
+
+msgid "solutions_cta_view"
+msgstr "Перейти на сайт"
+
+msgid "solutions_cta_taken"
+msgstr "Взять в другом городе"
+
+msgid "solutions_cta_free"
+msgstr "Забрать концепт"
+
+msgid "solutions_cta_preview"
+msgstr "Смотреть прототип"
+
+msgid "solutions_cta_sales_btn_primary"
+msgstr "Обсудить проект"
+
+msgid "solutions_cta_sales_btn_secondary"
+msgstr "Смотреть тарифы"
+
+msgid "solutions_cta_research_btn_primary"
+msgstr "Предложить нишу"
+
+msgid "solutions_cta_research_btn_secondary"
+msgstr "Пройти опрос"
+
+# ─── Global ───────────────────────────────────────────────
+msgid "projects_cta_view"
+msgstr "Перейти на сайт"
+
+msgid "projects_cta_preview"
+msgstr "Смотреть прототип"
+
+msgid "ustg19_footnote"
+msgstr "Согласно §19 UStG НДС не взимается."

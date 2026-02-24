@@ -1,0 +1,46 @@
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray-400);
+    padding: 0;
+    transition: color 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.theme-toggle:hover {
+    color: var(--cyber-blue);
+}
+
+/* Pricing Plans */
+.pricing-title {
+    font-size: 40px;
+    margin-bottom: 48px;
+}
+
+.plan-label {
+    color: var(--cyber-blue);
+    margin-bottom: 8px;
+}
+
+.plan-name {
+    margin-bottom: 8px;
+}
+
+.plan-price {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cyber-blue);
+    margin-bottom: 24px;
+}
+
+.plan-footnote {
+    margin-top: 24px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gray-600);
+}

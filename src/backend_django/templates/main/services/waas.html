@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{% load i18n static bento_tags %}
+
+{% block title %}{% trans "waas_page_title" %} — {{ site_settings.meta_title|default:"CodexDLC" }}{% endblock %}
+{% block og_title %}{% trans "waas_page_title" %}{% endblock %}
+{% block twitter_title %}{% trans "waas_page_title" %}{% endblock %}
+
+{% block content %}
+
+{# ======================== HERO ======================== #}
+<section class="hero" id="hero-section">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <span class="tech-label">{% trans "waas_hero_label"|default:"01 // WEBSITE AS A SERVICE" %}</span>
+        <h1 class="hero-title waas-hero-title">
+            {{ content.waas_hero_title|default:_("waas_hero_title") }}
+        </h1>
+        <p class="waas-hero-text">
+            {{ content.waas_hero_text }}
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            {% if site_settings.site_mode == 'sales' %}
+            <a href="#pricing" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_sales_btn_primary" %}</a>
+            <a href="{% url 'main:contacts' %}" class="btn btn-secondary"
+                style="padding: 20px 40px; font-size: 18px;">{% trans "waas_cta_sales_btn_secondary" %}</a>
+            {% else %}
+            <a href="#survey" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_research_btn_primary" %}</a>
+            <a href="{% url 'main:index' %}" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_research_btn_secondary" %}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== WHO IT'S FOR ======================== #}
+<section style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">{% trans "waas_pricing_label" %}</span>
+        <h2 class="waas-section-title">{{ content.waas_who_title }}</h2>
+        <div class="bento-grid" style="margin-top: 48px;">
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px;">01</span>
+                <h3 style="margin-bottom: 12px;">{{ content.waas_who_card_1_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.waas_who_card_1_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px;">02</span>
+                <h3 style="margin-bottom: 12px;">{{ content.waas_who_card_2_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.waas_who_card_2_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px;">03</span>
+                <h3 style="margin-bottom: 12px;">{{ content.waas_who_card_3_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.waas_who_card_3_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== WHAT'S INCLUDED ======================== #}
+<section style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">INCLUDED_IN_SUBSCRIPTION</span>
+        <h2 class="waas-section-title">{{ content.waas_included_title }}</h2>
+        <div class="bento-grid">
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--cyber-blue);">01</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_1_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_1_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--cyber-blue);">02</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_2_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_2_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--cyber-blue);">03</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_3_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_3_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--electric-purple);">04</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_4_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_4_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--electric-purple);">05</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_5_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_5_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <span class="tech-label" style="margin-bottom: 12px; color: var(--electric-purple);">06</span>
+                <h3 style="margin-bottom: 8px;">{{ content.waas_feat_6_title }}</h3>
+                <p style="color: var(--gray-400); font-size: 15px;">{{ content.waas_feat_6_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== PRICING ======================== #}
+{% if site_settings.site_mode == 'sales' %}
+<section id="pricing" style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">{% trans "waas_pricing_label" %}</span>
+        <h2 class="pricing-title">{{ content.waas_cta_sales_title }}</h2>
+        <div class="bento-grid">
+            {% for plan in plans %}
+            <div class="bento-card{% if plan.is_featured %} active{% endif %}"
+                style="grid-column: span 3; position: relative;">
+                {% if plan.is_featured %}
+                <span class="tech-label plan-label">★ POPULAR</span>
+                {% endif %}
+                <h3 class="plan-name">{{ plan.name }}</h3>
+                <div class="plan-price">{{ plan.price_label }}</div>
+                <ul class="contrast-list" style="flex: 1;">
+                    {% if plan.feat_1 %}<li>{{ plan.feat_1 }}</li>{% endif %}
+                    {% if plan.feat_2 %}<li>{{ plan.feat_2 }}</li>{% endif %}
+                    {% if plan.feat_3 %}<li>{{ plan.feat_3 }}</li>{% endif %}
+                </ul>
+                <a href="{% url 'main:contacts' %}"
+                    class="btn{% if plan.is_featured %} btn-primary{% else %} btn-secondary{% endif %}"
+                    style="width: 100%; text-align: center; margin-top: 24px;">{{ plan.cta_label }}</a>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="plan-footnote">* {% trans "ustg19_footnote" %}</p>
+    </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{# ======================== PROJECTS BENTO ======================== #}
+{% if projects %}
+<section style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">{% trans "waas_projects_label" %}</span>
+        <h2 class="waas-section-title">{{ content.waas_projects_title }}</h2>
+        <div class="bento-grid">
+            {% for project in projects %}
+            {% bento_span forloop.counter projects_count as span %}
+            <div class="bento-card {{ span }}">
+                {% if project.thumbnail %}
+                <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="waas-project-thumb">
+                {% else %}
+                <div class="waas-project-placeholder">[ {{ project.name|upper }} ]</div>
+                {% endif %}
+                <div>
+                    <span class="tech-label" style="margin-bottom: 4px;">{{ project.niche }}</span>
+                    <h3 style="margin-bottom: 4px;">{{ project.name }}</h3>
+                    {% if project.city %}<p class="project-city">{{ project.city }}</p>{% endif %}
+                </div>
+                <div style="margin-top: auto;">
+                    {% if project.site_url %}
+                    <a href="{{ project.site_url }}" target="_blank" rel="noopener" class="z-link"
+                        style="font-size: 13px;">{% trans "projects_cta_view" %} →</a>
+                    {% elif project.preview_url %}
+                    <a href="{{ project.preview_url }}" target="_blank" rel="noopener" class="z-link"
+                        style="font-size: 13px;">{% trans "projects_cta_preview" %} →</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{# ======================== FINAL CTA (dual-mode) ======================== #}
+<section style="padding: 140px 0;">
+    <div class="container" style="max-width: 650px; text-align: center;">
+        <span class="tech-label">{% trans "home_cta_kicker" %}</span>
+        {% if site_settings.site_mode == 'sales' %}
+        <h2 style="font-size: 48px; margin-bottom: 24px;">{{ content.waas_cta_sales_title }}</h2>
+        <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">{{ content.waas_cta_sales_text }}</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <a href="#pricing" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_sales_btn_primary" %}</a>
+            <a href="{% url 'main:contacts' %}" class="btn btn-secondary"
+                style="padding: 20px 40px; font-size: 18px;">{% trans "waas_cta_sales_btn_secondary" %}</a>
+        </div>
+        {% else %}
+        <h2 style="font-size: 48px; margin-bottom: 24px;">{{ content.waas_cta_research_title }}</h2>
+        <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">{{ content.waas_cta_research_text }}
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <a href="#survey" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_research_btn_primary" %}</a>
+            <a href="{% url 'main:index' %}" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">
+                {% trans "waas_cta_research_btn_secondary" %}</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block taglines %}
+<script id="page-taglines" type="application/json">
+["Digital Location Creator"]
+</script>
+{% endblock taglines %}

@@ -50,7 +50,7 @@ msgstr "Show"
 
 # ─── Hero ─────────────────────────────────────────────────────
 msgid "home_hero_label"
-msgstr "SYSTEM_ONLINE // V.1.0"
+msgstr "DIGITAL SOLUTIONS FOR SMALL BUSINESS"
 
 msgid "home_hero_btn_services"
 msgstr "View Services"
@@ -60,7 +60,7 @@ msgid "home_compare_label"
 msgstr "MARKET_ANALYSIS"
 
 msgid "home_compare_title"
-msgstr "Problem vs Solution"
+msgstr "Why a Subscription Works Better Than a One-Time Order"
 
 # ─── Services ─────────────────────────────────────────────────
 msgid "home_services_label"
@@ -70,13 +70,13 @@ msgid "home_services_title"
 msgstr "What We Do"
 
 msgid "home_service_waas_title"
-msgstr "Website as a Service"
+msgstr "Your Digital Branch. Everything Included."
 
 msgid "home_service_bot_title"
-msgstr "Telegram Bots & Automation"
+msgstr "Client Booking Without Your Involvement"
 
 msgid "home_service_proto_title"
-msgstr "Prototype in 48 Hours"
+msgstr "Prototype in 48 Hours. Launch in 7–14 Days."
 
 # ─── Subscription bento ───────────────────────────────────────
 msgid "home_sub_label"
@@ -150,3 +150,139 @@ msgstr "All rights reserved"
 
 msgid "footer_tagline"
 msgstr "Your Business. Our IT Engine."
+
+# ─── Dual-mode Hero CTA ───────────────────────────────────
+msgid "home_hero_cta_primary_research"
+msgstr "I want this service"
+
+msgid "home_hero_cta_secondary_research"
+msgstr "Take the survey"
+
+msgid "home_hero_cta_primary_sales"
+msgstr "View pricing"
+
+msgid "home_hero_cta_secondary_sales"
+msgstr "Get a free consultation"
+
+# ─── Trust / Architecture block ───────────────────────────
+msgid "home_trust_kicker"
+msgstr "RELIABLE ARCHITECTURE"
+
+msgid "home_trust_title"
+msgstr "Security and Speed You Can Feel"
+
+msgid "home_trust_metric_1_label"
+msgstr "No fear of Abmahnung"
+
+msgid "home_trust_metric_2_label"
+msgstr "Site stays up during peak season"
+
+msgid "home_trust_metric_3_label"
+msgstr "Google loves fast sites"
+
+msgid "home_trust_metric_4_label"
+msgstr "Highest data protection standard"
+
+# ─── Dual-mode Final CTA (Block 5) ────────────────────────
+msgid "home_cta_kicker"
+msgstr "READY TO SKIP IT HEADACHES?"
+
+msgid "home_cta_sales_btn_primary"
+msgstr "View pricing"
+
+msgid "home_cta_sales_btn_secondary"
+msgstr "Request a consultation"
+
+msgid "home_cta_research_btn_primary"
+msgstr "Take the survey (2 minutes)"
+
+msgid "home_cta_research_btn_secondary"
+msgstr "I want to be the first to know"
+
+# ─── WaaS service page ────────────────────────────────────
+msgid "waas_page_title"
+msgstr "Website as a Service — CodexDLC"
+
+msgid "waas_pricing_label"
+msgstr "PRICING_PLANS"
+
+msgid "waas_projects_label"
+msgstr "OUR_PROJECTS"
+
+msgid "waas_cta_sales_btn_primary"
+msgstr "Choose a plan"
+
+msgid "waas_cta_sales_btn_secondary"
+msgstr "Get a consultation"
+
+msgid "waas_cta_research_btn_primary"
+msgstr "Take the survey"
+
+msgid "waas_cta_research_btn_secondary"
+msgstr "I want to be the first to know"
+
+# ─── Automation service page ──────────────────────────────
+msgid "automation_page_title"
+msgstr "Automation — CodexDLC"
+
+msgid "automation_pricing_label"
+msgstr "PRICING_PLANS"
+
+msgid "automation_cta_sales_btn_primary"
+msgstr "Choose a plan"
+
+msgid "automation_cta_sales_btn_secondary"
+msgstr "Request a demo"
+
+msgid "automation_cta_research_btn_primary"
+msgstr "Take the survey"
+
+msgid "automation_cta_research_btn_secondary"
+msgstr "I want to be the first to know"
+
+# ─── Solutions / Prototype page ───────────────────────────
+msgid "solutions_page_title"
+msgstr "Industry Solutions — CodexDLC"
+
+msgid "solutions_badge_live"
+msgstr "LIVE"
+
+msgid "solutions_badge_taken"
+msgstr "TAKEN"
+
+msgid "solutions_badge_free"
+msgstr "FREE"
+
+msgid "solutions_cta_view"
+msgstr "View Website"
+
+msgid "solutions_cta_taken"
+msgstr "Take in Another City"
+
+msgid "solutions_cta_free"
+msgstr "Claim This Concept"
+
+msgid "solutions_cta_preview"
+msgstr "View Prototype"
+
+msgid "solutions_cta_sales_btn_primary"
+msgstr "Discuss Project"
+
+msgid "solutions_cta_sales_btn_secondary"
+msgstr "View Pricing"
+
+msgid "solutions_cta_research_btn_primary"
+msgstr "Suggest a Niche"
+
+msgid "solutions_cta_research_btn_secondary"
+msgstr "Take the Survey"
+
+# ─── Global ───────────────────────────────────────────────
+msgid "projects_cta_view"
+msgstr "View Website"
+
+msgid "projects_cta_preview"
+msgstr "View Prototype"
+
+msgid "ustg19_footnote"
+msgstr "Pursuant to §19 UStG, no VAT is charged."

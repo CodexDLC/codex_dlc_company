@@ -188,7 +188,7 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = LANGUAGE_CODE.split("-")[0]
 MODELTRANSLATION_LANGUAGES = ("en", "de", "ru")
 
 # ═══════════════════════════════════════════
-# Static files
+# Static & Media files
 # ═══════════════════════════════════════════
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
@@ -199,6 +199,9 @@ CANONICAL_DOMAIN = os.environ.get("CANONICAL_DOMAIN", SITE_BASE_URL)
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # ═══════════════════════════════════════════
 # Default primary key

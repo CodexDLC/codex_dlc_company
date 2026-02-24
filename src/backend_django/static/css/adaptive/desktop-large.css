@@ -1,0 +1,11 @@
+/* =========================================
+   LARGE SCREENS (1440px - 1919px)
+   @media (min-width: 1440px) and (max-width: 1919px)
+   ========================================= */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+    .container {
+        max-width: 1400px;
+    }
+}

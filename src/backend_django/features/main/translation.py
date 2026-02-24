@@ -1,8 +1,13 @@
-from modeltranslation.translator import TranslationOptions, register  # noqa: F401
+from modeltranslation.translator import TranslationOptions, register
 
-# Example:
-# from .models import MyModel
-#
-# @register(MyModel)
-# class MyModelTranslation(TranslationOptions):
-#     fields = ("title", "description")
+from .models import PricingPlan, Project
+
+
+@register(Project)
+class ProjectTranslation(TranslationOptions):
+    fields = ("name", "niche", "city")
+
+
+@register(PricingPlan)
+class PricingPlanTranslation(TranslationOptions):
+    fields = ("name", "price_label", "feat_1", "feat_2", "feat_3", "cta_label")

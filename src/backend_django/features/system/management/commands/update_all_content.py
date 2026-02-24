@@ -18,6 +18,10 @@ class Command(BaseCommand):
         except Exception as e:
             self.stdout.write(self.style.ERROR(f"Failed to update static translations: {e}"))
 
-        # Add other commands here as the project grows
+        self.stdout.write(self.style.MIGRATE_HEADING("\n>>> Updating Main Content (Projects, Pricing)..."))
+        try:
+            call_command("update_main_content")
+        except Exception as e:
+            self.stdout.write(self.style.ERROR(f"Failed to update main content: {e}"))
 
         self.stdout.write(self.style.SUCCESS("\n✓ All system updates completed."))

@@ -5,45 +5,52 @@
 {% block og_title %}Контакты — CodexDLC{% endblock %}
 
 {% block content %}
-<section style="padding: 160px 0 120px;">
-    <div class="container" style="max-width: 860px;">
+<section class="contacts-section">
+    <div class="container contacts-container">
         <span class="tech-label">INITIATE_CONTACT</span>
-        <h1 style="font-size: clamp(40px, 6vw, 64px); margin-bottom: 24px;">Связаться с нами</h1>
-        <p style="font-size: 18px; color: var(--gray-400); margin-bottom: 64px; max-width: 560px; line-height: 1.65;">
+        <h1 class="contacts-title">Связаться с нами</h1>
+        <p class="contacts-subtitle">
             Расскажите о вашем проекте — мы разберём задачи и предложим решение в течение 24 часов.
         </p>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+        <div class="contacts-grid">
 
             {# Форма #}
-            <div style="background: var(--glass-bg); padding: 40px; border-radius: var(--radius-bento); border: 1px solid var(--glass-border);">
-                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 24px;">// NEW_PROJECT_REQUEST</div>
-                <input type="text" class="terminal-input" placeholder="Имя..." style="margin-bottom: 16px;">
-                <input type="text" class="terminal-input" placeholder="Email или Telegram..." style="margin-bottom: 16px;">
-                <textarea class="terminal-input" placeholder="Опишите задачу..." style="height: 120px; resize: vertical; margin-bottom: 32px;"></textarea>
-                <button class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 16px;">ОТПРАВИТЬ ЗАПРОС</button>
+            <div class="contact-form-box">
+                <div class="tech-label">// NEW_PROJECT_REQUEST</div>
+                <input type="text" class="terminal-input" placeholder="Имя...">
+                <input type="text" class="terminal-input" placeholder="Email или Telegram...">
+                <textarea class="terminal-input" placeholder="Опишите задачу..."></textarea>
+                <button class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 16px;">
+                    {% if site_settings.site_mode == 'sales' %}
+                    {% trans "home_cta_sales_btn_secondary" %}
+                    {% else %}
+                    {% trans "home_cta_research_btn_primary" %}
+                    {% endif %}
+                </button>
             </div>
 
             {# Контактная информация #}
-            <div style="display: flex; flex-direction: column; gap: 32px; padding-top: 8px;">
+            <div class="contact-info-list">
                 <div>
-                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">EMAIL</div>
-                    <a href="mailto:hello@codexdlc.com" style="font-size: 18px; color: var(--cyber-blue);">hello@codexdlc.com</a>
+                    <div class="contact-item-label">EMAIL</div>
+                    <a href="mailto:hello@codexdlc.com" class="contact-item-value">hello@codexdlc.com</a>
                 </div>
                 <div>
-                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">TELEGRAM</div>
-                    <a href="https://t.me/codexdlc" target="_blank" rel="noopener" style="font-size: 18px; color: var(--cyber-blue);">@codexdlc</a>
+                    <div class="contact-item-label">TELEGRAM</div>
+                    <a href="https://t.me/codexdlc" target="_blank" rel="noopener"
+                        class="contact-item-value">@codexdlc</a>
                 </div>
                 <div>
-                    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 12px;">REGION</div>
-                    <div style="font-size: 16px; color: var(--gray-400);">DACH — Deutschland, Austria, Switzerland</div>
+                    <div class="contact-item-label">REGION</div>
+                    <div class="contact-item-text">DACH — Deutschland, Austria, Switzerland</div>
                 </div>
-                <div style="padding: 20px; background: var(--glass-bg); border-radius: 12px; border: 1px solid var(--glass-border);">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <div class="contact-status-box">
+                    <div class="contact-status-header">
                         <span class="status-dot"></span>
-                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--status-green);">ONLINE // RESPONSE &lt;24H</span>
+                        <span class="contact-status-label">ONLINE // RESPONSE &lt;24H</span>
                     </div>
-                    <div style="font-size: 13px; color: var(--gray-400);">Мы отвечаем в рабочие дни с 9:00 до 19:00 (CET)</div>
+                    <div class="contact-status-note">Мы отвечаем в рабочие дни с 9:00 до 19:00 (CET)</div>
                 </div>
             </div>
 
@@ -54,11 +61,11 @@
 
 {% block extra_js %}
 <script>
-    {# Theme Toggle (reused on all pages) #}
-    var DARK_CSS  = "{% static 'css/app.css' %}";
+    {# Theme Toggle(reused on all pages) # }
+    var DARK_CSS = "{% static 'css/app.css' %}";
     var LIGHT_CSS = "{% static 'css/app-light.css' %}";
     var themeLink = document.getElementById('theme-css');
-    var themeBtn  = document.getElementById('theme-btn');
+    var themeBtn = document.getElementById('theme-btn');
 
     function getTheme() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
     function applyTheme(theme) {

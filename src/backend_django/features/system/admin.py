@@ -1,13 +1,20 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TabbedTranslationAdmin
 from unfold.admin import ModelAdmin
 
 from .models.site_settings import SiteSettings
 from .models.static_translation import StaticTranslation
 
 
+class TranslationModelAdmin(ModelAdmin, TabbedTranslationAdmin):
+    """Combines Unfold styling with modeltranslation language tabs."""
+
+    pass
+
+
 @admin.register(SiteSettings)
-class SiteSettingsAdmin(ModelAdmin):
+class SiteSettingsAdmin(TranslationModelAdmin):
     list_display = ("company_name", "email", "phone")
     fieldsets = (
         (_("General"), {"fields": ("company_name", "logo_url", "site_base_url")}),
@@ -42,6 +49,6 @@ class SiteSettingsAdmin(ModelAdmin):
 
 
 @admin.register(StaticTranslation)
-class StaticTranslationAdmin(ModelAdmin):
+class StaticTranslationAdmin(TranslationModelAdmin):
     list_display = ("key", "description")
     search_fields = ("key", "text")

@@ -26,6 +26,11 @@
     <noscript><link rel="stylesheet" href="{% static 'css/app.css' %}"></noscript>
 
     <script src="{% static 'js/theme.js' %}" defer></script>
+    {% block taglines %}
+    <script id="page-taglines" type="application/json">
+    ["Digital Lead Conversion","Digital Local Clients","Developer\u2019s Life Cycle","Digital Life Creation"]
+    </script>
+    {% endblock taglines %}
     {% block extra_js %}{% endblock %}
 
 </body>

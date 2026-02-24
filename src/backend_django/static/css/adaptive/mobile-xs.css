@@ -1,0 +1,95 @@
+/* =========================================
+   ULTRA-SMALL MOBILE (< 480px)
+   @media (max-width: 479px)
+   ========================================= */
+
+@media (max-width: 479px) {
+
+    /* Base patterns for very small devices */
+    .container {
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header .right-controls {
+        gap: 12px;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+    }
+
+    .hero-title {
+        font-size: 36px !important;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Stack Z-Rows */
+    .z-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .z-row.reverse {
+        direction: ltr;
+    }
+
+    .z-visual {
+        min-height: 240px;
+    }
+
+    /* Stack Bento Grid */
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        min-height: auto !important;
+    }
+
+    /* Stack Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-grid>div {
+        grid-column: span 1 !important;
+    }
+
+    .island-footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .floating-dock {
+        width: calc(100% - 32px);
+        padding: 8px 16px;
+        gap: 16px;
+    }
+
+    .dock-link {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,33 @@
+/* =========================================
+   STANDARD MOBILE (480px - 767px)
+   @media (min-width: 480px) and (max-width: 767px)
+   ========================================= */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .hero-title {
+        font-size: clamp(40px, 8vw, 56px) !important;
+    }
+
+    .z-row {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .z-row.reverse {
+        direction: ltr;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .bento-card:first-child {
+        grid-column: span 2 !important;
+    }
+}

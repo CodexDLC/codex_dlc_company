@@ -1,0 +1,131 @@
+/* Footer (Terminal Style) */
+.footer {
+    background-color: var(--deep-space);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Island Footer Component */
+.island-footer {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-bento);
+    padding: var(--space-xl);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-lg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gutter);
+}
+
+.footer-brand-col {
+    grid-column: span 6;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 24px;
+    text-decoration: none;
+}
+
+.footer-description {
+    color: var(--gray-400);
+    font-size: 14px;
+    max-width: 350px;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.social-link {
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--cyber-blue);
+}
+
+.footer-links-col {
+    grid-column: span 3;
+}
+
+.footer-header {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--gray-400);
+    padding: 0;
+}
+
+.footer-links-list a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--cyber-blue);
+}
+
+.island-footer-bottom {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gray-600);
+}
+
+.footer-version {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gray-600);
+}
+
+.footer h4 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: var(--space-md);
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: var(--space-xs);
+    font-size: 14px;
+    color: var(--gray-400);
+}
+
+.footer ul li a:hover {
+    color: var(--cyber-blue);
+}

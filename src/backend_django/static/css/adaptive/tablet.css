@@ -1,0 +1,23 @@
+/* =========================================
+   TABLET (768px - 1023px)
+   @media (min-width: 768px) and (max-width: 1023px)
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .z-row {
+        gap: 40px;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bento-card {
+        grid-column: span 3 !important;
+    }
+
+    .bento-card:first-child {
+        grid-column: span 6 !important;
+    }
+}

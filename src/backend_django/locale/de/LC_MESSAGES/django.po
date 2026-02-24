@@ -50,7 +50,7 @@ msgstr "Anzeigen"
 
 # ─── Hero ─────────────────────────────────────────────────────
 msgid "home_hero_label"
-msgstr "SYSTEM_ONLINE // V.1.0"
+msgstr "DIGITALE LÖSUNGEN FÜR KLEINE UNTERNEHMEN"
 
 msgid "home_hero_btn_services"
 msgstr "Leistungen ansehen"
@@ -60,7 +60,7 @@ msgid "home_compare_label"
 msgstr "MARKET_ANALYSIS"
 
 msgid "home_compare_title"
-msgstr "Problem vs. Lösung"
+msgstr "Warum ein Abonnement besser ist als ein Einmalauftrag"
 
 # ─── Services ─────────────────────────────────────────────────
 msgid "home_services_label"
@@ -70,13 +70,13 @@ msgid "home_services_title"
 msgstr "Was wir tun"
 
 msgid "home_service_waas_title"
-msgstr "Website als Abonnement"
+msgstr "Ihre digitale Filiale. Alles inklusive."
 
 msgid "home_service_bot_title"
-msgstr "Telegram-Bots & Automatisierung"
+msgstr "Kundenbuchungen ohne Ihr Zutun"
 
 msgid "home_service_proto_title"
-msgstr "Prototyp in 48 Stunden"
+msgstr "Prototyp in 48 Stunden. Start in 7–14 Tagen."
 
 # ─── Subscription bento ───────────────────────────────────────
 msgid "home_sub_label"
@@ -150,3 +150,139 @@ msgstr "Alle Rechte vorbehalten"
 
 msgid "footer_tagline"
 msgstr "Ihr Business. Unser IT-Motor."
+
+# ─── Dual-mode Hero CTA ───────────────────────────────────
+msgid "home_hero_cta_primary_research"
+msgstr "Ich möchte diesen Service"
+
+msgid "home_hero_cta_secondary_research"
+msgstr "Umfrage ausfüllen"
+
+msgid "home_hero_cta_primary_sales"
+msgstr "Preise ansehen"
+
+msgid "home_hero_cta_secondary_sales"
+msgstr "Kostenlose Beratung"
+
+# ─── Trust / Architecture block ───────────────────────────
+msgid "home_trust_kicker"
+msgstr "ZUVERLÄSSIGE ARCHITEKTUR"
+
+msgid "home_trust_title"
+msgstr "Sicherheit und Geschwindigkeit, die Sie spüren"
+
+msgid "home_trust_metric_1_label"
+msgstr "Keine Angst vor Abmahnungen"
+
+msgid "home_trust_metric_2_label"
+msgstr "Die Website läuft auch in der Hochsaison"
+
+msgid "home_trust_metric_3_label"
+msgstr "Google liebt schnelle Websites"
+
+msgid "home_trust_metric_4_label"
+msgstr "Höchster Datenschutzstandard"
+
+# ─── Dual-mode Final CTA (Block 5) ────────────────────────
+msgid "home_cta_kicker"
+msgstr "BEREIT OHNE IT-STRESS?"
+
+msgid "home_cta_sales_btn_primary"
+msgstr "Preise ansehen"
+
+msgid "home_cta_sales_btn_secondary"
+msgstr "Beratung anfragen"
+
+msgid "home_cta_research_btn_primary"
+msgstr "Umfrage ausfüllen (2 Minuten)"
+
+msgid "home_cta_research_btn_secondary"
+msgstr "Als Erster informiert werden"
+
+# ─── WaaS service page ────────────────────────────────────
+msgid "waas_page_title"
+msgstr "Website als Abonnement — CodexDLC"
+
+msgid "waas_pricing_label"
+msgstr "PREISPLÄNE"
+
+msgid "waas_projects_label"
+msgstr "UNSERE_PROJEKTE"
+
+msgid "waas_cta_sales_btn_primary"
+msgstr "Paket wählen"
+
+msgid "waas_cta_sales_btn_secondary"
+msgstr "Beratung anfragen"
+
+msgid "waas_cta_research_btn_primary"
+msgstr "Umfrage ausfüllen"
+
+msgid "waas_cta_research_btn_secondary"
+msgstr "Als Erster informiert werden"
+
+# ─── Automation service page ──────────────────────────────
+msgid "automation_page_title"
+msgstr "Automatisierung — CodexDLC"
+
+msgid "automation_pricing_label"
+msgstr "PREISPLÄNE"
+
+msgid "automation_cta_sales_btn_primary"
+msgstr "Paket wählen"
+
+msgid "automation_cta_sales_btn_secondary"
+msgstr "Demo anfragen"
+
+msgid "automation_cta_research_btn_primary"
+msgstr "Umfrage ausfüllen"
+
+msgid "automation_cta_research_btn_secondary"
+msgstr "Als Erster informiert werden"
+
+# ─── Solutions / Prototype page ───────────────────────────
+msgid "solutions_page_title"
+msgstr "Branchenlösungen — CodexDLC"
+
+msgid "solutions_badge_live"
+msgstr "LIVE"
+
+msgid "solutions_badge_taken"
+msgstr "VERGEBEN"
+
+msgid "solutions_badge_free"
+msgstr "FREI"
+
+msgid "solutions_cta_view"
+msgstr "Website besuchen"
+
+msgid "solutions_cta_taken"
+msgstr "In anderer Stadt anfragen"
+
+msgid "solutions_cta_free"
+msgstr "Konzept sichern"
+
+msgid "solutions_cta_preview"
+msgstr "Prototyp ansehen"
+
+msgid "solutions_cta_sales_btn_primary"
+msgstr "Projekt besprechen"
+
+msgid "solutions_cta_sales_btn_secondary"
+msgstr "Preise ansehen"
+
+msgid "solutions_cta_research_btn_primary"
+msgstr "Nische vorschlagen"
+
+msgid "solutions_cta_research_btn_secondary"
+msgstr "Umfrage ausfüllen"
+
+# ─── Global ───────────────────────────────────────────────
+msgid "projects_cta_view"
+msgstr "Website besuchen"
+
+msgid "projects_cta_preview"
+msgstr "Prototyp ansehen"
+
+msgid "ustg19_footnote"
+msgstr "Gemäß §19 UStG wird keine Umsatzsteuer berechnet."

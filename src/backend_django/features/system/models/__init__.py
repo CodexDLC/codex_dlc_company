@@ -1,3 +1,3 @@
-from .mixins import TimestampMixin  # noqa: F401
+from .mixins import ActiveMixin, SeoMixin, TimestampMixin  # noqa: F401
 from .site_settings import SiteSettings  # noqa: F401
 from .static_translation import StaticTranslation  # noqa: F401

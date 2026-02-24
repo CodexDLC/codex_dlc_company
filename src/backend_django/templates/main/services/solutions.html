@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+{% load i18n static bento_tags %}
+
+{% block title %}{{ content.solutions_page_title }} — {{ site_settings.meta_title|default:"CodexDLC" }}{% endblock %}
+{% block og_title %}{{ content.solutions_page_title }}{% endblock %}
+{% block twitter_title %}{{ content.solutions_page_title }}{% endblock %}
+
+{% block content %}
+
+{# ======================== HERO ======================== #}
+<section class="hero" id="hero-section">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <span class="tech-label">03 // PLUG & PLAY</span>
+        <h1 class="hero-title solutions-hero-title">
+            {{ content.solutions_hero_title }}
+        </h1>
+        <p class="solutions-hero-text">
+            {{ content.solutions_hero_text }}
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            {% if site_settings.site_mode == 'sales' %}
+            <a href="#projects-grid" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_sales_btn_primary }}</a>
+            <a href="{% url 'main:contacts' %}" class="btn btn-secondary"
+                style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_sales_btn_secondary }}</a>
+            {% else %}
+            <a href="#survey" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_research_btn_primary }}</a>
+            <a href="{% url 'main:index' %}" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_research_btn_secondary }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== PROJECTS BENTO WITH STATUS BADGES ======================== #}
+<section id="projects-grid" style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">AVAILABLE_SOLUTIONS</span>
+        <h2 class="solutions-grid-title">{{ content.solutions_grid_title }}</h2>
+        <p class="solutions-grid-subtitle">{{ content.solutions_grid_subtitle }}</p>
+
+        {% if projects %}
+        <div class="bento-grid">
+            {% for project in projects %}
+            {% bento_span forloop.counter projects_count as span %}
+            <div class="bento-card {{ span }}">
+                {# Status badge #}
+                <div class="project-status">
+                    {% if project.status == 'live' %}
+                    <span class="status-live">● {{ content.solutions_badge_live }}</span>
+                    {% elif project.status == 'taken' %}
+                    <span class="status-taken">● {{ content.solutions_badge_taken }}</span>
+                    {% else %}
+                    <span class="status-free">● {{ content.solutions_badge_free }}</span>
+                    {% endif %}
+                </div>
+
+                {# Thumbnail — кликабельна для free/taken (iframe), для live открывает новую вкладку #}
+                {% if project.status == 'live' %}
+                <a href="{{ project.site_url }}" target="_blank" rel="noopener" class="project-thumbnail-link">
+                    {% if project.thumbnail %}
+                    <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="project-thumbnail-img">
+                    {% else %}
+                    <div class="project-thumbnail-placeholder">[ {{ project.name|upper }} ]</div>
+                    {% endif %}
+                </a>
+                {% elif project.preview_url %}
+                <a href="#" class="preview-trigger project-thumbnail-link" data-url="{{ project.preview_url }}"
+                    data-name="{{ project.name }}">
+                    {% if project.thumbnail %}
+                    <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="project-thumbnail-img">
+                    {% else %}
+                    <div class="project-thumbnail-placeholder">[ {{ project.name|upper }} ]</div>
+                    {% endif %}
+                    <div class="preview-overlay">
+                        <span class="preview-badge">▶ PREVIEW</span>
+                    </div>
+                </a>
+                {% else %}
+                {% if project.thumbnail %}
+                <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="project-thumbnail-img"
+                    style="margin-bottom: 16px;">
+                {% else %}
+                <div class="project-thumbnail-placeholder">[ {{ project.name|upper }} ]</div>
+                {% endif %}
+                {% endif %}
+
+                <div class="project-info">
+                    <span class="tech-label project-niche">{{ project.niche }}</span>
+                    <h3 class="project-name">{{ project.name }}</h3>
+                    {% if project.city %}<p class="project-city">{{ project.city }}</p>{% endif %}
+                </div>
+
+                {# CTA by status #}
+                <div class="project-actions">
+                    {% if project.status == 'live' %}
+                    <a href="{{ project.site_url }}" target="_blank" rel="noopener" class="z-link"
+                        style="font-size: 13px; color: var(--status-green);">{{ content.solutions_cta_view }} →</a>
+                    {% if project.preview_url %}
+                    <a href="#" class="preview-trigger z-link" data-url="{{ project.preview_url }}"
+                        data-name="{{ project.name }}" style="font-size: 13px; color: var(--gray-500);">{{ content.solutions_cta_preview }} →</a>
+                    {% endif %}
+                    {% elif project.status == 'taken' %}
+                    {% if project.preview_url %}
+                    <a href="#" class="preview-trigger z-link" data-url="{{ project.preview_url }}"
+                        data-name="{{ project.name }}" style="font-size: 13px; color: var(--cyber-blue);">{{ content.solutions_cta_preview }} →</a>
+                    {% endif %}
+                    <a href="{% url 'main:contacts' %}" class="z-link"
+                        style="font-size: 13px; color: var(--electric-purple);">{{ content.solutions_cta_taken }} →</a>
+                    {% else %}
+                    {% if project.preview_url %}
+                    <a href="#" class="preview-trigger z-link" data-url="{{ project.preview_url }}"
+                        data-name="{{ project.name }}" style="font-size: 13px; color: var(--cyber-blue);">{{ content.solutions_cta_free }} →</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {# ======================== IFRAME MODAL ======================== #}
+        <div id="preview-modal" class="preview-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="preview-modal-title" class="modal-title"></span>
+                    <button id="preview-modal-close" class="modal-close">✕ CLOSE</button>
+                </div>
+                <iframe id="preview-modal-iframe" src="" class="modal-iframe"></iframe>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="solutions-empty">
+            [ NO_PROJECTS_YET // COMING_SOON ]
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== HOW IT WORKS — 3 STEPS ======================== #}
+<section style="padding: 120px 0;">
+    <div class="container">
+        <span class="tech-label">PROCESS</span>
+        <h2 class="solutions-grid-title">{{ content.solutions_how_title }}</h2>
+        <div class="bento-grid">
+            <div class="bento-card" style="grid-column: span 4;">
+                <div class="process-step-num" style="color: var(--cyber-blue);">{{ content.solutions_step_1_num }}</div>
+                <h3 style="margin-bottom: 12px;">{{ content.solutions_step_1_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.solutions_step_1_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <div class="process-step-num" style="color: var(--electric-purple);">{{ content.solutions_step_2_num }}
+                </div>
+                <h3 style="margin-bottom: 12px;">{{ content.solutions_step_2_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.solutions_step_2_text }}</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 4;">
+                <div class="process-step-num" style="color: var(--status-green);">{{ content.solutions_step_3_num }}
+                </div>
+                <h3 style="margin-bottom: 12px;">{{ content.solutions_step_3_title }}</h3>
+                <p style="color: var(--gray-400);">{{ content.solutions_step_3_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+{# ======================== FINAL CTA (dual-mode) ======================== #}
+<section style="padding: 140px 0;">
+    <div class="container" style="max-width: 650px; text-align: center;">
+        <span class="tech-label">{% trans "home_cta_kicker" %}</span>
+        {% if site_settings.site_mode == 'sales' %}
+        <h2 style="font-size: 48px; margin-bottom: 24px;">{{ content.solutions_cta_sales_title }}</h2>
+        <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">{{ content.solutions_cta_sales_text }}
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <a href="#projects-grid" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_sales_btn_primary }}</a>
+            <a href="{% url 'main:contacts' %}" class="btn btn-secondary"
+                style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_sales_btn_secondary }}</a>
+        </div>
+        {% else %}
+        <h2 style="font-size: 48px; margin-bottom: 24px;">{{ content.solutions_cta_research_title }}</h2>
+        <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">{{ content.solutions_cta_research_text
+            }}</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <a href="#survey" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_research_btn_primary }}</a>
+            <a href="{% url 'main:index' %}" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">{{ content.solutions_cta_research_btn_secondary }}</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    (function () {
+        const modal = document.getElementById('preview-modal');
+        const iframe = document.getElementById('preview-modal-iframe');
+        const title = document.getElementById('preview-modal-title');
+        const closeBtn = document.getElementById('preview-modal-close');
+
+        function openModal(url, name) {
+            iframe.src = url;
+            title.textContent = name + ' // PREVIEW';
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            iframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.preview-trigger').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                openModal(el.dataset.url, el.dataset.name);
+            });
+            // Показываем overlay при hover на карточку с thumbnail
+            var overlay = el.querySelector('.preview-overlay');
+            if (overlay) {
+                el.addEventListener('mouseenter', function () { overlay.style.opacity = '1'; });
+                el.addEventListener('mouseleave', function () { overlay.style.opacity = '0'; });
+            }
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    })();
+</script>
+{% endblock extra_js %}
+
+{% block taglines %}
+<script id="page-taglines" type="application/json">
+["Demo Launch Cycle"]
+</script>
+{% endblock taglines %}

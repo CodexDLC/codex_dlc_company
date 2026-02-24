@@ -1,0 +1,15 @@
+/* =========================================
+   SMALL LAPTOP (1024px - 1279px)
+   @media (min-width: 1024px) and (max-width: 1279px)
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .container {
+        max-width: 960px;
+    }
+
+    .z-row {
+        gap: 60px;
+    }
+}

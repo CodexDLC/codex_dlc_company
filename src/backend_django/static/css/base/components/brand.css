@@ -1,0 +1,57 @@
+/* Brand Logo with DLC Animation */
+.brand-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    font-family: var(--font-headings);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+}
+
+.brand-codex {
+    color: var(--gray-100);
+}
+
+.brand-dlc {
+    color: var(--cyber-blue);
+    display: inline-block;
+    transform-origin: center bottom;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.brand-dlc.dlc-out {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.brand-dlc.dlc-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.brand-tagline {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--cyber-blue);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.32s ease, transform 0.32s ease;
+    pointer-events: none;
+}
+
+.brand-tagline.tagline-in {
+    opacity: 0.75;
+    transform: translateY(0);
+}
+
+.brand-tagline.tagline-out {
+    opacity: 0;
+    transform: translateY(4px);
+}

@@ -1,0 +1,12 @@
+/* =========================================
+   ULTRA-WIDE MONITORS (1920px+)
+   @media (min-width: 1920px)
+   ========================================= */
+
+@media (min-width: 1920px) {
+
+    /* Patterns for extra large screens */
+    :root {
+        --container-max-width: 1800px;
+    }
+}

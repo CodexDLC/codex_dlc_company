@@ -9,135 +9,163 @@
   {
     "key": "home_hero_subtitle",
     "description": "Hero section — subheadline paragraph",
-    "text_ru": "Разработка, хостинг и поддержка премиальных сайтов по подписке. Никаких технических забот — мы берем всё на себя.",
-    "text_en": "Development, hosting and maintenance of premium websites by subscription. No technical worries — we handle everything.",
-    "text_de": "Entwicklung, Hosting und Wartung von Premium-Websites per Abo. Keine technischen Sorgen — wir kümmern uns um alles."
+    "text_ru": "Полный IT-аутсорс для локальных компаний: премиальные сайты, автоматическая запись клиентов и круглосуточная поддержка серверов. Никаких огромных разовых счетов — фиксированная ежемесячная плата, всё включено.",
+    "text_en": "Full IT outsourcing for local businesses: premium websites, automated client booking and 24/7 server support. No huge one-time bills — a fixed monthly fee, everything included.",
+    "text_de": "Vollständiges IT-Outsourcing für lokale Unternehmen: Premium-Websites, automatische Kundenbuchungen und rund um die Uhr Server-Support. Keine riesigen Einmalrechnungen — eine feste monatliche Gebühr, alles inklusive."
+  },
+  {
+    "key": "home_hero_cta_primary_sales",
+    "description": "Hero section — primary CTA button (Sales mode)",
+    "text_ru": "Смотреть тарифы",
+    "text_en": "View pricing",
+    "text_de": "Preise ansehen"
+  },
+  {
+    "key": "home_hero_cta_secondary_sales",
+    "description": "Hero section — secondary CTA button (Sales mode)",
+    "text_ru": "Получить бесплатную консультацию",
+    "text_en": "Get a free consultation",
+    "text_de": "Kostenlose Beratung"
+  },
+  {
+    "key": "home_hero_cta_primary_research",
+    "description": "Hero section — primary CTA button (Research mode)",
+    "text_ru": "Хочу такой сервис",
+    "text_en": "I want this service",
+    "text_de": "Ich möchte diesen Service"
+  },
+  {
+    "key": "home_hero_cta_secondary_research",
+    "description": "Hero section — secondary CTA button (Research mode)",
+    "text_ru": "Пройти опрос",
+    "text_en": "Take the survey",
+    "text_de": "Umfrage ausfüllen"
   },
   {
     "key": "home_compare_classic_1",
     "description": "Problem/Solution block — classic agency bullet 1",
-    "text_ru": "Огромные разовые чеки",
-    "text_en": "Huge one-time invoices",
-    "text_de": "Riesige Einmalrechnungen"
+    "text_ru": "Огромные разовые чеки (часто от 3.000 €)",
+    "text_en": "Huge one-time invoices (often from €3,000)",
+    "text_de": "Riesige Einmalrechnungen (oft ab 3.000 €)"
   },
   {
     "key": "home_compare_classic_2",
     "description": "Problem/Solution block — classic agency bullet 2",
-    "text_ru": "Скрытые платежи за правки",
-    "text_en": "Hidden revision fees",
-    "text_de": "Versteckte Änderungsgebühren"
+    "text_ru": "Каждая правка текста — отдельный счёт",
+    "text_en": "Every text edit — a separate invoice",
+    "text_de": "Jede Textänderung — eine separate Rechnung"
   },
   {
     "key": "home_compare_classic_3",
     "description": "Problem/Solution block — classic agency bullet 3",
-    "text_ru": "Медленный WordPress / Конструкторы",
-    "text_en": "Slow WordPress / Website builders",
-    "text_de": "Langsames WordPress / Baukastensysteme"
+    "text_ru": "Медленный WordPress и постоянные сбои",
+    "text_en": "Slow WordPress and constant failures",
+    "text_de": "Langsames WordPress und ständige Ausfälle"
   },
   {
     "key": "home_compare_classic_4",
     "description": "Problem/Solution block — classic agency bullet 4",
-    "text_ru": "Владелец сам управляет хостингом",
-    "text_en": "Owner manages hosting themselves",
-    "text_de": "Inhaber verwaltet Hosting selbst"
+    "text_ru": "Хостинг, домен, обновления — ваша головная боль",
+    "text_en": "Hosting, domain, updates — your headache",
+    "text_de": "Hosting, Domain, Updates — Ihr Problem"
   },
   {
     "key": "home_compare_codex_1",
     "description": "Problem/Solution block — CodexDLC bullet 1",
-    "text_ru": "Комфортный ежемесячный платеж",
-    "text_en": "Comfortable monthly payment",
-    "text_de": "Komfortable monatliche Zahlung"
+    "text_ru": "Один честный платёж в месяц — без сюрпризов",
+    "text_en": "One honest monthly payment — no surprises",
+    "text_de": "Eine faire monatliche Zahlung — keine Überraschungen"
   },
   {
     "key": "home_compare_codex_2",
     "description": "Problem/Solution block — CodexDLC bullet 2",
-    "text_ru": "Всё включено (правки, развитие)",
-    "text_en": "All-inclusive (revisions, growth)",
-    "text_de": "Alles inklusive (Anpassungen, Wachstum)"
+    "text_ru": "Правки включены — срок зависит от сложности, всегда согласовываем заранее",
+    "text_en": "Edits included — timeline depends on complexity, always agreed in advance",
+    "text_de": "Anpassungen inklusive — Zeitplan je nach Komplexität, immer vorher abgesprochen"
   },
   {
     "key": "home_compare_codex_3",
     "description": "Problem/Solution block — CodexDLC bullet 3",
-    "text_ru": "Молниеносный кастомный код",
-    "text_en": "Blazing-fast custom code",
-    "text_de": "Blitzschneller Custom-Code"
+    "text_ru": "Быстрый, безопасный, современный стек",
+    "text_en": "Fast, secure, modern tech stack",
+    "text_de": "Schneller, sicherer, moderner Tech-Stack"
   },
   {
     "key": "home_compare_codex_4",
     "description": "Problem/Solution block — CodexDLC bullet 4",
-    "text_ru": "24/7 мониторинг и поддержка",
-    "text_en": "24/7 monitoring and support",
-    "text_de": "24/7 Monitoring und Support"
+    "text_ru": "100% технической ответственности на нас",
+    "text_en": "100% technical responsibility on us",
+    "text_de": "100% technische Verantwortung liegt bei uns"
   },
   {
     "key": "home_service_waas_desc",
     "description": "Services block — WaaS description paragraph",
-    "text_ru": "Премиальные сайты для сферы услуг. Никаких огромных разовых платежей и скрытых комиссий. Мы создаем платформу для сбора заявок, настраиваем почту, SEO и следим за сервером 24/7. Вы платите только фиксированную подписку.",
-    "text_en": "Premium websites for service businesses. No huge one-time payments or hidden fees. We build your lead-capture platform, set up email, SEO and monitor the server 24/7. You pay only a fixed monthly subscription.",
-    "text_de": "Premium-Websites für Dienstleistungsunternehmen. Keine riesigen Einmalzahlungen oder versteckten Gebühren. Wir erstellen Ihre Lead-Plattform, richten E-Mail und SEO ein und überwachen den Server rund um die Uhr. Sie zahlen nur ein festes monatliches Abonnement."
+    "text_ru": "Мы не просто делаем сайт — мы берём его на постоянное обслуживание. Индивидуальный дизайн, корпоративная почта, локальное SEO и полная защита по DSGVO с первого дня.",
+    "text_en": "We don't just build a website — we take it into permanent care. Custom design, corporate email, local SEO and full GDPR protection from day one.",
+    "text_de": "Wir bauen nicht nur eine Website — wir übernehmen sie dauerhaft. Individuelles Design, Unternehmens-E-Mail, lokales SEO und vollständiger DSGVO-Schutz ab dem ersten Tag."
   },
   {
     "key": "home_service_waas_feat_1",
     "description": "WaaS feature bullet 1",
-    "text_ru": "Кастомный дизайн под нишу",
-    "text_en": "Custom design for your niche",
-    "text_de": "Individuelles Design für Ihre Branche"
+    "text_ru": "Дизайн под вашу нишу — никаких шаблонов",
+    "text_en": "Design for your niche — no templates",
+    "text_de": "Design für Ihre Branche — keine Templates"
   },
   {
     "key": "home_service_waas_feat_2",
     "description": "WaaS feature bullet 2",
-    "text_ru": "SEO-оптимизация с первого дня",
-    "text_en": "SEO optimization from day one",
-    "text_de": "SEO-Optimierung ab dem ersten Tag"
+    "text_ru": "Локальное SEO: ваш бизнес на карте — клиенты находят вас сами",
+    "text_en": "Local SEO: your business on the map — clients find you themselves",
+    "text_de": "Lokales SEO: Ihr Unternehmen auf der Karte — Kunden finden Sie selbst"
   },
   {
     "key": "home_service_waas_feat_3",
     "description": "WaaS feature bullet 3",
-    "text_ru": "Домен, хостинг, почта включены",
-    "text_en": "Domain, hosting, email included",
-    "text_de": "Domain, Hosting, E-Mail inklusive"
+    "text_ru": "Домен, хостинг и почта уже в цене",
+    "text_en": "Domain, hosting and email already included",
+    "text_de": "Domain, Hosting und E-Mail bereits im Preis"
   },
   {
     "key": "home_service_waas_feat_4",
     "description": "WaaS feature bullet 4",
-    "text_ru": "Правки без лимита в рамках подписки",
-    "text_en": "Unlimited revisions within the subscription",
-    "text_de": "Unbegrenzte Anpassungen im Rahmen des Abos"
+    "text_ru": "Impressum и DSGVO настроены с первого дня",
+    "text_en": "Impressum and GDPR configured from day one",
+    "text_de": "Impressum und DSGVO ab dem ersten Tag eingerichtet"
   },
   {
     "key": "home_service_bot_desc",
-    "description": "Services block — Telegram bot description paragraph",
-    "text_ru": "Хватит терять клиентов в переписках. Мы разрабатываем умных ботов, которые сами квалифицируют лидов, принимают записи и интегрируются с вашей базой данных. Ваш бизнес работает даже когда вы спите.",
-    "text_en": "Stop losing clients in chats. We develop intelligent bots that qualify leads automatically, accept bookings and integrate with your database. Your business runs even while you sleep.",
-    "text_de": "Hören Sie auf, Kunden in Chats zu verlieren. Wir entwickeln intelligente Bots, die Leads automatisch qualifizieren, Buchungen annehmen und sich in Ihre Datenbank integrieren. Ihr Unternehmen läuft auch wenn Sie schlafen."
+    "description": "Services block — Automation description paragraph",
+    "text_ru": "Занятый телефон и пропущенные заявки — это потерянные деньги. Наша система принимает бронирования круглосуточно, фильтрует спам и отправляет напоминания клиентам. Ваш бизнес работает, даже когда вы спите.",
+    "text_en": "A busy phone and missed inquiries mean lost money. Our system accepts bookings around the clock, filters spam and sends reminders to clients. Your business runs even while you sleep.",
+    "text_de": "Ein besetztes Telefon und verpasste Anfragen bedeuten verlorenes Geld. Unser System nimmt Buchungen rund um die Uhr an, filtert Spam und sendet Erinnerungen an Kunden. Ihr Unternehmen läuft auch wenn Sie schlafen."
   },
   {
     "key": "home_service_bot_feat_1",
-    "description": "Bot feature bullet 1",
-    "text_ru": "Квалификация лидов по сценарию (FSM)",
-    "text_en": "Lead qualification via scripted FSM",
-    "text_de": "Lead-Qualifizierung per FSM-Skript"
+    "description": "Automation feature bullet 1",
+    "text_ru": "Онлайн-запись 24/7 — без вашего участия",
+    "text_en": "Online booking 24/7 — without your involvement",
+    "text_de": "Online-Buchung 24/7 — ohne Ihr Zutun"
   },
   {
     "key": "home_service_bot_feat_2",
-    "description": "Bot feature bullet 2",
-    "text_ru": "Онлайн-запись через Telegram Web App",
-    "text_en": "Online booking via Telegram Web App",
-    "text_de": "Online-Buchung via Telegram Web App"
+    "description": "Automation feature bullet 2",
+    "text_ru": "Интеграция с WhatsApp, Telegram и сайтом",
+    "text_en": "Integration with WhatsApp, Telegram and website",
+    "text_de": "Integration mit WhatsApp, Telegram und Website"
   },
   {
     "key": "home_service_bot_feat_3",
-    "description": "Bot feature bullet 3",
-    "text_ru": "Уведомления администратору в реальном времени",
-    "text_en": "Real-time admin notifications",
-    "text_de": "Echtzeit-Benachrichtigungen für Administratoren"
+    "description": "Automation feature bullet 3",
+    "text_ru": "Автоматические напоминания снижают неявки",
+    "text_en": "Automatic reminders reduce no-shows",
+    "text_de": "Automatische Erinnerungen reduzieren Nichterscheinen"
   },
   {
     "key": "home_service_bot_feat_4",
-    "description": "Bot feature bullet 4",
-    "text_ru": "Интеграция с CRM и базами данных",
-    "text_en": "CRM and database integration",
-    "text_de": "CRM- und Datenbankintegration"
+    "description": "Automation feature bullet 4",
+    "text_ru": "Уведомления вам — моментально, в удобный мессенджер",
+    "text_en": "Notifications to you — instantly, in your preferred messenger",
+    "text_de": "Benachrichtigungen für Sie — sofort, im bevorzugten Messenger"
   },
   {
     "key": "home_service_bot_demo_user",
@@ -156,37 +184,37 @@
   {
     "key": "home_service_proto_desc",
     "description": "Services block — Prototypes description paragraph",
-    "text_ru": "У нас есть собственная библиотека протестированных бизнес-шаблонов. Вы выбираете концепцию, и уже через 48 часов получаете рабочий интерактивный прототип. После согласования — запуск за 7–14 дней.",
-    "text_en": "We maintain a library of battle-tested business templates. Choose a concept and receive a working interactive prototype within 48 hours. After approval — launch in 7–14 days.",
-    "text_de": "Wir pflegen eine Bibliothek erprobter Business-Templates. Wählen Sie ein Konzept und erhalten Sie innerhalb von 48 Stunden einen funktionierenden interaktiven Prototypen. Nach Genehmigung — Start in 7–14 Tagen."
+    "text_ru": "Никаких затяжных IT-проектов. Вы выбираете направление — мы через 48 часов показываем кликабельный прототип вашего сайта. После утверждения — полноценный запуск за 7–14 дней.",
+    "text_en": "No drawn-out IT projects. You choose the direction — in 48 hours we show you a clickable prototype of your site. After approval — full launch in 7–14 days.",
+    "text_de": "Keine langwierigen IT-Projekte. Sie wählen die Richtung — in 48 Stunden zeigen wir Ihnen einen anklickbaren Prototypen Ihrer Website. Nach Genehmigung — vollständiger Start in 7–14 Tagen."
   },
   {
     "key": "home_service_proto_feat_1",
     "description": "Proto feature bullet 1",
-    "text_ru": "Салон красоты / Барбершоп",
-    "text_en": "Beauty salon / Barbershop",
-    "text_de": "Schönheitssalon / Barbershop"
+    "text_ru": "Готовые решения для ниш: салоны, автосервисы, кафе, мастера",
+    "text_en": "Ready solutions for niches: salons, auto services, cafes, craftsmen",
+    "text_de": "Fertige Lösungen für Branchen: Salons, Kfz-Service, Cafés, Handwerker"
   },
   {
     "key": "home_service_proto_feat_2",
     "description": "Proto feature bullet 2",
-    "text_ru": "Монтаж и строительство",
-    "text_en": "Installation & construction",
-    "text_de": "Montage und Bau"
+    "text_ru": "Ваши цвета, логотип и контент с первого показа",
+    "text_en": "Your colors, logo and content from the first preview",
+    "text_de": "Ihre Farben, Logo und Inhalte ab der ersten Vorschau"
   },
   {
     "key": "home_service_proto_feat_3",
     "description": "Proto feature bullet 3",
-    "text_ru": "Автосервис / Локальные услуги",
-    "text_en": "Auto service / Local services",
-    "text_de": "Kfz-Service / Lokale Dienstleistungen"
+    "text_ru": "Прототип можно потрогать и покликать до оплаты",
+    "text_en": "Prototype is interactive and clickable before payment",
+    "text_de": "Prototyp ist interaktiv und anklickbar vor der Bezahlung"
   },
   {
     "key": "home_service_proto_feat_4",
     "description": "Proto feature bullet 4",
-    "text_ru": "Настройка под ваш фирменный стиль",
-    "text_en": "Tailored to your brand identity",
-    "text_de": "Anpassung an Ihre Unternehmensidentität"
+    "text_ru": "Полный запуск после утверждения — 7–14 дней",
+    "text_en": "Full launch after approval — 7–14 days",
+    "text_de": "Vollständiger Start nach Genehmigung — 7–14 Tage"
   },
   {
     "key": "home_sub_dev_desc",
@@ -229,5 +257,1059 @@
     "text_ru": "Оставьте контакт — мы разберём задачи вашего бизнеса и предложим решение в течение 24 часов.",
     "text_en": "Leave your contact — we'll analyze your business needs and propose a solution within 24 hours.",
     "text_de": "Hinterlassen Sie Ihre Kontaktdaten — wir analysieren Ihre Geschäftsanforderungen und schlagen innerhalb von 24 Stunden eine Lösung vor."
+  },
+
+  {
+    "key": "home_trust_text",
+    "description": "Trust/Architecture block — subtitle paragraph (Block 4)",
+    "text_ru": "Никаких тяжёлых конструкторов. Каждый проект — чистый индивидуальный код: максимальная видимость в Google, безупречная защита данных и стабильность в любой момент.",
+    "text_en": "No bloated website builders. Every project is clean custom code: maximum Google visibility, flawless data protection and stability at any moment.",
+    "text_de": "Keine aufgeblähten Baukastensysteme. Jedes Projekt ist sauberer individueller Code: maximale Google-Sichtbarkeit, makellose Datenschutz und Stabilität zu jeder Zeit."
+  },
+  {
+    "key": "home_cta_sales_title",
+    "description": "Final CTA — title in sales mode",
+    "text_ru": "Первый прототип — через 48 часов после заявки.",
+    "text_en": "First Prototype — 48 Hours After Request.",
+    "text_de": "Erster Prototyp — 48 Stunden nach Anfrage."
+  },
+  {
+    "key": "home_cta_sales_text",
+    "description": "Final CTA — body text in sales mode",
+    "text_ru": "Сфокусируйтесь на своём бизнесе — мы возьмём на себя всю технику. Выберите тариф или давайте вместе разберём, что нужно именно вашей компании.",
+    "text_en": "Focus on your business — we'll handle all the technology. Choose a plan or let's figure out together what your company needs.",
+    "text_de": "Konzentrieren Sie sich auf Ihr Unternehmen — wir kümmern uns um die gesamte Technik. Wählen Sie ein Paket oder lassen Sie uns gemeinsam herausfinden, was Ihr Unternehmen braucht."
+  },
+  {
+    "key": "home_cta_sales_btn_primary",
+    "description": "Final CTA — primary button (Sales mode)",
+    "text_ru": "Смотреть тарифы",
+    "text_en": "View pricing",
+    "text_de": "Preise ansehen"
+  },
+  {
+    "key": "home_cta_sales_btn_secondary",
+    "description": "Final CTA — secondary button (Sales mode)",
+    "text_ru": "Запросить консультацию",
+    "text_en": "Request a consultation",
+    "text_de": "Beratung anfragen"
+  },
+  {
+    "key": "home_cta_research_title",
+    "description": "Final CTA — title in research mode",
+    "text_ru": "Помогите нам стать лучше",
+    "text_en": "Help Us Become Better",
+    "text_de": "Helfen Sie uns, besser zu werden"
+  },
+  {
+    "key": "home_cta_research_text",
+    "description": "Final CTA — body text in research mode",
+    "text_ru": "Мы готовим сервис для малого бизнеса в Германии и хотим понять, что важно именно вам. Пройдите короткий опрос — это займёт 2 минуты и поможет нам сделать продукт под ваши задачи.",
+    "text_en": "We're building a service for small businesses in Germany and want to understand what matters to you. Take a short survey — it takes 2 minutes and helps us build the product for your needs.",
+    "text_de": "Wir entwickeln einen Service für kleine Unternehmen in Deutschland und möchten verstehen, was Ihnen wichtig ist. Machen Sie eine kurze Umfrage — es dauert 2 Minuten und hilft uns, das Produkt für Ihre Bedürfnisse zu entwickeln."
+  },
+  {
+    "key": "home_cta_research_btn_primary",
+    "description": "Final CTA — primary button (Research mode)",
+    "text_ru": "Пройти опрос (2 минуты)",
+    "text_en": "Take the survey (2 minutes)",
+    "text_de": "Umfrage ausfüllen (2 Minuten)"
+  },
+  {
+    "key": "home_cta_research_btn_secondary",
+    "description": "Final CTA — secondary button (Research mode)",
+    "text_ru": "Хочу узнать первым о запуске",
+    "text_en": "I want to be the first to know",
+    "text_de": "Als Erster informiert werden"
+  },
+
+  {
+    "key": "waas_hero_title",
+    "description": "WaaS page — hero headline",
+    "text_ru": "Сайт, который работает на вас.\nА не наоборот.",
+    "text_en": "A Website That Works for You.\nNot the Other Way Around.",
+    "text_de": "Eine Website, die für Sie arbeitet.\nNicht umgekehrt."
+  },
+  {
+    "key": "waas_hero_text",
+    "description": "WaaS page — hero body text",
+    "text_ru": "Забудьте об огромных разовых счетах и агентствах, которые исчезают после сдачи проекта. Мы строим ваш сайт и остаёмся рядом — каждый месяц, каждый год.",
+    "text_en": "Forget about huge one-time bills and agencies that vanish after delivery. We build your site and stay by your side — every month, every year.",
+    "text_de": "Vergessen Sie riesige Einmalrechnungen und Agenturen, die nach der Projektabgabe verschwinden. Wir erstellen Ihre Website und bleiben an Ihrer Seite — jeden Monat, jedes Jahr."
+  },
+  {
+    "key": "waas_who_title",
+    "description": "WaaS page — Who It's For section title",
+    "text_ru": "Ваша ниша — наша экспертиза",
+    "text_en": "Your Niche — Our Expertise",
+    "text_de": "Ihre Branche — unsere Expertise"
+  },
+  {
+    "key": "waas_who_card_1_title",
+    "description": "WaaS Who It's For — card 1 title",
+    "text_ru": "Салоны красоты и студии",
+    "text_en": "Beauty Salons and Studios",
+    "text_de": "Schönheitssalons und Studios"
+  },
+  {
+    "key": "waas_who_card_1_text",
+    "description": "WaaS Who It's For — card 1 body",
+    "text_ru": "Онлайн-запись, портфолио, прайс-лист и кнопка «Google Maps» — всё что нужно для заполняемости.",
+    "text_en": "Online booking, portfolio, price list and Google Maps button — everything needed to keep your chairs full.",
+    "text_de": "Online-Buchung, Portfolio, Preisliste und Google-Maps-Button — alles für eine volle Auslastung."
+  },
+  {
+    "key": "waas_who_card_2_title",
+    "description": "WaaS Who It's For — card 2 title",
+    "text_ru": "Мастера и Handwerker",
+    "text_en": "Craftsmen and Handwerker",
+    "text_de": "Handwerker und Meister"
+  },
+  {
+    "key": "waas_who_card_2_text",
+    "description": "WaaS Who It's For — card 2 body",
+    "text_ru": "Визитка-сайт с формой заявки, примерами работ и кнопкой звонка. Клиенты находят вас в Google — сами.",
+    "text_en": "Business card site with inquiry form, work examples and call button. Clients find you on Google — on their own.",
+    "text_de": "Visitenkarten-Website mit Anforderungsformular, Arbeitsbeispielen und Anruf-Button. Kunden finden Sie auf Google — von selbst."
+  },
+  {
+    "key": "waas_who_card_3_title",
+    "description": "WaaS Who It's For — card 3 title",
+    "text_ru": "Кафе и рестораны",
+    "text_en": "Cafes and Restaurants",
+    "text_de": "Cafés und Restaurants"
+  },
+  {
+    "key": "waas_who_card_3_text",
+    "description": "WaaS Who It's For — card 3 body",
+    "text_ru": "Меню, акции, бронирование столика и раздел с отзывами. Гости заходят на сайт и сразу хотят прийти.",
+    "text_en": "Menu, promotions, table booking and reviews section. Guests visit the site and immediately want to come.",
+    "text_de": "Menü, Aktionen, Tischreservierung und Bewertungsbereich. Gäste besuchen die Website und wollen sofort kommen."
+  },
+  {
+    "key": "waas_included_title",
+    "description": "WaaS page — What's Included section title",
+    "text_ru": "Что входит в подписку",
+    "text_en": "What's Included in Your Subscription",
+    "text_de": "Was ist im Abonnement enthalten"
+  },
+  {
+    "key": "waas_feat_1_title",
+    "description": "WaaS included feature 1 title",
+    "text_ru": "Дизайн под вашу нишу",
+    "text_en": "Custom Design for Your Niche",
+    "text_de": "Individuelles Design für Ihre Branche"
+  },
+  {
+    "key": "waas_feat_1_text",
+    "description": "WaaS included feature 1 body",
+    "text_ru": "Никаких шаблонов — каждый сайт разрабатывается с нуля под ваш стиль и задачи.",
+    "text_en": "No templates — every site is built from scratch for your brand and goals.",
+    "text_de": "Keine Templates — jede Website wird von Grund auf für Ihre Marke und Ziele entwickelt."
+  },
+  {
+    "key": "waas_feat_2_title",
+    "description": "WaaS included feature 2 title",
+    "text_ru": "Домен, хостинг и почта",
+    "text_en": "Domain, Hosting and Email",
+    "text_de": "Domain, Hosting und E-Mail"
+  },
+  {
+    "key": "waas_feat_2_text",
+    "description": "WaaS included feature 2 body",
+    "text_ru": "Всё включено в подписку — вы не занимаетесь техническими вопросами.",
+    "text_en": "All included in the subscription — you don't deal with technical matters.",
+    "text_de": "Alles im Abonnement enthalten — Sie müssen sich nicht mit technischen Fragen befassen."
+  },
+  {
+    "key": "waas_feat_3_title",
+    "description": "WaaS included feature 3 title",
+    "text_ru": "Локальное SEO",
+    "text_en": "Local SEO",
+    "text_de": "Lokales SEO"
+  },
+  {
+    "key": "waas_feat_3_text",
+    "description": "WaaS included feature 3 body",
+    "text_ru": "Google Business, карты, мета-теги — ваш бизнес виден в нужном городе.",
+    "text_en": "Google Business, maps, meta tags — your business visible in the right city.",
+    "text_de": "Google Business, Karten, Meta-Tags — Ihr Unternehmen in der richtigen Stadt sichtbar."
+  },
+  {
+    "key": "waas_feat_4_title",
+    "description": "WaaS included feature 4 title",
+    "text_ru": "DSGVO и Impressum",
+    "text_en": "GDPR and Impressum",
+    "text_de": "DSGVO und Impressum"
+  },
+  {
+    "key": "waas_feat_4_text",
+    "description": "WaaS included feature 4 body",
+    "text_ru": "Юридическая защита с первого дня — без страха перед Abmahnung.",
+    "text_en": "Legal protection from day one — no fear of Abmahnung.",
+    "text_de": "Rechtlicher Schutz ab dem ersten Tag — keine Angst vor Abmahnungen."
+  },
+  {
+    "key": "waas_feat_5_title",
+    "description": "WaaS included feature 5 title",
+    "text_ru": "Правки и поддержка",
+    "text_en": "Edits and Support",
+    "text_de": "Anpassungen und Support"
+  },
+  {
+    "key": "waas_feat_5_text",
+    "description": "WaaS included feature 5 body",
+    "text_ru": "Мелкие правки — в течение 48 часов. Сложные задачи — по согласованному сроку.",
+    "text_en": "Minor edits within 48 hours. Complex tasks on agreed timeline.",
+    "text_de": "Kleinere Anpassungen innerhalb von 48 Stunden. Komplexe Aufgaben nach vereinbartem Zeitplan."
+  },
+  {
+    "key": "waas_feat_6_title",
+    "description": "WaaS included feature 6 title",
+    "text_ru": "Мониторинг 24/7",
+    "text_en": "24/7 Monitoring",
+    "text_de": "24/7-Überwachung"
+  },
+  {
+    "key": "waas_feat_6_text",
+    "description": "WaaS included feature 6 body",
+    "text_ru": "99.9% Uptime — сайт не падает в разгар сезона.",
+    "text_en": "99.9% uptime — site stays up during peak season.",
+    "text_de": "99,9% Uptime — die Website läuft auch in der Hochsaison."
+  },
+  {
+    "key": "waas_projects_title",
+    "description": "WaaS page — Projects section title",
+    "text_ru": "Живые проекты наших клиентов",
+    "text_en": "Live Projects from Our Clients",
+    "text_de": "Live-Projekte unserer Kunden"
+  },
+  {
+    "key": "waas_cta_sales_title",
+    "description": "WaaS Final CTA — title in sales mode",
+    "text_ru": "Готовы запустить ваш сайт?",
+    "text_en": "Ready to Launch Your Website?",
+    "text_de": "Bereit, Ihre Website zu starten?"
+  },
+  {
+    "key": "waas_cta_sales_text",
+    "description": "WaaS Final CTA — body in sales mode",
+    "text_ru": "Выберите тариф или получите бесплатную консультацию — разберём, что нужно именно вашему бизнесу.",
+    "text_en": "Choose a plan or get a free consultation — we'll figure out what your business needs.",
+    "text_de": "Wählen Sie ein Paket oder erhalten Sie eine kostenlose Beratung — wir finden heraus, was Ihr Unternehmen braucht."
+  },
+  {
+    "key": "waas_cta_research_title",
+    "description": "WaaS Final CTA — title in research mode",
+    "text_ru": "Был бы такой сервис вам полезен?",
+    "text_en": "Would This Service Be Useful to You?",
+    "text_de": "Wäre dieser Service für Sie nützlich?"
+  },
+  {
+    "key": "waas_cta_research_text",
+    "description": "WaaS Final CTA — body in research mode",
+    "text_ru": "Пройдите короткий опрос — помогите нам создать продукт, который решает реальные задачи малого бизнеса в Германии.",
+    "text_en": "Take a short survey — help us build a product that solves real problems for small businesses in Germany.",
+    "text_de": "Machen Sie eine kurze Umfrage — helfen Sie uns, ein Produkt zu entwickeln, das reale Probleme kleiner Unternehmen in Deutschland löst."
+  },
+
+  {
+    "key": "automation_hero_title",
+    "description": "Automation page — hero headline",
+    "text_ru": "Запись клиентов без вашего участия",
+    "text_en": "Client Booking Without Your Involvement",
+    "text_de": "Kundenbuchungen ohne Ihr Zutun"
+  },
+  {
+    "key": "automation_hero_text",
+    "description": "Automation page — hero body text",
+    "text_ru": "Занятый телефон и пропущенные заявки — это потерянные деньги. Наша система принимает бронирования круглосуточно, фильтрует спам и отправляет напоминания клиентам. Ваш бизнес работает, даже когда вы спите.",
+    "text_en": "A busy phone and missed inquiries mean lost money. Our system accepts bookings around the clock, filters spam, and sends reminders to clients. Your business runs even while you sleep.",
+    "text_de": "Ein besetztes Telefon und verpasste Anfragen bedeuten verlorenes Geld. Unser System nimmt Buchungen rund um die Uhr an, filtert Spam und sendet Erinnerungen an Kunden. Ihr Unternehmen läuft auch wenn Sie schlafen."
+  },
+  {
+    "key": "automation_how_title",
+    "description": "Automation page — How It Works section title",
+    "text_ru": "Как это работает",
+    "text_en": "How It Works",
+    "text_de": "Wie es funktioniert"
+  },
+  {
+    "key": "automation_scenario_1_label",
+    "description": "Automation How It Works — scenario 1 label",
+    "text_ru": "01 // УМНАЯ ЗАПИСЬ",
+    "text_en": "01 // SMART BOOKING",
+    "text_de": "01 // INTELLIGENTE BUCHUNG"
+  },
+  {
+    "key": "automation_scenario_1_title",
+    "description": "Automation How It Works — scenario 1 title",
+    "text_ru": "Клиент записывается сам, без вас",
+    "text_en": "Client books without you",
+    "text_de": "Kunde bucht ohne Sie"
+  },
+  {
+    "key": "automation_scenario_1_text",
+    "description": "Automation How It Works — scenario 1 body",
+    "text_ru": "Клиент выбирает свободный слот — система исключает наложения, владелец получает уведомление в Telegram или WhatsApp мгновенно.",
+    "text_en": "Client selects a free slot — the system prevents overlaps, owner gets notified instantly via Telegram or WhatsApp.",
+    "text_de": "Der Kunde wählt einen freien Slot — das System verhindert Überschneidungen, der Inhaber wird sofort per Telegram oder WhatsApp benachrichtigt."
+  },
+  {
+    "key": "automation_scenario_2_label",
+    "description": "Automation How It Works — scenario 2 label",
+    "text_ru": "02 // НАПОМИНАНИЯ",
+    "text_en": "02 // REMINDERS",
+    "text_de": "02 // ERINNERUNGEN"
+  },
+  {
+    "key": "automation_scenario_2_title",
+    "description": "Automation How It Works — scenario 2 title",
+    "text_ru": "Меньше неявок — больше выручки",
+    "text_en": "Fewer no-shows — more revenue",
+    "text_de": "Weniger Nichterscheinen — mehr Umsatz"
+  },
+  {
+    "key": "automation_scenario_2_text",
+    "description": "Automation How It Works — scenario 2 body",
+    "text_ru": "Автоматические напоминания за 24 часа и за 2 часа до визита. Клиент не забудет, вы не потеряете время.",
+    "text_en": "Automatic reminders 24 hours and 2 hours before the appointment. Client won't forget, you won't lose time.",
+    "text_de": "Automatische Erinnerungen 24 Stunden und 2 Stunden vor dem Termin. Der Kunde vergisst es nicht, Sie verlieren keine Zeit."
+  },
+  {
+    "key": "automation_scenario_3_label",
+    "description": "Automation How It Works — scenario 3 label",
+    "text_ru": "03 // КВАЛИФИКАЦИЯ",
+    "text_en": "03 // QUALIFICATION",
+    "text_de": "03 // QUALIFIZIERUNG"
+  },
+  {
+    "key": "automation_scenario_3_title",
+    "description": "Automation How It Works — scenario 3 title",
+    "text_ru": "Только горячие клиенты — к вам",
+    "text_en": "Only hot leads reach you",
+    "text_de": "Nur qualifizierte Kunden kommen zu Ihnen"
+  },
+  {
+    "key": "automation_scenario_3_text",
+    "description": "Automation How It Works — scenario 3 body",
+    "text_ru": "Бот задаёт уточняющие вопросы, фильтрует спам и доставляет вам уже готовых к работе клиентов.",
+    "text_en": "Bot asks qualifying questions, filters spam, and delivers clients ready to work with you.",
+    "text_de": "Der Bot stellt Qualifizierungsfragen, filtert Spam und liefert Ihnen bereits arbeitsbereite Kunden."
+  },
+  {
+    "key": "automation_channels_title",
+    "description": "Automation page — Integration Channels section title",
+    "text_ru": "Каналы интеграции",
+    "text_en": "Integration Channels",
+    "text_de": "Integrationskanäle"
+  },
+  {
+    "key": "automation_channel_1_name",
+    "description": "Automation channel 1 name",
+    "text_ru": "Telegram",
+    "text_en": "Telegram",
+    "text_de": "Telegram"
+  },
+  {
+    "key": "automation_channel_1_text",
+    "description": "Automation channel 1 description",
+    "text_ru": "Бот принимает заявки, отвечает на вопросы и уведомляет вас моментально.",
+    "text_en": "Bot accepts requests, answers questions and notifies you instantly.",
+    "text_de": "Bot nimmt Anfragen entgegen, beantwortet Fragen und benachrichtigt Sie sofort."
+  },
+  {
+    "key": "automation_channel_2_name",
+    "description": "Automation channel 2 name",
+    "text_ru": "WhatsApp Business",
+    "text_en": "WhatsApp Business",
+    "text_de": "WhatsApp Business"
+  },
+  {
+    "key": "automation_channel_2_text",
+    "description": "Automation channel 2 description",
+    "text_ru": "Самый популярный мессенджер в Германии — ваши клиенты уже там.",
+    "text_en": "The most popular messenger in Germany — your clients are already there.",
+    "text_de": "Der beliebteste Messenger in Deutschland — Ihre Kunden sind bereits dort."
+  },
+  {
+    "key": "automation_channel_3_name",
+    "description": "Automation channel 3 name",
+    "text_ru": "Сайт",
+    "text_en": "Website",
+    "text_de": "Website"
+  },
+  {
+    "key": "automation_channel_3_text",
+    "description": "Automation channel 3 description",
+    "text_ru": "Форма записи прямо на вашем сайте — без переходов в мессенджер.",
+    "text_en": "Booking form directly on your website — no switching to messengers.",
+    "text_de": "Buchungsformular direkt auf Ihrer Website — kein Wechsel zu Messengern."
+  },
+  {
+    "key": "automation_channel_4_name",
+    "description": "Automation channel 4 name",
+    "text_ru": "Email",
+    "text_en": "Email",
+    "text_de": "E-Mail"
+  },
+  {
+    "key": "automation_channel_4_text",
+    "description": "Automation channel 4 description",
+    "text_ru": "Подтверждения, напоминания и счета — автоматически на почту клиента.",
+    "text_en": "Confirmations, reminders and invoices — automatically to client's email.",
+    "text_de": "Bestätigungen, Erinnerungen und Rechnungen — automatisch an die E-Mail des Kunden."
+  },
+  {
+    "key": "automation_cta_sales_title",
+    "description": "Automation Final CTA — title in sales mode",
+    "text_ru": "Настроим автоматизацию под ваш бизнес",
+    "text_en": "We'll Set Up Automation for Your Business",
+    "text_de": "Wir richten Automatisierung für Ihr Unternehmen ein"
+  },
+  {
+    "key": "automation_cta_sales_text",
+    "description": "Automation Final CTA — body in sales mode",
+    "text_ru": "Выберите тариф или запросите демонстрацию — покажем, как система работает именно в вашей нише.",
+    "text_en": "Choose a plan or request a demo — we'll show how the system works for your specific niche.",
+    "text_de": "Wählen Sie ein Paket oder fordern Sie eine Demo an — wir zeigen, wie das System für Ihre spezifische Branche funktioniert."
+  },
+  {
+    "key": "automation_cta_research_title",
+    "description": "Automation Final CTA — title in research mode",
+    "text_ru": "Была бы такая система полезна вашему бизнесу?",
+    "text_en": "Would This System Be Useful to Your Business?",
+    "text_de": "Wäre dieses System für Ihr Unternehmen nützlich?"
+  },
+  {
+    "key": "automation_cta_research_text",
+    "description": "Automation Final CTA — body in research mode",
+    "text_ru": "Расскажите о своём бизнесе — поможем понять, какой уровень автоматизации вам нужен.",
+    "text_en": "Tell us about your business — we'll help you understand what level of automation you need.",
+    "text_de": "Erzählen Sie uns von Ihrem Unternehmen — wir helfen Ihnen zu verstehen, welches Automatisierungsniveau Sie benötigen."
+  },
+
+  {
+    "key": "solutions_hero_title",
+    "description": "Solutions/Prototype page — hero headline",
+    "text_ru": "Прототип за 48 часов.\nЗапуск за 7–14 дней.",
+    "text_en": "Prototype in 48 Hours.\nLaunch in 7–14 Days.",
+    "text_de": "Prototyp in 48 Stunden.\nStart in 7–14 Tagen."
+  },
+  {
+    "key": "solutions_hero_text",
+    "description": "Solutions/Prototype page — hero body text",
+    "text_ru": "Никаких затяжных IT-проектов. Вы выбираете направление — мы через 48 часов показываем кликабельный прототип вашего сайта. После утверждения — полноценный запуск за 7–14 дней.",
+    "text_en": "No drawn-out IT projects. You choose the direction — in 48 hours we show you a clickable prototype of your site. After approval — full launch in 7–14 days.",
+    "text_de": "Keine langwierigen IT-Projekte. Sie wählen die Richtung — in 48 Stunden zeigen wir Ihnen einen anklickbaren Prototypen Ihrer Website. Nach Genehmigung — vollständiger Start in 7–14 Tagen."
+  },
+  {
+    "key": "solutions_grid_title",
+    "description": "Solutions page — Projects grid section title",
+    "text_ru": "Готовые концепции для вашей ниши",
+    "text_en": "Ready-Made Concepts for Your Niche",
+    "text_de": "Fertige Konzepte für Ihre Branche"
+  },
+  {
+    "key": "solutions_grid_subtitle",
+    "description": "Solutions page — Projects grid subtitle",
+    "text_ru": "Выберите концепт и получите кликабельный прототип через 48 часов. Свободные концепты можно забрать — занятые доступны в другом городе.",
+    "text_en": "Choose a concept and get a clickable prototype in 48 hours. Free concepts can be claimed — taken ones are available in another city.",
+    "text_de": "Wählen Sie ein Konzept und erhalten Sie in 48 Stunden einen anklickbaren Prototypen. Freie Konzepte können beansprucht werden — vergebene sind in einer anderen Stadt verfügbar."
+  },
+  {
+    "key": "solutions_how_title",
+    "description": "Solutions page — How It Works section title",
+    "text_ru": "Как это работает",
+    "text_en": "How It Works",
+    "text_de": "Wie es funktioniert"
+  },
+  {
+    "key": "solutions_step_1_num",
+    "description": "Solutions How It Works — step 1 number label",
+    "text_ru": "01",
+    "text_en": "01",
+    "text_de": "01"
+  },
+  {
+    "key": "solutions_step_1_title",
+    "description": "Solutions How It Works — step 1 title",
+    "text_ru": "Выбираете концепт",
+    "text_en": "Choose a Concept",
+    "text_de": "Konzept wählen"
+  },
+  {
+    "key": "solutions_step_1_text",
+    "description": "Solutions How It Works — step 1 body",
+    "text_ru": "Смотрите интерактивный прототип — кликаете, листаете, оцениваете до оплаты.",
+    "text_en": "View the interactive prototype — click, scroll, evaluate before paying.",
+    "text_de": "Sehen Sie sich den interaktiven Prototypen an — klicken, scrollen, bewerten vor der Bezahlung."
+  },
+  {
+    "key": "solutions_step_2_num",
+    "description": "Solutions How It Works — step 2 number label",
+    "text_ru": "02",
+    "text_en": "02",
+    "text_de": "02"
+  },
+  {
+    "key": "solutions_step_2_title",
+    "description": "Solutions How It Works — step 2 title",
+    "text_ru": "Вносим ваши данные",
+    "text_en": "We Add Your Data",
+    "text_de": "Wir fügen Ihre Daten ein"
+  },
+  {
+    "key": "solutions_step_2_text",
+    "description": "Solutions How It Works — step 2 body",
+    "text_ru": "Логотип, цвета, контент, город — адаптируем под ваш бренд.",
+    "text_en": "Logo, colors, content, city — we adapt everything to your brand.",
+    "text_de": "Logo, Farben, Inhalte, Stadt — wir passen alles an Ihre Marke an."
+  },
+  {
+    "key": "solutions_step_3_num",
+    "description": "Solutions How It Works — step 3 number label",
+    "text_ru": "03",
+    "text_en": "03",
+    "text_de": "03"
+  },
+  {
+    "key": "solutions_step_3_title",
+    "description": "Solutions How It Works — step 3 title",
+    "text_ru": "Запускаем",
+    "text_en": "We Launch",
+    "text_de": "Wir starten"
+  },
+  {
+    "key": "solutions_step_3_text",
+    "description": "Solutions How It Works — step 3 body",
+    "text_ru": "Домен, хостинг, DSGVO — всё настраиваем и передаём вам работающий сайт.",
+    "text_en": "Domain, hosting, GDPR — we set everything up and hand over a working site.",
+    "text_de": "Domain, Hosting, DSGVO — wir richten alles ein und übergeben Ihnen eine funktionierende Website."
+  },
+  {
+    "key": "solutions_cta_sales_title",
+    "description": "Solutions Final CTA — title in sales mode",
+    "text_ru": "Разработаем концепт специально под вашу нишу",
+    "text_en": "We'll Develop a Concept Specifically for Your Niche",
+    "text_de": "Wir entwickeln ein Konzept speziell für Ihre Branche"
+  },
+  {
+    "key": "solutions_cta_sales_text",
+    "description": "Solutions Final CTA — body in sales mode",
+    "text_ru": "Обсудите проект или выберите готовый концепт — запустим сайт за 7–14 дней после утверждения.",
+    "text_en": "Discuss the project or choose a ready concept — we'll launch your site in 7–14 days after approval.",
+    "text_de": "Besprechen Sie das Projekt oder wählen Sie ein fertiges Konzept — wir starten Ihre Website 7–14 Tage nach Genehmigung."
+  },
+  {
+    "key": "solutions_cta_sales_btn_primary",
+    "description": "Solutions Final CTA — primary button (Sales mode)",
+    "text_ru": "Обсудить проект",
+    "text_en": "Discuss Project",
+    "text_de": "Projekt besprechen"
+  },
+  {
+    "key": "solutions_cta_sales_btn_secondary",
+    "description": "Solutions Final CTA — secondary button (Sales mode)",
+    "text_ru": "Смотреть тарифы",
+    "text_en": "View Pricing",
+    "text_de": "Preise ansehen"
+  },
+  {
+    "key": "solutions_cta_research_title",
+    "description": "Solutions Final CTA — title in research mode",
+    "text_ru": "Расскажите о своём бизнесе — разработаем концепт для вас",
+    "text_en": "Tell Us About Your Business — We'll Develop a Concept for You",
+    "text_de": "Erzählen Sie uns von Ihrem Unternehmen — wir entwickeln ein Konzept für Sie"
+  },
+  {
+    "key": "solutions_cta_research_text",
+    "description": "Solutions Final CTA — body in research mode",
+    "text_ru": "Пройдите опрос — помогите нам понять, какие ниши нужны малому бизнесу в Германии.",
+    "text_en": "Take the survey — help us understand which niches small businesses in Germany need.",
+    "text_de": "Machen Sie die Umfrage — helfen Sie uns zu verstehen, welche Branchen kleine Unternehmen in Deutschland benötigen."
+  },
+  {
+    "key": "solutions_cta_research_btn_primary",
+    "description": "Solutions Final CTA — primary button (Research mode)",
+    "text_ru": "Предложить нишу",
+    "text_en": "Suggest a Niche",
+    "text_de": "Nische vorschlagen"
+  },
+  {
+    "key": "solutions_cta_research_btn_secondary",
+    "description": "Solutions Final CTA — secondary button (Research mode)",
+    "text_ru": "Пройти опрос",
+    "text_en": "Take the Survey",
+    "text_de": "Umfrage ausfüllen"
+  },
+  {
+    "key": "nav_main_home",
+    "description": "Navigation — Home link",
+    "text_ru": "Главная",
+    "text_en": "Home",
+    "text_de": "Startseite"
+  },
+  {
+    "key": "nav_main_services",
+    "description": "Navigation — Services link",
+    "text_ru": "Услуги",
+    "text_en": "Services",
+    "text_de": "Leistungen"
+  },
+  {
+    "key": "nav_main_prototypes",
+    "description": "Navigation — Prototypes link",
+    "text_ru": "Прототипы",
+    "text_en": "Prototypes",
+    "text_de": "Prototypen"
+  },
+  {
+    "key": "btn_cta_booking",
+    "description": "Navigation — Booking button",
+    "text_ru": "Связаться",
+    "text_en": "Get in Touch",
+    "text_de": "Anfrage stellen"
+  },
+  {
+    "key": "solutions_badge_live",
+    "description": "Solutions page — Project status badge: LIVE",
+    "text_ru": "LIVE",
+    "text_en": "LIVE",
+    "text_de": "LIVE"
+  },
+  {
+    "key": "solutions_badge_taken",
+    "description": "Solutions page — Project status badge: TAKEN",
+    "text_ru": "ЗАНЯТО",
+    "text_en": "TAKEN",
+    "text_de": "VERGEBEN"
+  },
+  {
+    "key": "solutions_badge_free",
+    "description": "Solutions page — Project status badge: FREE",
+    "text_ru": "СВОБОДНО",
+    "text_en": "FREE",
+    "text_de": "FREI"
+  },
+  {
+    "key": "solutions_cta_view",
+    "description": "Solutions page — Project card CTA: View Website",
+    "text_ru": "Перейти на сайт",
+    "text_en": "View Website",
+    "text_de": "Website besuchen"
+  },
+  {
+    "key": "solutions_cta_preview",
+    "description": "Solutions page — Project card CTA: View Prototype",
+    "text_ru": "Смотреть прототип",
+    "text_en": "View Prototype",
+    "text_de": "Prototyp ansehen"
+  },
+  {
+    "key": "solutions_cta_taken",
+    "description": "Solutions page — Project card CTA: Taken",
+    "text_ru": "Взять в другом городе",
+    "text_en": "Take in Another City",
+    "text_de": "In anderer Stadt anfragen"
+  },
+  {
+    "key": "solutions_cta_free",
+    "description": "Solutions page — Project card CTA: Free",
+    "text_ru": "Забрать концепт",
+    "text_en": "Claim This Concept",
+    "text_de": "Konzept sichern"
+  },
+
+  {
+    "key": "btn_action_more",
+    "description": "Generic — 'Learn More' button label",
+    "text_ru": "Подробнее",
+    "text_en": "Learn More",
+    "text_de": "Mehr erfahren"
+  },
+  {
+    "key": "btn_form_submit",
+    "description": "Generic — form submit button",
+    "text_ru": "Отправить",
+    "text_en": "Submit",
+    "text_de": "Absenden"
+  },
+  {
+    "key": "btn_form_cancel",
+    "description": "Generic — form cancel button",
+    "text_ru": "Отмена",
+    "text_en": "Cancel",
+    "text_de": "Abbrechen"
+  },
+  {
+    "key": "btn_ui_toggle_footer",
+    "description": "Generic — toggle/show button",
+    "text_ru": "Показать",
+    "text_en": "Show",
+    "text_de": "Anzeigen"
+  },
+
+  {
+    "key": "home_hero_label",
+    "description": "Home hero — tech label above headline",
+    "text_ru": "ЦИФРОВЫЕ РЕШЕНИЯ ДЛЯ МАЛОГО БИЗНЕСА",
+    "text_en": "DIGITAL SOLUTIONS FOR SMALL BUSINESS",
+    "text_de": "DIGITALE LÖSUNGEN FÜR KLEINE UNTERNEHMEN"
+  },
+  {
+    "key": "home_compare_label",
+    "description": "Home Problem/Solution — section tech label",
+    "text_ru": "MARKET_ANALYSIS",
+    "text_en": "MARKET_ANALYSIS",
+    "text_de": "MARKET_ANALYSIS"
+  },
+  {
+    "key": "home_compare_title",
+    "description": "Home Problem/Solution — section title",
+    "text_ru": "Почему подписка работает лучше разового заказа",
+    "text_en": "Why a Subscription Works Better Than a One-Time Order",
+    "text_de": "Warum ein Abonnement besser ist als ein Einmalauftrag"
+  },
+  {
+    "key": "home_services_label",
+    "description": "Home Services block — section tech label",
+    "text_ru": "CORE_OFFERINGS",
+    "text_en": "CORE_OFFERINGS",
+    "text_de": "CORE_OFFERINGS"
+  },
+  {
+    "key": "home_services_title",
+    "description": "Home Services block — section title",
+    "text_ru": "Что мы делаем",
+    "text_en": "What We Do",
+    "text_de": "Was wir tun"
+  },
+  {
+    "key": "home_service_waas_title",
+    "description": "Home WaaS card — service title",
+    "text_ru": "Ваш цифровой филиал. Всё включено.",
+    "text_en": "Your Digital Branch. Everything Included.",
+    "text_de": "Ihre digitale Filiale. Alles inklusive."
+  },
+  {
+    "key": "home_service_bot_title",
+    "description": "Home Automation card — service title",
+    "text_ru": "Запись клиентов без вашего участия",
+    "text_en": "Client Booking Without Your Involvement",
+    "text_de": "Kundenbuchungen ohne Ihr Zutun"
+  },
+  {
+    "key": "home_service_proto_title",
+    "description": "Home Prototypes card — service title",
+    "text_ru": "Прототип за 48 часов. Запуск за 7–14 дней.",
+    "text_en": "Prototype in 48 Hours. Launch in 7–14 Days.",
+    "text_de": "Prototyp in 48 Stunden. Start in 7–14 Tagen."
+  },
+  {
+    "key": "home_trust_kicker",
+    "description": "Home Trust block — section tech label",
+    "text_ru": "НАДЁЖНАЯ АРХИТЕКТУРА",
+    "text_en": "RELIABLE ARCHITECTURE",
+    "text_de": "ZUVERLÄSSIGE ARCHITEKTUR"
+  },
+  {
+    "key": "home_trust_title",
+    "description": "Home Trust block — section title",
+    "text_ru": "Безопасность и скорость, которые вы почувствуете",
+    "text_en": "Security and Speed You Can Feel",
+    "text_de": "Sicherheit und Geschwindigkeit, die Sie spüren"
+  },
+  {
+    "key": "home_trust_metric_1_label",
+    "description": "Home Trust block — DSGVO metric label",
+    "text_ru": "Никаких страхов перед Abmahnung",
+    "text_en": "No fear of Abmahnung",
+    "text_de": "Keine Angst vor Abmahnungen"
+  },
+  {
+    "key": "home_trust_metric_2_label",
+    "description": "Home Trust block — Uptime metric label",
+    "text_ru": "Сайт не падает в разгар сезона",
+    "text_en": "Site stays up during peak season",
+    "text_de": "Die Website läuft auch in der Hochsaison"
+  },
+  {
+    "key": "home_trust_metric_3_label",
+    "description": "Home Trust block — Lighthouse metric label",
+    "text_ru": "Google любит быстрые сайты",
+    "text_en": "Google loves fast sites",
+    "text_de": "Google liebt schnelle Websites"
+  },
+  {
+    "key": "home_trust_metric_4_label",
+    "description": "Home Trust block — EU Hosting metric label",
+    "text_ru": "Высший стандарт защиты данных",
+    "text_en": "Highest data protection standard",
+    "text_de": "Höchster Datenschutzstandard"
+  },
+  {
+    "key": "home_tech_label",
+    "description": "Home Tech Corner — section tech label",
+    "text_ru": "UNDER_THE_HOOD",
+    "text_en": "UNDER_THE_HOOD",
+    "text_de": "UNDER_THE_HOOD"
+  },
+  {
+    "key": "home_tech_title",
+    "description": "Home Tech Corner — section title",
+    "text_ru": "Надёжная архитектура",
+    "text_en": "Reliable Architecture",
+    "text_de": "Zuverlässige Architektur"
+  },
+  {
+    "key": "home_tech_arch_title",
+    "description": "Home Tech Corner — architect card title",
+    "text_ru": "Full-Stack & System Design",
+    "text_en": "Full-Stack & System Design",
+    "text_de": "Full-Stack & System Design"
+  },
+  {
+    "key": "home_tech_arch_label",
+    "description": "Home Tech Corner — architect card tech label",
+    "text_ru": "SYSTEM_ARCHITECT",
+    "text_en": "SYSTEM_ARCHITECT",
+    "text_de": "SYSTEM_ARCHITECT"
+  },
+  {
+    "key": "home_tech_stack_label",
+    "description": "Home Tech Corner — tech stack card label",
+    "text_ru": "TECH_STACK",
+    "text_en": "TECH_STACK",
+    "text_de": "TECH_STACK"
+  },
+  {
+    "key": "home_cta_kicker",
+    "description": "Home Final CTA — section tech label",
+    "text_ru": "ГОТОВЫ ИЗБАВИТЬСЯ ОТ IT-РУТИНЫ?",
+    "text_en": "READY TO SKIP IT HEADACHES?",
+    "text_de": "BEREIT OHNE IT-STRESS?"
+  },
+
+  {
+    "key": "footer_tagline",
+    "description": "Footer — brand tagline",
+    "text_ru": "Ваш бизнес. Наш IT-движок.",
+    "text_en": "Your Business. Our IT Engine.",
+    "text_de": "Ihr Business. Unser IT-Motor."
+  },
+  {
+    "key": "footer_rights",
+    "description": "Footer — copyright rights text",
+    "text_ru": "Все права защищены",
+    "text_en": "All rights reserved",
+    "text_de": "Alle Rechte vorbehalten"
+  },
+  {
+    "key": "nav_legal_impressum",
+    "description": "Navigation — Impressum legal link",
+    "text_ru": "Импрессум",
+    "text_en": "Imprint",
+    "text_de": "Impressum"
+  },
+  {
+    "key": "nav_legal_privacy",
+    "description": "Navigation — Privacy Policy legal link",
+    "text_ru": "Datenschutz",
+    "text_en": "Privacy Policy",
+    "text_de": "Datenschutz"
+  },
+  {
+    "key": "nav_footer_all_contacts",
+    "description": "Footer — All Contacts link",
+    "text_ru": "Все контакты",
+    "text_en": "All Contacts",
+    "text_de": "Alle Kontakte"
+  },
+  {
+    "key": "faq_page_title",
+    "description": "FAQ page — page title / footer link",
+    "text_ru": "Вопросы и ответы",
+    "text_en": "FAQ",
+    "text_de": "Häufige Fragen"
+  },
+
+  {
+    "key": "automation_cta_sales_btn_primary",
+    "description": "Automation Final CTA — primary button (Sales mode)",
+    "text_ru": "Выбрать тариф",
+    "text_en": "Choose a plan",
+    "text_de": "Paket wählen"
+  },
+  {
+    "key": "automation_cta_sales_btn_secondary",
+    "description": "Automation Final CTA — secondary button (Sales mode)",
+    "text_ru": "Запросить демо",
+    "text_en": "Request a demo",
+    "text_de": "Demo anfragen"
+  },
+  {
+    "key": "automation_cta_research_btn_primary",
+    "description": "Automation Final CTA — primary button (Research mode)",
+    "text_ru": "Пройти опрос",
+    "text_en": "Take the survey",
+    "text_de": "Umfrage ausfüllen"
+  },
+  {
+    "key": "automation_cta_research_btn_secondary",
+    "description": "Automation Final CTA — secondary button (Research mode)",
+    "text_ru": "Хочу узнать первым",
+    "text_en": "I want to be the first to know",
+    "text_de": "Als Erster informiert werden"
+  },
+  {
+    "key": "automation_page_title",
+    "description": "Automation page — browser tab title",
+    "text_ru": "Автоматизация — CodexDLC",
+    "text_en": "Automation — CodexDLC",
+    "text_de": "Automatisierung — CodexDLC"
+  },
+  {
+    "key": "automation_pricing_label",
+    "description": "Automation page — pricing section label",
+    "text_ru": "ТАРИФЫ",
+    "text_en": "PRICING_PLANS",
+    "text_de": "PREISPLÄNE"
+  },
+
+  {
+    "key": "waas_cta_sales_btn_primary",
+    "description": "WaaS Final CTA — primary button (Sales mode)",
+    "text_ru": "Выбрать тариф",
+    "text_en": "Choose a plan",
+    "text_de": "Paket wählen"
+  },
+  {
+    "key": "waas_cta_sales_btn_secondary",
+    "description": "WaaS Final CTA — secondary button (Sales mode)",
+    "text_ru": "Получить консультацию",
+    "text_en": "Get a consultation",
+    "text_de": "Beratung anfragen"
+  },
+  {
+    "key": "waas_cta_research_btn_primary",
+    "description": "WaaS Final CTA — primary button (Research mode)",
+    "text_ru": "Пройти опрос",
+    "text_en": "Take the survey",
+    "text_de": "Umfrage ausfüllen"
+  },
+  {
+    "key": "waas_cta_research_btn_secondary",
+    "description": "WaaS Final CTA — secondary button (Research mode)",
+    "text_ru": "Хочу узнать первым",
+    "text_en": "I want to be the first to know",
+    "text_de": "Als Erster informiert werden"
+  },
+  {
+    "key": "waas_page_title",
+    "description": "WaaS page — browser tab title",
+    "text_ru": "Сайт по подписке — CodexDLC",
+    "text_en": "Website as a Service — CodexDLC",
+    "text_de": "Website als Abonnement — CodexDLC"
+  },
+  {
+    "key": "waas_pricing_label",
+    "description": "WaaS page — pricing section label",
+    "text_ru": "ТАРИФЫ",
+    "text_en": "PRICING_PLANS",
+    "text_de": "PREISPLÄNE"
+  },
+  {
+    "key": "waas_projects_label",
+    "description": "WaaS page — projects section label",
+    "text_ru": "НАШИ_ПРОЕКТЫ",
+    "text_en": "OUR_PROJECTS",
+    "text_de": "UNSERE_PROJEKTE"
+  },
+
+  {
+    "key": "solutions_page_title",
+    "description": "Solutions page — browser tab title",
+    "text_ru": "Готовые решения — CodexDLC",
+    "text_en": "Industry Solutions — CodexDLC",
+    "text_de": "Branchenlösungen — CodexDLC"
+  },
+
+  {
+    "key": "contacts_page_title",
+    "description": "Contacts page — page heading",
+    "text_ru": "Контакты",
+    "text_en": "Contacts",
+    "text_de": "Kontakt"
+  },
+  {
+    "key": "contacts_label",
+    "description": "Contacts page — section tech label",
+    "text_ru": "GET_IN_TOUCH",
+    "text_en": "GET_IN_TOUCH",
+    "text_de": "GET_IN_TOUCH"
+  },
+  {
+    "key": "contacts_subtitle",
+    "description": "Contacts page — subtitle",
+    "text_ru": "Напишите нам — ответим в течение 24 часов.",
+    "text_en": "Write to us — we respond within 24 hours.",
+    "text_de": "Schreiben Sie uns — wir antworten innerhalb von 24 Stunden."
+  },
+  {
+    "key": "faq_label",
+    "description": "FAQ page — section tech label",
+    "text_ru": "FAQ // SYSTEM_DOCS",
+    "text_en": "FAQ // SYSTEM_DOCS",
+    "text_de": "FAQ // SYSTEM_DOCS"
+  },
+  {
+    "key": "impressum_page_title",
+    "description": "Impressum page — page title",
+    "text_ru": "Импрессум",
+    "text_en": "Imprint",
+    "text_de": "Impressum"
+  },
+  {
+    "key": "privacy_page_title",
+    "description": "Privacy/Datenschutz page — page title",
+    "text_ru": "Политика конфиденциальности",
+    "text_en": "Privacy Policy",
+    "text_de": "Datenschutzerklärung"
+  },
+  {
+    "key": "ustg19_footnote",
+    "description": "Legal footnote — §19 UStG VAT exemption note",
+    "text_ru": "Согласно §19 UStG НДС не взимается.",
+    "text_en": "Pursuant to §19 UStG, no VAT is charged.",
+    "text_de": "Gemäß §19 UStG wird keine Umsatzsteuer berechnet."
+  },
+  {
+    "key": "nav_main_contacts",
+    "description": "Navigation — Contacts link",
+    "text_ru": "Контакты",
+    "text_en": "Contacts",
+    "text_de": "Kontakt"
+  },
+  {
+    "key": "nav_main_team",
+    "description": "Navigation — Team link",
+    "text_ru": "Команда",
+    "text_en": "Team",
+    "text_de": "Team"
+  },
+  {
+    "key": "projects_cta_view",
+    "description": "Projects — View Website CTA",
+    "text_ru": "Перейти на сайт",
+    "text_en": "View Website",
+    "text_de": "Website besuchen"
+  },
+  {
+    "key": "projects_cta_preview",
+    "description": "Projects — View Prototype CTA",
+    "text_ru": "Смотреть прототип",
+    "text_en": "View Prototype",
+    "text_de": "Prototyp ansehen"
   }
 ]

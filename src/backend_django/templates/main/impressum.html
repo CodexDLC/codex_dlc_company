@@ -6,39 +6,45 @@
 {% block meta_description %}Impressum und rechtliche Angaben für CodexDLC.{% endblock %}
 
 {% block content %}
-<section style="padding: 160px 0 120px;">
-    <div class="container" style="max-width: 720px;">
+<section class="legal-section">
+    <div class="container legal-container">
         <span class="tech-label">LEGAL // DE</span>
-        <h1 style="font-size: clamp(36px, 5vw, 56px); margin-bottom: 48px;">Impressum</h1>
+        <h1 class="legal-title">Impressum</h1>
 
-        <div style="display: flex; flex-direction: column; gap: 40px; color: var(--gray-400); font-size: 15px; line-height: 1.8;">
+        <div class="legal-content">
 
             <div>
-                <h2 style="font-size: 18px; color: var(--gray-100); margin-bottom: 12px; font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px;">Angaben gemäß § 5 TMG</h2>
+                <h2 class="legal-item-title">Angaben gemäß § 5 TMG</h2>
                 <p>CodexDLC<br>
-                DACH-Region</p>
+                    DACH-Region</p>
             </div>
 
             <div>
-                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">Kontakt</h2>
-                <p>E-Mail: <a href="mailto:hello@codexdlc.com" style="color: var(--cyber-blue);">hello@codexdlc.com</a><br>
-                Telegram: <a href="https://t.me/codexdlc" target="_blank" rel="noopener" style="color: var(--cyber-blue);">@codexdlc</a></p>
+                <h2 class="legal-item-title">Kontakt</h2>
+                <p>E-Mail: <a href="mailto:hello@codexdlc.com"
+                        style="color: var(--cyber-blue);">hello@codexdlc.com</a><br>
+                    Telegram: <a href="https://t.me/codexdlc" target="_blank" rel="noopener"
+                        style="color: var(--cyber-blue);">@codexdlc</a></p>
             </div>
 
             <div>
-                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">Haftungsausschluss</h2>
-                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+                <h2 class="legal-item-title">Haftungsausschluss</h2>
+                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
+                    und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
             </div>
 
             <div>
-                <h2 style="font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: var(--gray-100); margin-bottom: 12px;">Urheberrecht</h2>
-                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+                <h2 class="legal-item-title">Urheberrecht</h2>
+                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+                    deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+                    außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+                    bzw. Erstellers.</p>
             </div>
 
         </div>
 
-        <div style="margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--glass-border);">
-            <a href="{% url 'main:index' %}" style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600);">← ZURÜCK ZUR STARTSEITE</a>
+        <div class="legal-footer-link">
+            <a href="{% url 'main:index' %}">← ZURÜCK ZUR STARTSEITE</a>
         </div>
 
     </div>
@@ -47,13 +53,13 @@
 
 {% block extra_js %}
 <script>
-    var DARK_CSS  = "{% static 'css/app.css' %}";
+    var DARK_CSS = "{% static 'css/app.css' %}";
     var LIGHT_CSS = "{% static 'css/app-light.css' %}";
     var themeLink = document.getElementById('theme-css');
-    var themeBtn  = document.getElementById('theme-btn');
+    var themeBtn = document.getElementById('theme-btn');
     function getTheme() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
-    function applyTheme(t) { if (t === 'light') { document.documentElement.setAttribute('data-theme','light'); themeLink.href=LIGHT_CSS; themeBtn.textContent='[ D ]'; } else { document.documentElement.removeAttribute('data-theme'); themeLink.href=DARK_CSS; themeBtn.textContent='[ L ]'; } localStorage.setItem('codex-theme',t); }
-    function toggleTheme() { applyTheme(getTheme()==='dark'?'light':'dark'); }
-    (function(){ var c=getTheme(); themeBtn.textContent=c==='light'?'[ D ]':'[ L ]'; if(c==='light') themeLink.href=LIGHT_CSS; })();
+    function applyTheme(t) { if (t === 'light') { document.documentElement.setAttribute('data-theme', 'light'); themeLink.href = LIGHT_CSS; themeBtn.textContent = '[ D ]'; } else { document.documentElement.removeAttribute('data-theme'); themeLink.href = DARK_CSS; themeBtn.textContent = '[ L ]'; } localStorage.setItem('codex-theme', t); }
+    function toggleTheme() { applyTheme(getTheme() === 'dark' ? 'light' : 'dark'); }
+    (function () { var c = getTheme(); themeBtn.textContent = c === 'light' ? '[ D ]' : '[ L ]'; if (c === 'light') themeLink.href = LIGHT_CSS; })();
 </script>
 {% endblock %}

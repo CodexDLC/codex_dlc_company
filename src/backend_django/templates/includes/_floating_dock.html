@@ -1,7 +1,18 @@
 {% load i18n %}
 <nav class="floating-dock">
-    <a href="{% url 'main:index' %}" class="dock-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}">{% trans "nav_main_home" %}</a>
-    <a href="{% url 'main:index' %}#services" class="dock-link">{% trans "nav_main_services" %}</a>
-    <a href="#" class="dock-link">{% trans "nav_main_prototypes" %}</a>
-    <a href="{% url 'main:contacts' %}" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px; border-radius: 100px;">{% trans "btn_cta_booking" %}</a>
+    <a href="{% url 'main:index' %}"
+        class="dock-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+        {{ content.nav_main_home|default:_("nav_main_home") }}</a>
+    <a href="{% url 'main:index' %}#services" class="dock-link">
+        {{ content.nav_main_services|default:_("nav_main_services") }}</a>
+    <a href="{% url 'main:services_prototype' %}"
+        class="dock-link {% if request.resolver_match.url_name == 'services_prototype' %}active{% endif %}">
+        {{ content.nav_main_prototypes|default:_("nav_main_prototypes") }}</a>
+    {% if site_settings.site_mode == 'sales' %}
+    <a href="{% url 'main:contacts' %}" class="btn btn-primary dock-cta">
+        {{ content.btn_cta_booking|default:_("btn_cta_booking") }}</a>
+    {% else %}
+    <a href="{% url 'main:contacts' %}" class="btn btn-primary dock-cta">
+        {{ content.home_hero_cta_primary_research|default:_("home_hero_cta_primary_research") }}</a>
+    {% endif %}
 </nav>

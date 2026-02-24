@@ -1,0 +1,21 @@
+/* Forms (Command Line Style) */
+.terminal-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--gray-100);
+    font-family: var(--font-mono);
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.terminal-input::placeholder {
+    color: var(--gray-600);
+}
+
+.terminal-input:focus {
+    border-bottom: 1px solid var(--cyber-blue);
+}

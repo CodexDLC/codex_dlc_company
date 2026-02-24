@@ -1,0 +1,42 @@
+/* Buttons (Tactile Terminal Style) */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-btn);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-primary {
+    border-color: var(--cyber-blue);
+    color: var(--cyber-blue);
+    background: transparent;
+}
+
+.btn-primary:hover {
+    background: var(--cyber-blue);
+    color: var(--deep-space);
+    box-shadow: var(--glow-btn);
+}
+
+.btn-primary:active {
+    background: var(--cyber-blue-hover);
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    color: var(--gray-100);
+}
+
+.btn-secondary:hover {
+    background: var(--glass-bg-elevated);
+    border-color: var(--glass-border-hover);
+}

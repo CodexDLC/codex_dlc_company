@@ -62,6 +62,21 @@ class SiteSettings(models.Model):
     geo_lat = models.DecimalField(_("Latitude"), max_digits=10, decimal_places=7, null=True, blank=True)
     geo_lng = models.DecimalField(_("Longitude"), max_digits=10, decimal_places=7, null=True, blank=True)
 
+    # --- Site Mode ---
+    SITE_MODE_RESEARCH = "research"
+    SITE_MODE_SALES = "sales"
+    SITE_MODE_CHOICES = [
+        (SITE_MODE_RESEARCH, _("Research")),
+        (SITE_MODE_SALES, _("Sales")),
+    ]
+    site_mode = models.CharField(
+        _("Site Mode"),
+        max_length=20,
+        choices=SITE_MODE_CHOICES,
+        default=SITE_MODE_RESEARCH,
+        help_text=_("'research' = email/survey CTAs, 'sales' = pricing/consultation CTAs"),
+    )
+
     # --- Technical & Admin Metadata ---
     # These are used for internal logic (notifications, worker routing)
     telegram_admin_channel_id = models.CharField(

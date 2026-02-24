@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,19 +23,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
 
     <!-- Top Bar -->
-    <header style="padding: 32px 0; position: absolute; width: 100%; z-index: 10;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <header>
+        <div class="container">
             <div class="brand-logo" id="brand-logo">
                 <span class="brand-codex">Codex</span><span class="brand-dlc" id="brand-dlc">DLC</span>
                 <span class="brand-tagline" id="brand-tagline"></span>
             </div>
-            <div style="display: flex; align-items: center; gap: 24px; font-family: var(--font-mono); font-size: 12px; color: var(--gray-400);">
+            <div class="right-controls">
                 <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="theme-btn">[ * ]</button>
                 <div class="lang-switcher">[ <a href="#" style="color: var(--cyber-blue);">RU</a> / EN / DE ]</div>
             </div>
@@ -46,7 +50,7 @@
         <a href="#" class="dock-link active">Главная</a>
         <a href="#" class="dock-link">Услуги</a>
         <a href="#" class="dock-link">Прототипы</a>
-        <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px; border-radius: 100px;">Связаться</a>
+        <a href="#" class="btn btn-primary">Связаться</a>
     </nav>
 
     <main>
@@ -56,15 +60,16 @@
             <div class="hero-torch" id="hero-torch"></div>
             <div class="container hero-content">
                 <span class="tech-label">SYSTEM_ONLINE // V.1.0</span>
-                <h1 class="hero-title" style="font-size: clamp(48px, 10vw, 84px); line-height: 1.05; margin-bottom: 32px;">
+                <h1 class="hero-title">
                     Ваш бизнес.<br>Наш IT-движок.
                 </h1>
-                <p style="font-size: 20px; color: var(--gray-400); margin-bottom: 48px; max-width: 620px; line-height: 1.65;">
-                    Разработка, хостинг и поддержка премиальных сайтов по подписке. Никаких технических забот — мы берем всё на себя.
+                <p class="hero-description">
+                    Разработка, хостинг и поддержка премиальных сайтов по подписке. Никаких технических забот — мы берем
+                    всё на себя.
                 </p>
-                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a href="#" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">РАССЧИТАТЬ СТОИМОСТЬ</a>
-                    <a href="#services" class="btn btn-secondary" style="padding: 20px 40px; font-size: 18px;">СМОТРЕТЬ УСЛУГИ</a>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary">РАССЧИТАТЬ СТОИМОСТЬ</a>
+                    <a href="#services" class="btn btn-secondary">СМОТРЕТЬ УСЛУГИ</a>
                 </div>
             </div>
         </section>
@@ -112,7 +117,9 @@
                             <span class="tech-label" style="margin-bottom: 12px;">01 // WEBSITE AS A SERVICE</span>
                             <h2>Сайты по подписке</h2>
                         </div>
-                        <p>Премиальные сайты для сферы услуг. Никаких огромных разовых платежей и скрытых комиссий. Мы создаем платформу для сбора заявок, настраиваем почту, SEO и следим за сервером 24/7. Вы платите только фиксированную подписку.</p>
+                        <p>Премиальные сайты для сферы услуг. Никаких огромных разовых платежей и скрытых комиссий. Мы
+                            создаем платформу для сбора заявок, настраиваем почту, SEO и следим за сервером 24/7. Вы
+                            платите только фиксированную подписку.</p>
                         <ul class="contrast-list" style="margin-top: 8px;">
                             <li>Кастомный дизайн под нишу</li>
                             <li>SEO-оптимизация с первого дня</li>
@@ -124,12 +131,21 @@
                     <div class="z-visual">
                         <div class="z-visual-accent"></div>
                         <div style="text-align: center; z-index: 1;">
-                            <div style="font-size: 10px; margin-bottom: 16px; color: var(--gray-600);">[ LILY_SALON_PREVIEW ]</div>
+                            <div style="font-size: 10px; margin-bottom: 16px; color: var(--gray-600);">[
+                                LILY_SALON_PREVIEW ]</div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 24px;">
-                                <div style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
-                                <div style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
-                                <div style="height: 80px; grid-column: span 2; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);"></div>
-                                <div style="height: 40px; grid-column: span 2; background: var(--cyber-blue); opacity: 0.15; border-radius: 4px;"></div>
+                                <div
+                                    style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
+                                </div>
+                                <div
+                                    style="height: 56px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
+                                </div>
+                                <div
+                                    style="height: 80px; grid-column: span 2; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
+                                </div>
+                                <div
+                                    style="height: 40px; grid-column: span 2; background: var(--cyber-blue); opacity: 0.15; border-radius: 4px;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -142,7 +158,9 @@
                             <span class="tech-label" style="margin-bottom: 12px;">02 // AUTOMATION</span>
                             <h2>Telegram-боты и автоматизация</h2>
                         </div>
-                        <p>Хватит терять клиентов в переписках. Мы разрабатываем умных ботов, которые сами квалифицируют лидов, принимают записи и интегрируются с вашей базой данных. Ваш бизнес работает даже когда вы спите.</p>
+                        <p>Хватит терять клиентов в переписках. Мы разрабатываем умных ботов, которые сами квалифицируют
+                            лидов, принимают записи и интегрируются с вашей базой данных. Ваш бизнес работает даже когда
+                            вы спите.</p>
                         <ul class="contrast-list" style="margin-top: 8px;">
                             <li>Квалификация лидов по сценарию (FSM)</li>
                             <li>Онлайн-запись через Telegram Web App</li>
@@ -154,14 +172,22 @@
                     <div class="z-visual blue-accent">
                         <div class="z-visual-accent"></div>
                         <div style="z-index: 1; padding: 24px; width: 100%;">
-                            <div style="background: var(--glass-bg-elevated); border-radius: 12px; padding: 16px; border: 1px solid var(--glass-border);">
-                                <div style="font-size: 10px; color: var(--gray-600); margin-bottom: 12px;">TELEGRAM_BOT // ACTIVE</div>
+                            <div
+                                style="background: var(--glass-bg-elevated); border-radius: 12px; padding: 16px; border: 1px solid var(--glass-border);">
+                                <div style="font-size: 10px; color: var(--gray-600); margin-bottom: 12px;">TELEGRAM_BOT
+                                    // ACTIVE</div>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
-                                    <div style="background: var(--glass-bg); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--gray-400); border: 1px solid var(--glass-border);">Клиент: Хочу записаться на стрижку</div>
-                                    <div style="background: rgba(0, 240, 255, 0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--cyber-blue); border: 1px solid rgba(0,240,255,0.15); align-self: flex-end;">Бот: Выберите дату → [Открыть календарь]</div>
+                                    <div
+                                        style="background: var(--glass-bg); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--gray-400); border: 1px solid var(--glass-border);">
+                                        Клиент: Хочу записаться на стрижку</div>
+                                    <div
+                                        style="background: rgba(0, 240, 255, 0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; color: var(--cyber-blue); border: 1px solid rgba(0,240,255,0.15); align-self: flex-end;">
+                                        Бот: Выберите дату → [Открыть календарь]</div>
                                     <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
                                         <span class="status-dot" style="margin-right: 0;"></span>
-                                        <span style="font-family: var(--font-mono); font-size: 10px; color: var(--status-green);">NEW_LEAD // ADMIN_NOTIFIED</span>
+                                        <span
+                                            style="font-family: var(--font-mono); font-size: 10px; color: var(--status-green);">NEW_LEAD
+                                            // ADMIN_NOTIFIED</span>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +202,9 @@
                             <span class="tech-label" style="margin-bottom: 12px;">03 // PLUG & PLAY</span>
                             <h2>Прототип за 48 часов</h2>
                         </div>
-                        <p>У нас есть собственная библиотека протестированных бизнес-шаблонов. Вы выбираете концепцию, и уже через 48 часов получаете рабочий интерактивный прототип. После согласования — запуск за 7–14 дней.</p>
+                        <p>У нас есть собственная библиотека протестированных бизнес-шаблонов. Вы выбираете концепцию, и
+                            уже через 48 часов получаете рабочий интерактивный прототип. После согласования — запуск за
+                            7–14 дней.</p>
                         <ul class="contrast-list" style="margin-top: 8px;">
                             <li>Салон красоты / Барбершоп</li>
                             <li>Монтаж и строительство</li>
@@ -189,10 +217,18 @@
                         <div class="z-visual-accent"></div>
                         <div style="z-index: 1; padding: 24px; width: 100%;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
-                                <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">LILY<br>SALON</div>
-                                <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">DLC<br>MONTAGE</div>
-                                <div style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid rgba(0,240,255,0.25); font-family: var(--font-mono); font-size: 9px; color: var(--cyber-blue); text-align: center;">AUTO<br>HUB</div>
-                                <div style="grid-column: span 3; background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">BUILDER PRO // CONSTRUCTION</div>
+                                <div
+                                    style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">
+                                    LILY<br>SALON</div>
+                                <div
+                                    style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">
+                                    DLC<br>MONTAGE</div>
+                                <div
+                                    style="background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid rgba(0,240,255,0.25); font-family: var(--font-mono); font-size: 9px; color: var(--cyber-blue); text-align: center;">
+                                    AUTO<br>HUB</div>
+                                <div
+                                    style="grid-column: span 3; background: var(--glass-bg-elevated); border-radius: 8px; padding: 12px; border: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 9px; color: var(--gray-600); text-align: center;">
+                                    BUILDER PRO // CONSTRUCTION</div>
                             </div>
                         </div>
                     </div>
@@ -211,22 +247,30 @@
                     <div class="bento-card" style="grid-column: span 8; grid-row: span 2; min-height: 400px;">
                         <div>
                             <h3>Кастомная разработка</h3>
-                            <p style="color: var(--gray-400);">Индивидуальный интерфейс, спроектированный под ваши задачи. Никаких конструкторов.</p>
+                            <p style="color: var(--gray-400);">Индивидуальный интерфейс, спроектированный под ваши
+                                задачи. Никаких конструкторов.</p>
                         </div>
-                        <div style="height: 180px; background: var(--glass-glow-blue); border: 1px dashed var(--glass-border); border-radius: 16px; margin-top: 32px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); color: var(--gray-600); font-size: 12px;">[ LILY_SALON_PREVIEW ]</div>
+                        <div
+                            style="height: 180px; background: var(--glass-glow-blue); border: 1px dashed var(--glass-border); border-radius: 16px; margin-top: 32px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); color: var(--gray-600); font-size: 12px;">
+                            [ LILY_SALON_PREVIEW ]</div>
                     </div>
                     <div class="bento-card" style="grid-column: span 4;">
                         <h3>SEO & Аналитика</h3>
-                        <p style="color: var(--gray-400);">Постоянная оптимизация под поисковые системы. Core Web Vitals 100/100.</p>
+                        <p style="color: var(--gray-400);">Постоянная оптимизация под поисковые системы. Core Web Vitals
+                            100/100.</p>
                     </div>
                     <div class="bento-card" style="grid-column: span 4;">
                         <h3>Домен & Почта</h3>
-                        <p style="color: var(--gray-400);">Полное управление инфраструктурой. Корпоративная почта включена.</p>
+                        <p style="color: var(--gray-400);">Полное управление инфраструктурой. Корпоративная почта
+                            включена.</p>
                     </div>
-                    <div class="bento-card" style="grid-column: span 12; flex-direction: row; align-items: center; justify-content: space-between;">
+                    <div class="bento-card"
+                        style="grid-column: span 12; flex-direction: row; align-items: center; justify-content: space-between;">
                         <div style="display: flex; align-items: center; gap: 12px;">
                             <span class="status-dot"></span>
-                            <span style="font-family: var(--font-mono); font-size: 14px; color: var(--status-green);">UPTIME 99.9%</span>
+                            <span
+                                style="font-family: var(--font-mono); font-size: 14px; color: var(--status-green);">UPTIME
+                                99.9%</span>
                         </div>
                         <h3 style="margin: 0;">Техническая поддержка 24/7</h3>
                     </div>
@@ -241,13 +285,19 @@
             <div class="container">
                 <span class="tech-label">UNDER_THE_HOOD</span>
                 <h2 style="font-size: 40px; margin-bottom: 16px;">Надёжная архитектура</h2>
-                <p style="font-size: 17px; color: var(--gray-400); max-width: 600px; margin-bottom: 0;">Мы не используем медленные конструкторы. Каждый проект — это кастомный стек, обеспечивающий Uptime 99.9% и молниеносную загрузку.</p>
+                <p style="font-size: 17px; color: var(--gray-400); max-width: 600px; margin-bottom: 0;">Мы не используем
+                    медленные конструкторы. Каждый проект — это кастомный стек, обеспечивающий Uptime 99.9% и
+                    молниеносную загрузку.</p>
                 <div class="tech-bento">
                     <div class="bento-card" style="grid-column: span 5;">
                         <span class="tech-label" style="margin-bottom: 16px;">SYSTEM_ARCHITECT</span>
                         <h3 style="margin-bottom: 12px;">Full-Stack & System Design</h3>
-                        <p style="color: var(--gray-400); font-size: 15px; line-height: 1.6;">Цель — делать сложные IT-продукты доступными для малого бизнеса. Архитектура под ваши задачи, не под «среднее решение».</p>
-                        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 10px; color: var(--gray-600);">DACH_REGION // EST. 2024</div>
+                        <p style="color: var(--gray-400); font-size: 15px; line-height: 1.6;">Цель — делать сложные
+                            IT-продукты доступными для малого бизнеса. Архитектура под ваши задачи, не под «среднее
+                            решение».</p>
+                        <div
+                            style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--glass-border); font-family: var(--font-mono); font-size: 10px; color: var(--gray-600);">
+                            DACH_REGION // EST. 2024</div>
                     </div>
                     <div class="bento-card" style="grid-column: span 7;">
                         <span class="tech-label" style="margin-bottom: 16px;">TECH_STACK</span>
@@ -263,20 +313,32 @@
                             <span class="tech-badge">Nginx</span>
                             <span class="tech-badge">CI/CD</span>
                         </div>
-                        <div style="margin-top: 24px; padding: 16px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
-                            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 8px;">// performance benchmark</div>
+                        <div
+                            style="margin-top: 24px; padding: 16px; background: var(--glass-bg-elevated); border-radius: 8px; border: 1px solid var(--glass-border);">
+                            <div
+                                style="font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); margin-bottom: 8px;">
+                                // performance benchmark</div>
                             <div style="display: flex; gap: 32px;">
                                 <div>
-                                    <div style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); font-weight: 600;">&lt;200ms</div>
-                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Time to First Byte</div>
+                                    <div
+                                        style="font-family: var(--font-mono); font-size: 20px; color: var(--cyber-blue); font-weight: 600;">
+                                        &lt;200ms</div>
+                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Time to First
+                                        Byte</div>
                                 </div>
                                 <div>
-                                    <div style="font-family: var(--font-mono); font-size: 20px; color: var(--status-green); font-weight: 600;">99.9%</div>
-                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Uptime SLA</div>
+                                    <div
+                                        style="font-family: var(--font-mono); font-size: 20px; color: var(--status-green); font-weight: 600;">
+                                        99.9%</div>
+                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Uptime SLA
+                                    </div>
                                 </div>
                                 <div>
-                                    <div style="font-family: var(--font-mono); font-size: 20px; color: var(--electric-purple); font-weight: 600;">100</div>
-                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Lighthouse Score</div>
+                                    <div
+                                        style="font-family: var(--font-mono); font-size: 20px; color: var(--electric-purple); font-weight: 600;">
+                                        100</div>
+                                    <div style="font-size: 12px; color: var(--gray-600); margin-top: 4px;">Lighthouse
+                                        Score</div>
                                 </div>
                             </div>
                         </div>
@@ -316,10 +378,14 @@
             <div class="container" style="max-width: 650px; text-align: center;">
                 <span class="tech-label">EXECUTE_DEPLOYMENT</span>
                 <h2 style="font-size: 48px; margin-bottom: 24px;">Готовы автоматизировать заявки?</h2>
-                <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">Оставьте контакт — мы разберём задачи вашего бизнеса и предложим решение в течение 24 часов.</p>
-                <div style="text-align: left; background: var(--glass-bg); padding: 40px; border-radius: var(--radius-bento); border: 1px solid var(--glass-border);">
-                    <input type="text" class="terminal-input" placeholder="Email или Телефон..." style="font-size: 20px; margin-bottom: 32px;">
-                    <button class="btn btn-primary" style="width: 100%; padding: 24px; font-size: 18px;">ИНИЦИИРОВАТЬ ПРОЕКТ</button>
+                <p style="color: var(--gray-400); font-size: 17px; margin-bottom: 56px;">Оставьте контакт — мы разберём
+                    задачи вашего бизнеса и предложим решение в течение 24 часов.</p>
+                <div
+                    style="text-align: left; background: var(--glass-bg); padding: 40px; border-radius: var(--radius-bento); border: 1px solid var(--glass-border);">
+                    <input type="text" class="terminal-input" placeholder="Email или Телефон..."
+                        style="font-size: 20px; margin-bottom: 32px;">
+                    <button class="btn btn-primary" style="width: 100%; padding: 24px; font-size: 18px;">ИНИЦИИРОВАТЬ
+                        ПРОЕКТ</button>
                 </div>
             </div>
         </section>
@@ -329,22 +395,30 @@
     <footer class="island-footer">
         <div class="footer-grid">
             <div style="grid-column: span 6;">
-                <div class="brand" style="font-family: var(--font-headings); font-size: 28px; font-weight: 700; margin-bottom: 24px;">
+                <div class="brand"
+                    style="font-family: var(--font-headings); font-size: 28px; font-weight: 700; margin-bottom: 24px;">
                     Codex<span style="color: var(--cyber-blue);">DLC</span>
                 </div>
-                <p style="color: var(--gray-400); font-size: 14px; max-width: 350px; line-height: 1.6;">Digital Lead Conversion. Мы строим системы, которые превращают техническую сложность в рост бизнеса.</p>
+                <p style="color: var(--gray-400); font-size: 14px; max-width: 350px; line-height: 1.6;">Digital Lead
+                    Conversion. Мы строим системы, которые превращают техническую сложность в рост бизнеса.</p>
             </div>
             <div style="grid-column: span 3;">
-                <h4 style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">SERVICES</h4>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--gray-400);">
+                <h4
+                    style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">
+                    SERVICES</h4>
+                <ul
+                    style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--gray-400);">
                     <li>WaaS Subscription</li>
                     <li>Telegram Bots</li>
                     <li>Prototypes</li>
                 </ul>
             </div>
             <div style="grid-column: span 3;">
-                <h4 style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">LEGAL</h4>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--gray-400);">
+                <h4
+                    style="font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">
+                    LEGAL</h4>
+                <ul
+                    style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--gray-400);">
                     <li>Impressum</li>
                     <li>Datenschutz</li>
                 </ul>
@@ -395,7 +469,7 @@
     <!-- Logo DLC Animation -->
     <script>
         (function () {
-            var dlcEl     = document.getElementById('brand-dlc');
+            var dlcEl = document.getElementById('brand-dlc');
             var taglineEl = document.getElementById('brand-tagline');
 
             // Taglines per page — extensible when new pages added
@@ -408,12 +482,12 @@
             var current = 0;
 
             // Phase timing (ms)
-            var T_HOLD    = 1800;   // show "CodexDLC" at start
-            var T_FADE    = 400;    // DLC fades out
-            var T_PAUSE   = 200;    // bare "Codex" moment
+            var T_HOLD = 1800;   // show "CodexDLC" at start
+            var T_FADE = 400;    // DLC fades out
+            var T_PAUSE = 200;    // bare "Codex" moment
             var T_TAGLINE = 320;    // tagline fades in
-            var T_READ    = 3200;   // tagline visible
-            var T_OUT     = 340;    // tagline + DLC fade back
+            var T_READ = 3200;   // tagline visible
+            var T_OUT = 340;    // tagline + DLC fade back
             var T_RESTORE = 300;    // DLC back in
 
             function runCycle() {
@@ -459,9 +533,9 @@
     <!-- Hero torch + Z-row parallax -->
     <script>
         (function () {
-            var hero    = document.getElementById('hero-section');
-            var torch   = document.getElementById('hero-torch');
-            var raf     = null;
+            var hero = document.getElementById('hero-section');
+            var torch = document.getElementById('hero-torch');
+            var raf = null;
             var tx = 0, ty = 0;   // target
             var cx = 0, cy = 0;   // current (lerped)
 
@@ -485,7 +559,7 @@
                 cx += (tx - cx) * 0.10;
                 cy += (ty - cy) * 0.10;
                 torch.style.left = cx + 'px';
-                torch.style.top  = cy + 'px';
+                torch.style.top = cy + 'px';
                 raf = requestAnimationFrame(animTorch);
             }
 
@@ -497,8 +571,8 @@
 
                 row.addEventListener('mousemove', function (e) {
                     var r = row.getBoundingClientRect();
-                    var nx = (e.clientX - r.left) / r.width  - 0.5;  // -0.5..0.5
-                    var ny = (e.clientY - r.top)  / r.height - 0.5;
+                    var nx = (e.clientX - r.left) / r.width - 0.5;  // -0.5..0.5
+                    var ny = (e.clientY - r.top) / r.height - 0.5;
                     visual.style.transform = 'translate(' + (nx * 12) + 'px, ' + (ny * 8) + 'px)';
                 });
 
@@ -510,4 +584,5 @@
     </script>
 
 </body>
+
 </html>
